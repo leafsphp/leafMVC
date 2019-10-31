@@ -9,7 +9,7 @@
 <body>
 	<h2>
 		<?php $counter1=-1;  if( isset($notes) && ( is_array($notes) || $notes instanceof Traversable ) && sizeof($notes) ) foreach( $notes as $key1 => $value1 ){ $counter1++; ?>
-			<?php echo htmlspecialchars( $value1, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+			<?php echo htmlspecialchars( $value1, ENT_COMPAT, 'UTF-8', FALSE ); ?> <br>
 		<?php } ?>
 	</h2>
 </body>

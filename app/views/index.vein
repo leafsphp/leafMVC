@@ -9,7 +9,7 @@
 <body>
 	<h2>
 		{loop="$notes"}
-			{$value}
+			{$value} <br>
 		{/loop}
 	</h2>
 </body>
