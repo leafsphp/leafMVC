@@ -1,9 +1,9 @@
 <?php 
     namespace App\Helpers;
 
-    use App\Lib\Base;
+    use Leaf\Core\Helper;
 
-    class ClassName extends Base  {
+    class ClassName extends Helper  {
         public function __construct() {
             parent::__construct();
         }

@@ -1,6 +1,8 @@
 
 <?php 
-    class ClassName extends \App\Lib\Database {
+    use Leaf\Core\Database;
+    
+    class ClassName extends Database {
         public function __construct() {
             parent::__construct();
         }

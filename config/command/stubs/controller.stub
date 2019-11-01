@@ -1,9 +1,9 @@
 <?php
     namespace App\Controllers;
 
-    use App\Controllers\Base as Base;
+    use Leaf\Core\Controller;
 
-    class ClassName extends Base {
+    class ClassName extends Controller {
         public function __construct() {
             parent::__construct();
         }

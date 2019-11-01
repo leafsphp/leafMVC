@@ -22,7 +22,11 @@
         "symfony/console": "^4.3",
         "illuminate/support": "^6.4",
         "doctrine/dbal": "^2.9",
-        "psy/psysh": "^0.9.9"
+        "psy/psysh": "^0.9.9",
+        "illuminate/console": "^6.3"
+    },
+    "require-dev": {
+        "deployer/deployer": "^6.4"
     },
     "config": {
         "optimize-autoloader": true

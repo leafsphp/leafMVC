@@ -1,11 +1,11 @@
 <?php
-    namespace App\Controllers\BaseController;
-    
-    use App\Controllers\BaseController;
-    
-    class ClassName extends BaseController {
+    namespace App\Controllers;
+
+    use Leaf\Core\Controller;
+
+    class ClassName extends Controller {
         public function __construct() {
-            parent::__construct();        
+            parent::__construct();
         }
 
         public function index() {
@@ -16,7 +16,7 @@
         }
 
         public function create() {
-
+            
         }
 
         public function show() {

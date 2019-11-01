@@ -1,9 +1,11 @@
 <?php 
-    class ClassName extends \App\Lib\Database {
-        
+    use Leaf\Core\Database;
+    
+    class ClassName extends Database {
         public function __construct() {
             parent::__construct();
         }
+        
         public function up()  {
             if(!$this->capsule::schema()->hasTable("tableName")):
                 $this->capsule::schema()->create("tableName", function ($table) {

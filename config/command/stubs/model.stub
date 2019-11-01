@@ -1,10 +1,10 @@
 <?php
     namespace App\Models;
 
-    use App\Lib\Database;
+    use Leaf\Core\Database;
     new Database();
 
-    use Illuminate\Database\Eloquent\Model;
+    use Leaf\Core\Model;
 
     class ClassName extends Model {
         protected $fillable = [
