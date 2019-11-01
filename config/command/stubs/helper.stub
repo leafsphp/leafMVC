@@ -1,0 +1,10 @@
+<?php 
+    namespace App\Helpers;
+
+    use App\Lib\Base;
+
+    class ClassName extends Base  {
+        public function __construct() {
+            parent::__construct();
+        }
+    }

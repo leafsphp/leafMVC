@@ -18,7 +18,9 @@
     ],
     "require": {
         "leafs/leaf": "dev-master",
-        "vlucas/phpdotenv": "^3.6"
+        "vlucas/phpdotenv": "^3.6",
+        "symfony/console": "^4.3",
+        "illuminate/support": "^6.4"
     },
     "config": {
         "optimize-autoloader": true

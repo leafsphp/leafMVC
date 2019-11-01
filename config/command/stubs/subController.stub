@@ -1,0 +1,29 @@
+<?php
+    namespace App\Controllers\BaseController;
+    
+    use App\Controllers\BaseController;
+    
+    class ClassName extends BaseController {
+        public function __construct() {
+            parent::__construct();        
+        }
+
+        public function index() {
+            $this->set([
+                "title" => "Leaf Vein Integration"
+            ]);
+            $this->render("index");
+        }
+
+        public function create() {
+
+        }
+
+        public function show() {
+
+        }
+
+        public function destroy() {
+
+        }
+    }

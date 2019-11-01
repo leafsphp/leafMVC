@@ -1,0 +1,17 @@
+
+<?php 
+    class ClassName extends \App\Lib\Database {
+        public function __construct() {
+            parent::__construct();
+        }
+
+        public function up() {
+            $this->capsule::schema()->table('', function($table){
+                
+            });
+        }
+
+        public function down() {
+
+        }
+    }

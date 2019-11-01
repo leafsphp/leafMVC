@@ -1,0 +1,13 @@
+<?php
+    namespace App\Models;
+
+    use App\Lib\Database;
+    new Database();
+
+    use Illuminate\Database\Eloquent\Model;
+
+    class ClassName extends Model {
+        protected $fillable = [
+
+        ];
+    }

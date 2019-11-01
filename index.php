@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-require __DIR__. "/app/init.php";
+require __DIR__. "/config/init.php";
 
 $leaf = new Leaf\Core\Leaf;
 $response = new Leaf\Core\Http\Response;
