@@ -1,24 +1,25 @@
 <?php
     require __DIR__.'/vendor/autoload.php';
+    require __DIR__.'/config/bootstrap.php';
 
     use Symfony\Component\Console\Application;
-    use \Config\Command;
+    // use Config\Command;
 
     \Dotenv\Dotenv::create(__DIR__)->load();
 
     $app = new Application();
     // ... register commands    
-    $app->add(new Command\GenerateTemplateCommand());
-    $app->add(new Command\GenerateMigrationCommand());
-    $app->add(new Command\GenerateModelCommand());
-    $app->add(new Command\GenerateHelperCommand());
-    $app->add(new Command\GenerateControllerCommand());
-    $app->add(new Command\DatabaseMigrationCommand());
-    $app->add(new Command\DeleteControllerCommand());
-    $app->add(new Command\ServerCommand());
-    $app->add(new Command\StartCommand());
-    $app->add(new Command\ConsoleCommand());
-    $app->add(new Command\DatabaseRollbackCommand());
-    $app->add(new Command\DatabaseSeedCommand());
+    $app->add(new \Config\Command\GenerateTemplateCommand());
+    $app->add(new \Config\Command\GenerateMigrationCommand());
+    $app->add(new \Config\Command\GenerateModelCommand());
+    $app->add(new \Config\Command\GenerateHelperCommand());
+    $app->add(new \Config\Command\GenerateControllerCommand());
+    $app->add(new \Config\Command\DatabaseMigrationCommand());
+    $app->add(new \Config\Command\DeleteControllerCommand());
+    $app->add(new \Config\Command\ServerCommand());
+    $app->add(new \Config\Command\StartCommand());
+    $app->add(new \Config\Command\ConsoleCommand());
+    $app->add(new \Config\Command\DatabaseRollbackCommand());
+    $app->add(new \Config\Command\DatabaseSeedCommand());
 
     $app->run();
