@@ -15,7 +15,7 @@ class GenerateHelperCommand extends Command
     protected static $defaultName = 'g:helper';
 
     public function __construct(){
-        $this->helperPath = dirname(__DIR__) . '/helpers/';
+        $this->helperPath = dirname(dirname(__DIR__)) . '/app/helpers/';
         parent::__construct();
     }
 

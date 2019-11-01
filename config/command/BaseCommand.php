@@ -3,11 +3,9 @@
 
     use Illuminate\Support\Str;
 
-    class BaseCommand
-    {
-        public static function dir_and_file($input): Array
-        {
-            $controllerPath = dirname(__DIR__). '/controllers/';
+    class BaseCommand {
+        public static function dir_and_file($input): Array {
+            $controllerPath = dirname(dirname(__DIR__)). '/app/controllers/';
 
             $path_to_controller = strtolower($input->getArgument("controller")).'Controller.php';
             $path_info = pathinfo($path_to_controller);

@@ -10,27 +10,23 @@ use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Str;
 
-class DatabaseMigrationCommand extends Command
-{
+class DatabaseMigrationCommand extends Command {
 
     protected static $defaultName = "db:migrate";
 
-    public function __construct()
-    {
-        $this->migrationPath = dirname(__DIR__) . '/migrations/';
+    public function __construct() {
+        $this->migrationPath = dirname(dirname(__DIR__)) . '/app/migrations/';
         parent::__construct();
     }
 
-    protected function configure()
-    {
+    protected function configure() {
         $this
             ->setDescription("used to run migrations")
             ->setHelp("Command used to run migration");
     }
 
 
-    protected function execute(InputInterface $input, OutputInterface $output)
-    {
+    protected function execute(InputInterface $input, OutputInterface $output) {
         $this->_runMigrations($output);
     }
 
@@ -47,7 +43,7 @@ class DatabaseMigrationCommand extends Command
                 $class = new $className;
                 $class->up();
 
-                $output->writeln('db migration on => ' . str_replace(dirname(__DIR__) . '/migrations/', "", $migration));
+                $output->writeln('db migration on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/migrations/', "", $migration));
             endif;
         }
     }

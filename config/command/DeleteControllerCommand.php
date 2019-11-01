@@ -11,19 +11,16 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Str;
 use Config\Command\BaseCommand;
 
-class DeleteControllerCommand extends Command
-{
+class DeleteControllerCommand extends Command {
 
     protected static $defaultName = "d:controller";
 
-    public function __construct()
-    {
-        $this->controllerPath = dirname(__DIR__) . '/controllers/';
+    public function __construct() {
+        $this->controllerPath = dirname(dirname(__DIR__)) . '/app/controllers/';
         parent::__construct();
     }
 
-    protected function configure()
-    {
+    protected function configure() {
         $this
             ->setDescription("used to delete a controller")
             ->setHelp("Command used to delete a controller")
@@ -31,13 +28,11 @@ class DeleteControllerCommand extends Command
     }
 
 
-    protected function execute(InputInterface $input, OutputInterface $output)
-    {
+    protected function execute(InputInterface $input, OutputInterface $output) {
         $output->writeln($this->_deleteController($input));
     }
 
-    public function _deleteController($input)
-    {
+    public function _deleteController($input) {
         list($dirname, $filename) = BaseCommand::dir_and_file($input);
 
         if(file_exists($dirname . '/' . $filename)):

@@ -6,14 +6,12 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DatabaseSeedCommand extends Command
-{
+class DatabaseSeedCommand extends Command {
 
     protected static $defaultName = "db:seed";
 
-    public function __construct()
-    {
-        $this->seedPath = dirname(__DIR__) . '/migrations/seeds/';
+    public function __construct() {
+        $this->seedPath = dirname(dirname(__DIR__)) . '/app/migrations/seeds/';
         parent::__construct();
     }
 
