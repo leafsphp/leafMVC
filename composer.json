@@ -1,5 +1,28 @@
 {
+    "name": "leafs/api-starter",
+    "description": "Leaf is a PHP micro framework that helps you create clean, simple but powerful web apps and APIs quickly.",
+    "type": "library",
+    "keywords": [
+        "framework",
+        "leaf",
+        "leafPHP"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Darko",
+            "email": "mickdd22@gmail.com",
+            "homepage": "https://mychi.netlify.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "leafs/leaf": "dev-master"
+        "leafs/leaf": "dev-master",
+        "vlucas/phpdotenv": "^3.6"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+
+        ]
     }
 }
