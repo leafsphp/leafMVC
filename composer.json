@@ -20,9 +20,12 @@
         "leafs/leaf": "dev-master",
         "vlucas/phpdotenv": "^3.6"
     },
+    "config": {
+        "optimize-autoloader": true
+    },
     "scripts": {
-        "post-create-project-cmd": [
-
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     }
 }
