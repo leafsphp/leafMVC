@@ -19,7 +19,7 @@ class ConsoleCommand extends Command {
 
 
     protected function execute(InputInterface $input, OutputInterface $output) {
-        $output->writeln(">>> Leaf interactive shell activated");
+        $output->writeln("Leaf interactive shell activated");
         $shell = new Shell();
         $output->write($shell->run());
     }

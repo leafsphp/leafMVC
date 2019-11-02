@@ -14,6 +14,7 @@
     $app->add(new \Config\Command\GenerateModelCommand());
     $app->add(new \Config\Command\GenerateHelperCommand());
     $app->add(new \Config\Command\GenerateControllerCommand());
+    $app->add(new \Config\Command\GenerateApiControllerCommand());
     $app->add(new \Config\Command\DatabaseMigrationCommand());
     $app->add(new \Config\Command\DeleteControllerCommand());
     $app->add(new \Config\Command\ServerCommand());

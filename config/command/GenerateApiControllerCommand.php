@@ -11,9 +11,9 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Str;
 use Config\Command\BaseCommand;
 
-class GenerateControllerCommand extends Command
+class GenerateApiControllerCommand extends Command
 {
-    protected static $defaultName = 'g:controller';
+    protected static $defaultName = 'g:api-controller';
 
     public function __construct(){
         $this->controllerPath = dirname(dirname(__DIR__)) . '/app/controllers/';
@@ -69,7 +69,7 @@ class GenerateControllerCommand extends Command
             // create the main controller file
             touch($file);  
 
-            $fileContent = file_get_contents(__DIR__ . '/stubs/subController.stub');
+            $fileContent = file_get_contents(__DIR__ . '/stubs/apiController.stub');
             
             $fileContent = str_replace(["ClassName", "BaseController"], [$controller, $this->baseController], $fileContent);
             file_put_contents($file, $fileContent);
