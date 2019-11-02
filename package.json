@@ -4,6 +4,9 @@
   "description": "Leaf PHP MVC Framework",
   "author": "Michael Darko",
   "license": "MIT",
+  "scripts": {
+    "start": "cd app/views/react && npm start"
+  },
   "homepage": "https://leaf-docs.netlify.com",
   "devDependencies": {
     "@babel/core": "^7.0.0",

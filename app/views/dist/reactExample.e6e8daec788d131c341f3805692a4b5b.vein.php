@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <script type="text/javascript">
-        var myApp = {
+        var user = {
             logged : <?php echo htmlspecialchars( $user->logged, ENT_COMPAT, 'UTF-8', FALSE ); ?>
         };
     </script>

@@ -70,13 +70,13 @@ let config = {
 		]
 	},
 	externals: {
-		myApp: 'myApp',
+		user: 'user',
 	},
 	plugins: [
 		new ExtractTextPlugin(path.join('..', 'css', 'app.css')),
 		new webpack.DefinePlugin({
 			'__DEV__': JSON.stringify(true),
-			'__API_HOST__': JSON.stringify('http://localhost/my-app/'),
+			'__API_HOST__': JSON.stringify('This cariable is from webpack\'s config'),
 		}),
 	],
 
