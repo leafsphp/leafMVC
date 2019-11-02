@@ -7,12 +7,12 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let config = {
 	entry: {
 		main: [
-			'./__app/app.js'
+			'./src/app.js'
 			// './_devapp/css/app.scss'
 		]
 	},
 	output: {
-		path: path.resolve(__dirname, 'assets', 'bundle'),
+		path: path.resolve(__dirname, 'build'),
 		filename: '[name].bundle.js'
 	},
 	resolve: {

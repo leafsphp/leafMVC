@@ -6,6 +6,7 @@
     class ReactexampleController extends Controller {
         public function __construct() {
             parent::__construct();
+            $this->configure(["veins_dir" => "app/views", "cache_dir" => "app/views/dist"]);
         }
 
         public function index() {
