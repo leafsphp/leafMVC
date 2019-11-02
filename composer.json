@@ -26,7 +26,8 @@
         "illuminate/console": "^6.3"
     },
     "require-dev": {
-        "deployer/deployer": "^6.4"
+        "deployer/deployer": "^6.4",
+        "laravel/ui": "^1.1"
     },
     "config": {
         "optimize-autoloader": true

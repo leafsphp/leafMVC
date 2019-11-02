@@ -22,5 +22,6 @@
     $app->add(new \Config\Command\ConsoleCommand());
     $app->add(new \Config\Command\DatabaseRollbackCommand());
     $app->add(new \Config\Command\DatabaseSeedCommand());
+    $app->add(new \Laravel\Ui\UiCommand());
 
     $app->run();
