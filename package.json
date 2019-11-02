@@ -1,10 +1,10 @@
 {
-  "name": "alpha",
+  "name": "leaf-mvc",
   "version": "0.0.2",
-  "description": "The Alpha Framework",
-  "author": "Adu Lawrence Kweku",
+  "description": "Leaf PHP MVC Framework",
+  "author": "Michael Darko",
   "license": "MIT",
-  "homepage": "https://alpha.com",
+  "homepage": "https://leaf-docs.netlify.com",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -17,6 +17,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lawrenceadu/alpha"
+    "url": "https://github.com/leafsphp/leaf"
   }
 }
