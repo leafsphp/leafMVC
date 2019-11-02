@@ -3,6 +3,13 @@ Leaf MVC is a PHP MVC framework that helps you create clean, simple but powerful
 Leaf MVC is based on the ruby on rails framework😉😎
 
 
+#### Installation
+The best way to install LeafMVC is to use composer
+```bash
+composer create-project leafs/mvc <project-name>
+```
+
+
 #### Directory Structure
 ```bash
 C:.
