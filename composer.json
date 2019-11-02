@@ -1,5 +1,5 @@
 {
-    "name": "leafs/api-starter",
+    "name": "leafs/mvc",
     "description": "Leaf is a PHP micro framework that helps you create clean, simple but powerful web apps and APIs quickly.",
     "type": "library",
     "keywords": [
