@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "leafs/leaf": "dev-master",
+        "leafs/leaf": "1.4.1",
         "vlucas/phpdotenv": "^3.6",
         "symfony/console": "^4.3",
         "illuminate/support": "^6.4",

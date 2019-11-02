@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f0c0d5b34449f42bfa3f43eab4cf637",
+    "content-hash": "02955edb9713c8c3ff3f20affdb7f58e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -733,16 +733,16 @@
         },
         {
             "name": "leafs/leaf",
-            "version": "dev-master",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafsphp/leaf.git",
-                "reference": "975f99b2b6e0db8e43f049dfb9d555328ad598bb"
+                "reference": "dc64ca86dfa6e359b77b5b28159aba5f9263d301"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafsphp/leaf/zipball/975f99b2b6e0db8e43f049dfb9d555328ad598bb",
-                "reference": "975f99b2b6e0db8e43f049dfb9d555328ad598bb",
+                "url": "https://api.github.com/repos/leafsphp/leaf/zipball/dc64ca86dfa6e359b77b5b28159aba5f9263d301",
+                "reference": "dc64ca86dfa6e359b77b5b28159aba5f9263d301",
                 "shasum": ""
             },
             "require": {
@@ -769,7 +769,7 @@
                 }
             ],
             "description": "Leaf is a PHP micro framework that helps you create clean, simple but powerful web apps and APIs quickly.",
-            "time": "2019-10-31T07:54:12+00:00"
+            "time": "2019-11-02T03:07:00+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2011,9 +2011,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "leafs/leaf": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
