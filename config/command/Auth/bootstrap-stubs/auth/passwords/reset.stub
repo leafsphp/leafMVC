@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="height: 90vh; display: flex; align-items: center !important; justify-content: center !important;">
+        <div class="col-md-4 card">
+          <article class="card-body">
+            <a href="/auth/login" class="float-right btn btn-outline-primary">Sign In</a>
+            <h4 class="card-title mb-4 mt-1">Reset Password</h4>
+            <form method="POST" action="">
+              <div class="form-group">
+                <label>Your email</label>
+                <input
+                    name="email"
+                    class="form-control"
+                    placeholder="Email"
+                    type="email"
+                    required
+                />
+              </div>
+              <div class="form-group">
+                <label>Your new password</label>
+                <input
+                    name="password"
+                    class="form-control"
+                    placeholder="******"
+                    type="password"
+                    required
+                />
+              </div>
+              <div class="form-group">
+                <label>Confirm password</label>
+                <input
+                    name="cpassword"
+                    class="form-control"
+                    placeholder="******"
+                    type="password"
+                    required
+                />
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Reset Password
+                </button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

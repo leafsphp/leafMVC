@@ -1,0 +1,38 @@
+<?php
+
+namespace App\Controllers;
+
+use Leaf\Core\Controller;
+
+class AuthController extends Controller
+{
+    public function login()
+    {
+        $this->render("auth/login");
+    }
+
+    public function register()
+    {
+        $this->render("auth/register");
+    }
+
+    public function verify()
+    {
+        $this->render("auth/verify");
+    }
+
+    public function confirm()
+    {
+        $this->render("auth/passwords/confirm");
+    }
+
+    public function confirmEmail()
+    {
+        $this->render("auth/passwords/email");
+    }
+
+    public function reset()
+    {
+        $this->render("auth/passwords/reset");
+    }
+}

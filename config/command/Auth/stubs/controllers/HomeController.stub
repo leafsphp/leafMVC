@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Controllers;
+
+use Leaf\Core\Controller;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        $this->render("home");
+    }
+}

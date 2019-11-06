@@ -3,12 +3,11 @@
     require __DIR__.'/config/bootstrap.php';
 
     use Symfony\Component\Console\Application;
-    // use Config\Command;
 
     \Dotenv\Dotenv::create(__DIR__)->load();
 
     $app = new Application();
-    // ... register commands    
+    
     $app->add(new \Config\Command\GenerateTemplateCommand());
     $app->add(new \Config\Command\GenerateMigrationCommand());
     $app->add(new \Config\Command\GenerateModelCommand());
@@ -22,6 +21,7 @@
     $app->add(new \Config\Command\ConsoleCommand());
     $app->add(new \Config\Command\DatabaseRollbackCommand());
     $app->add(new \Config\Command\DatabaseSeedCommand());
-    $app->add(new \Laravel\Ui\UiCommand());
+    $app->add(new \Config\Command\UiCommand());
+    $app->add(new \Config\Command\AuthCommand());
 
     $app->run();
