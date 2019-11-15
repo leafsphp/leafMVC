@@ -16,4 +16,8 @@ $leaf->setNamespace('\App\Controllers');
 $leaf->get('/', 'IndexController@index');
 $leaf->get('/react', 'ReactexampleController@index');
 
+// $leaf->get('/api', function() {
+//     // something here
+// });
+
 $leaf->run();

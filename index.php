@@ -10,4 +10,4 @@ $errors = new Leaf\Config\Errors;
 
 $errors->show();
 
-require __DIR__. "/app/routes/routes.php";
+require __DIR__. "/config/routes.php";
