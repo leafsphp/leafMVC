@@ -1,26 +1,30 @@
 <?php
-    require __DIR__.'/vendor/autoload.php';
-    require __DIR__.'/config/bootstrap.php';
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| loading of any our classes "manually". Feels great to relax.
+|
+*/
+require __DIR__.'/vendor/autoload.php';
 
-    use Symfony\Component\Console\Application;
+/*
+|--------------------------------------------------------------------------
+| Register The Leaf Command Auto Loader
+|--------------------------------------------------------------------------
+|
+| Require all the files containing the Leaf Commands
+|
+*/
+require __DIR__.'/config/bootstrap.php';
 
-    \Dotenv\Dotenv::create(__DIR__)->load();
+\Dotenv\Dotenv::create(__DIR__)->load();
 
-    $app = new Application();
-    
-    $app->add(new \Config\Command\GenerateTemplateCommand());
-    $app->add(new \Config\Command\GenerateMigrationCommand());
-    $app->add(new \Config\Command\GenerateModelCommand());
-    $app->add(new \Config\Command\GenerateHelperCommand());
-    $app->add(new \Config\Command\GenerateControllerCommand());
-    $app->add(new \Config\Command\GenerateApiControllerCommand());
-    $app->add(new \Config\Command\DatabaseMigrationCommand());
-    $app->add(new \Config\Command\DeleteControllerCommand());
-    $app->add(new \Config\Command\ServerCommand());
-    $app->add(new \Config\Command\ConsoleCommand());
-    $app->add(new \Config\Command\DatabaseRollbackCommand());
-    $app->add(new \Config\Command\DatabaseSeedCommand());
-    // $app->add(new \Config\Command\UiCommand());
-    $app->add(new \Config\Command\AuthCommand());
+new \Config\Console;
 
-    $app->run();
+
+
