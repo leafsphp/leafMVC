@@ -15,7 +15,7 @@ class DatabaseMigrationCommand extends Command {
     protected static $defaultName = "db:migrate";
 
     public function __construct() {
-        $this->migrationPath = dirname(dirname(__DIR__)) . '/app/migrations/';
+        $this->migrationPath = dirname(dirname(__DIR__)) . '/app/database/migrations/';
         parent::__construct();
     }
 
@@ -43,7 +43,7 @@ class DatabaseMigrationCommand extends Command {
                 $class = new $className;
                 $class->up();
 
-                $output->writeln('db migration on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/migrations/', "", $migration));
+                $output->writeln('db migration on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/database/migrations/', "", $migration));
             endif;
         }
     }

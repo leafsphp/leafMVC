@@ -14,7 +14,7 @@
 
         public function __construct()
         {
-            $this->migrationPath = dirname(dirname(__DIR__)) . "/app/migrations/";
+            $this->migrationPath = dirname(dirname(__DIR__)) . "/app/database/migrations/";
             parent::__construct();
         }
     

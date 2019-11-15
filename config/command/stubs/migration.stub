@@ -1,5 +1,7 @@
 
 <?php 
+    namepace App\Database\Migrations;
+
     use Leaf\Core\Database;
     
     class ClassName extends Database {

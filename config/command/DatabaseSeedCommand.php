@@ -11,7 +11,7 @@ class DatabaseSeedCommand extends Command {
     protected static $defaultName = "db:seed";
 
     public function __construct() {
-        $this->seedPath = dirname(dirname(__DIR__)) . '/app/migrations/seeds/';
+        $this->seedPath = dirname(dirname(__DIR__)) . '/app/database/seeds/';
         parent::__construct();
     }
 
@@ -29,7 +29,7 @@ class DatabaseSeedCommand extends Command {
 
         foreach ($seeds as $seed) {
             $file = pathinfo($seed);
-            $filename = '\App\Migrations\Seeds\\' . $file['filename'];
+            $filename = '\App\Database\Seeds\\' . $file['filename'];
 
             $class = new $filename;
             $class->run();

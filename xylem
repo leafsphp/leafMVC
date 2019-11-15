@@ -24,7 +24,32 @@ require __DIR__.'/config/bootstrap.php';
 
 \Dotenv\Dotenv::create(__DIR__)->load();
 
-new \Config\Console;
+/*
+|--------------------------------------------------------------------------
+| Initialise Xylem CMD
+|--------------------------------------------------------------------------
+|
+| Initialise pre-defined xylem commands
+|
+*/
+$xylem = new \Config\Console;
 
+/*
+|--------------------------------------------------------------------------
+| Add custom command
+|--------------------------------------------------------------------------
+|
+| If you have a new command to add to Xylem
+|
+*/
+$xylem->registerCustom(new \App\Console\ExampleCommand());
 
-
+/*
+|--------------------------------------------------------------------------
+| Run The Xylem Application
+|--------------------------------------------------------------------------
+|
+| Transport water and dissolved substances to the rest of Leaf😂
+|
+*/
+$xylem->run();

@@ -13,6 +13,6 @@ use Illuminate\Foundation\Inspiring;
 |
 */
 
-$console->command('inspire', function () {
+$xylem->command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');

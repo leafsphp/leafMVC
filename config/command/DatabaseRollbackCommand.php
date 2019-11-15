@@ -16,7 +16,7 @@ class DatabaseRollbackCommand extends Command  {
 
     public function __construct()
     {
-        $this->migrationPath = dirname(dirname(__DIR__)) . '/app/migrations/';
+        $this->migrationPath = dirname(dirname(__DIR__)) . '/app/database/migrations/';
         parent::__construct();
     }
 
@@ -53,7 +53,7 @@ class DatabaseRollbackCommand extends Command  {
             $class = new $className;
             $class->down();
 
-            $output->writeln('db rollback on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/migrations/', "", $migration));
+            $output->writeln('db rollback on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/database/migrations/', "", $migration));
         }
     }
 }

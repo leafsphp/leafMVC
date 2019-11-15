@@ -11,7 +11,7 @@ composer create-project leafs/mvc <project-name>
 
 
 #### Directory Structure
-```bash
+<!-- ```bash
 C:.
 ├───app
 │   ├───controllers
@@ -28,7 +28,7 @@ C:.
 ├───public
 ├───storage
 └───vendor
-```
+``` -->
 As you can see, the structure of Leaf MVC isn't so different from other frameworks like Rails and Laravel, let's take a deeper look at the folder structure
 `app` is where the main code for the app sits. All the controllers, models, views, helpers, migrations and routes. 
 `config` holds configuration files for the Leaf framework, ie, Command Line suuport and class autoloader
