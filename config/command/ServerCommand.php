@@ -17,15 +17,17 @@ class ServerCommand extends Command
     protected function configure()
     {
         $this
-            ->setHelp("command used to start php server")
-            ->setDescription("command use to start php server on a port")
+            ->setHelp("Start the leaf app server")
+            ->setDescription("Run your Leaf app")
             ->addArgument("port", InputArgument::OPTIONAL, "port number");
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $port = $input->getArgument("port") ? (int)$input->getArgument("port") : 3000; 
+        $port = $input->getArgument("port") ? (int)$input->getArgument("port") : 5500; 
 
+        $output->write("Leaf development server started: http://localhost:$port\n");
+        $output->write("Happy gardening!! \n");
         $output->write(shell_exec("php -S localhost:{$port}"));
     }
 }

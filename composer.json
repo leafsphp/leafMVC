@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "leafs/leaf": "1.4.1",
+        "leafs/leaf": "1.4.2",
         "vlucas/phpdotenv": "^3.6",
         "symfony/console": "^4.3",
         "illuminate/support": "^6.4",
@@ -26,11 +26,12 @@
         "illuminate/console": "^6.3"
     },
     "require-dev": {
-        "deployer/deployer": "^6.4",
-        "laravel/ui": "^1.1"
+        "fzaninotto/faker": "^1.4",
+        "deployer/deployer": "^6.4"
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "scripts": {
         "post-root-package-install": [

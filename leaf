@@ -17,11 +17,10 @@
     $app->add(new \Config\Command\DatabaseMigrationCommand());
     $app->add(new \Config\Command\DeleteControllerCommand());
     $app->add(new \Config\Command\ServerCommand());
-    $app->add(new \Config\Command\StartCommand());
     $app->add(new \Config\Command\ConsoleCommand());
     $app->add(new \Config\Command\DatabaseRollbackCommand());
     $app->add(new \Config\Command\DatabaseSeedCommand());
-    // git $app->add(new \Config\Command\UiCommand());
+    // $app->add(new \Config\Command\UiCommand());
     $app->add(new \Config\Command\AuthCommand());
 
     $app->run();
