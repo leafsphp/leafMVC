@@ -11,5 +11,3 @@ $errors = new Leaf\Config\Errors;
 $errors->show();
 
 require __DIR__. "/app/routes/routes.php";
-
-$leaf->run();

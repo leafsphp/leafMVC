@@ -15,3 +15,5 @@ $leaf->set404(function() use($response) {
 $leaf->setNamespace('\App\Controllers');
 $leaf->get('/', 'IndexController@index');
 $leaf->get('/react', 'ReactexampleController@index');
+
+$leaf->run();
