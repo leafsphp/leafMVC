@@ -9,24 +9,19 @@
 |
 */
 
-// $leaf->before('GET|POST', function() {
-//     // api middle ware
-// });
+$response = new Leaf\Core\Http\Response;
+$request = new Leaf\Core\Http\Request;
+
+$leaf->before('GET|POST', function() {
+    header('Content-Type: application/json');
+}, null);
 
 $leaf->set404(function() use($response) {
 	$response->respond(["message" => "Error 404, route not found"]);
 });
 
-$leaf->get('/api/home', function() {
-    echo "api home";
-});
-
-$leaf->get('/api/users/all', function() {
-    echo "All Users";
-});
-
-$leaf->get('/user', function() {
-    // something here
+$leaf->get('/api/user/{id}', function($id) use($response) {
+    $response->respond(["message" => "User $id"]);
 });
 
 $leaf->run();
