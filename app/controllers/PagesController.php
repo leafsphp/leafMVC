@@ -1,18 +1,19 @@
 <?php
     namespace App\Controllers;
 
-    use Leaf\Core\ApiController;
+    use Leaf\Core\Controller;
     use Leaf\Core\Http\Request;
 
-    class ClassName extends ApiController {
+    class PagesController extends Controller {
         public function __construct() {
             parent::__construct();
         }
 
         public function index() {
-            $this->respond([
-				"message" => "This is the ClassName"
-			]);
+            $this->set([
+                "title" => "Leaf MVC Home"
+            ]);
+            $this->render("home");
         }
 
         public function create() {

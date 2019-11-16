@@ -7,7 +7,7 @@
         public static function dir_and_file($input): Array {
             $controllerPath = dirname(dirname(__DIR__)). '/app/controllers/';
 
-            $path_to_controller = strtolower($input->getArgument("controller")).'Controller.php';
+            $path_to_controller = ($input->getArgument("controller"));
             $path_info = pathinfo($path_to_controller);
     
             $dirname = $path_info["dirname"] == "." ? $controllerPath : $controllerPath . $path_info["dirname"];

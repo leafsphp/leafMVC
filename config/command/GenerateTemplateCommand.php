@@ -31,7 +31,7 @@ class GenerateTemplateCommand extends Command
     {
         $template = $input->getArgument("template");
 
-        $file = $this->templatePath . $template . '.vein';
+        $file = $this->templatePath . $template . '.vein.php';
 
         touch($file);
 
@@ -39,10 +39,5 @@ class GenerateTemplateCommand extends Command
         \file_put_contents($file, $fileContent);
 
         $output->writeln($template . ' generated successfully');
-
-        $process = new Process("composer dump-autoload");
-        $process->run();
-
-        $output->writeln($process->getOutput());
     }
 }

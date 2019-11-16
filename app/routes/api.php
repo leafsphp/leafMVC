@@ -10,7 +10,6 @@
 */
 
 $response = new Leaf\Core\Http\Response;
-$request = new Leaf\Core\Http\Request;
 
 $leaf->before('GET|POST', function() {
     header('Content-Type: application/json');
