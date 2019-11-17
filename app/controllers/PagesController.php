@@ -11,7 +11,15 @@
 
         public function index() {
             $this->set([
-                "title" => "Leaf MVC Home"
+                "title" => "Leaf MVC Home",
+                "users" => [
+                    [
+                        "name" => "Mychi"
+                    ],
+                    [
+                        "name" => "Sandra"
+                    ]
+                ]
             ]);
             $this->render("home");
         }

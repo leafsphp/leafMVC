@@ -8,5 +8,10 @@
 </head>
 <body>
 	<h2>{$title}</h2>
+	<ul>
+		{loop="$users" as $user}
+			<li>{$key} - {$user['name']|strtoupper}</li>
+		{/loop}
+	</ul>
 </body>
 </html>

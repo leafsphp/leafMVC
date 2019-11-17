@@ -6,8 +6,6 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Process\Process;
-use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Str;
 
 class GenerateHelperCommand extends Command
@@ -40,10 +38,5 @@ class GenerateHelperCommand extends Command
         \file_put_contents($file, $fileContent);
 
         $output->writeln($helper . ' generated successfully');
-
-        $process = new Process("composer dump-autoload");
-        $process->run();
-
-        $output->writeln($process->getOutput());
     }
 }

@@ -11,14 +11,12 @@
 $response = new Leaf\Core\Http\Response;
 
 $leaf->set404(function() use($response) {
-	$response->respond(["message" => "Error 404, page not found"]);
+	$response->renderHtmlPage('app/views/pages/errors/404.html');
 });
 
 $leaf->setNamespace('\App\Controllers');
 
 // $leaf->get('/', 'IndexController@index');
-
-$leaf->get('/react', 'ReactexampleController@index');
 
 $leaf->get('/', 'PagesController@index');
 

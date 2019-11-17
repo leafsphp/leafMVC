@@ -6,8 +6,6 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Process\Process;
-use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Str;
 use Config\Command\BaseCommand;
 
@@ -42,7 +40,7 @@ class DeleteControllerCommand extends Command {
 
             if ($is_empty === true):
                 $path = explode('/', $dirname);
-                $base_controller = Str::studly(strtolower(end($path))) . "Controller.php";
+                $base_controller = Str::studly(strtolower(end($path))) . ".php";
                 $base_path = str_replace(end($path), "", $dirname);
 
                 unlink($base_path . $base_controller);

@@ -6,8 +6,6 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Process\Process;
-use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Str;
 use Config\Command\BaseCommand;
 
@@ -32,10 +30,6 @@ class GenerateApiControllerCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln($this->_generateController($input));
-
-        $process = new Process("composer dump-autoload");
-        $process->run();
-        $output->writeln($process->getOutput());
     }
 
     public function _generateController($input)
