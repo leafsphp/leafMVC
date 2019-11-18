@@ -13,7 +13,7 @@
 
 
 # Leaf
-LeafMVC is a simple MVC framework built on top of the leaf php micro-framework.
+LeafMVC is a simple MVC framework built on top of the leaf php micro-framework. LeafMVC lets you create clean but powerful web apps and APIs quickly. Leaf provides simple to use functions to take care of complex issues, eventually speeding up development and taking the pain out of development.
 
 ## Installation
 
@@ -26,4 +26,17 @@ $ composer create project leafs/mvc <project-name>
 This will start a new LeafMVC app.
 
 
-## View Leaf's docs [here](https://leafmvc.netlify.com/)
+## Learning LeafMVC
+
+LeafMVC has a very easy to understand [documentation](https://leafmvc.netlify.com/) which contains information on all operations in LeafMVC.
+
+Since LeafMVC runs on Leaf, you can check out the Leaf PHP Framework documentation [here](https://leaf-docs.netlify.com).
+
+
+## License
+
+The LeafMVC framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## View LeafMVC's docs [here](https://leafmvc.netlify.com/)
+## View Leaf's docs [here](https://leaf-docs.netlify.com/)
