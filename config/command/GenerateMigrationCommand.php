@@ -28,17 +28,13 @@
     
         protected function execute(InputInterface $input, OutputInterface $output)
         {
-            $filename = Str::snake($input->getArgument("migration"));
-            $file = $this->migrationPath 
-                        . date("YmdHis") 
-                        . '_' 
-                        . $filename 
-                        . '.php';
-
+            $filename = Str::snake("Create".$input->getArgument("migration"));
+            $actualFileName = date("Y_m_d_His").'_'.$filename.'.php';
+            $file = $this->migrationPath.$actualFileName;
             // create the migration file
             touch($file);
 
-            $className = Str::studly($input->getArgument("migration"));
+            $className = Str::studly("Create".$input->getArgument("migration"));
 
             // get content of the migration stub
             $fileContent = \file_get_contents(__DIR__ . '/stubs/migration.stub');
@@ -49,6 +45,6 @@
             // update the migration file
             file_put_contents($file, $fileContent);
 
-            $output->writeln($file . ' file generated');
+            $output->writeln($actualFileName . ' generated successfully');
         }
     }

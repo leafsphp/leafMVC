@@ -22,34 +22,42 @@ require __DIR__.'/vendor/autoload.php';
 */
 require __DIR__.'/config/bootstrap.php';
 
+/*
+|--------------------------------------------------------------------------
+| Bring in (env)
+|--------------------------------------------------------------------------
+|
+| Quickly use our environment variables
+|
+*/
 \Dotenv\Dotenv::create(__DIR__)->load();
 
 /*
 |--------------------------------------------------------------------------
-| Initialise Xylem CMD
+| Initialise Leaf CMD
 |--------------------------------------------------------------------------
 |
-| Initialise pre-defined xylem commands
+| Initialise pre-defined console commands
 |
 */
-$xylem = new \Config\Console;
+$console = new \Config\Console;
 
 /*
 |--------------------------------------------------------------------------
 | Add custom command
 |--------------------------------------------------------------------------
 |
-| If you have a new command to add to Xylem
+| If you have a new command to add to Leaf
 |
 */
-$xylem->registerCustom(new \App\Console\ExampleCommand());
+$console->registerCustom(new \App\Console\ExampleCommand());
 
 /*
 |--------------------------------------------------------------------------
-| Run The Xylem Application
+| Run The console Application
 |--------------------------------------------------------------------------
 |
 | Transport water and dissolved substances to the rest of Leaf😂
 |
 */
-$xylem->run();
+$console->run();

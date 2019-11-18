@@ -3,7 +3,7 @@
     
     use Leaf\Core\Database;
     
-    class ClassName extends Database {
+    class CreatePasswordResets extends Database {
         public function __construct() {
             parent::__construct();
         }
@@ -14,10 +14,11 @@
          * @return void
          */
         public function up()  {
-            if(!$this->capsule::schema()->hasTable("table")):
-                $this->capsule::schema()->create("table", function ($table) {
-                    $table->increments('id');
-                    $table->timestamps();
+            if(!$this->capsule::schema()->hasTable("password_resets")):
+                $this->capsule::schema()->create("password_resets", function ($table) {
+                    $table->string('email')->index();
+                    $table->string('token');
+                    $table->timestamp('created_at')->nullable();
                 });
             endif;
         }
@@ -28,6 +29,6 @@
          * @return void
          */
         public function down() {
-            $this->capsule::schema()->dropIfExists("table");
+            $this->capsule::schema()->dropIfExists("password_resets");
         }
     }

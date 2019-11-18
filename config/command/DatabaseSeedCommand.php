@@ -25,14 +25,9 @@ class DatabaseSeedCommand extends Command {
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $seeds = glob($this->seedPath . '*.php');
+        $seed = new \App\Database\Seeds\DatabaseSeeder;
+        $seed->run();
 
-        foreach ($seeds as $seed) {
-            $file = pathinfo($seed);
-            $filename = '\App\Database\Seeds\\' . $file['filename'];
-
-            $class = new $filename;
-            $class->run();
-        }
+        $output->writeln("Database seed complete");
     }
 }
