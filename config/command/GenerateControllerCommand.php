@@ -2,10 +2,12 @@
 
 namespace Config\Command;
 
+use InvalidArgumentException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 use Illuminate\Support\Str;
 use Config\Command\BaseCommand;
 
@@ -23,11 +25,15 @@ class GenerateControllerCommand extends Command
         $this 
             ->setDescription("Create a new controller class")
             ->setHelp("Create a new controller class")
-            ->addArgument("controller", InputArgument::REQUIRED, 'controller name');
+            ->addArgument("controller", InputArgument::REQUIRED, 'controller name')
+            ->addOption("resource", null, InputOption::VALUE_NONE, 'The controller type');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        if (!in_array($input->getOption('resource'), [true, false])) {
+            throw new InvalidArgumentException('Invalid option.');
+        }
         $output->writeln($this->_generateController($input));
     }
 
@@ -38,10 +44,15 @@ class GenerateControllerCommand extends Command
         if (!file_exists($dirname . '/' . $filename)):
             $file = $dirname . '/' . $filename;
             $controller = str_replace(".php", "", $filename);
-            // create the main controller file
-            touch($file);  
+            touch($file);
 
-            $fileContent = file_get_contents(__DIR__ . '/stubs/resourceController.stub');
+            $option = $input->getOption('resource');
+
+            if (!$option) {
+                $fileContent = file_get_contents(__DIR__ . '/stubs/controller.stub');
+            } else {
+                $fileContent = file_get_contents(__DIR__ . '/stubs/resourceController.stub');
+            }
             
             $fileContent = str_replace(["ClassName"], [$controller], $fileContent);
             file_put_contents($file, $fileContent);
