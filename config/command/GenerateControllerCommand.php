@@ -26,7 +26,8 @@ class GenerateControllerCommand extends Command
             ->setDescription("Create a new controller class")
             ->setHelp("Create a new controller class")
             ->addArgument("controller", InputArgument::REQUIRED, 'controller name')
-            ->addOption("resource", null, InputOption::VALUE_NONE, 'The controller type');
+            ->addOption("resource", null, InputOption::VALUE_NONE, 'Create a resource controller')
+            ->addOption("api", null, InputOption::VALUE_NONE, 'Create an API controller');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -46,12 +47,18 @@ class GenerateControllerCommand extends Command
             $controller = str_replace(".php", "", $filename);
             touch($file);
 
-            $option = $input->getOption('resource');
+            $option = $input->getOption('api');
 
             if (!$option) {
-                $fileContent = file_get_contents(__DIR__ . '/stubs/controller.stub');
+                $option = $input->getOption('resource');
+
+                if (!$option) {
+                    $fileContent = file_get_contents(__DIR__ . '/stubs/controller.stub');
+                } else {
+                    $fileContent = file_get_contents(__DIR__ . '/stubs/resourceController.stub');
+                }
             } else {
-                $fileContent = file_get_contents(__DIR__ . '/stubs/resourceController.stub');
+                $fileContent = file_get_contents(__DIR__ . '/stubs/apiController.stub');
             }
             
             $fileContent = str_replace(["ClassName"], [$controller], $fileContent);

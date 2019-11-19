@@ -14,16 +14,4 @@
 				"message" => "This is the ClassName"
 			]);
         }
-
-        public function create() {
-            
-        }
-
-        public function show() {
-
-        }
-
-        public function destroy() {
-
-        }
     }
