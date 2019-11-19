@@ -51,7 +51,6 @@ C:.
 │           └───errors
 ├───config
 │   └───command
-├───lib
 ├───public
 ├───storage
 │   ├───app
