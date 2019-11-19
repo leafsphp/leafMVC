@@ -14,8 +14,8 @@
          * @return void
          */
         public function up()  {
-            if(!$this->capsule::schema()->hasTable("table")):
-                $this->capsule::schema()->create("table", function ($table) {
+            if(!$this->capsule::schema()->hasTable("tableName")):
+                $this->capsule::schema()->create("tableName", function ($table) {
                     $table->increments('id');
                     $table->timestamps();
                 });
@@ -28,6 +28,6 @@
          * @return void
          */
         public function down() {
-            $this->capsule::schema()->dropIfExists("table");
+            $this->capsule::schema()->dropIfExists("tableName");
         }
     }

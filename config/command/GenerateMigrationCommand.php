@@ -28,7 +28,8 @@
     
         protected function execute(InputInterface $input, OutputInterface $output)
         {
-            $filename = Str::snake("Create".$input->getArgument("migration"));
+            $userInput = Str::plural($input->getArgument("migration"));
+            $filename = Str::snake("Create_".$userInput);
             $actualFileName = date("Y_m_d_His").'_'.$filename.'.php';
             $file = $this->migrationPath.$actualFileName;
             // create the migration file
@@ -36,13 +37,10 @@
 
             $className = Str::studly("Create".$input->getArgument("migration"));
 
-            // get content of the migration stub
             $fileContent = \file_get_contents(__DIR__ . '/stubs/migration.stub');
 
-            // replace all ClassName with className variable
-            $fileContent = str_replace("ClassName", $className, $fileContent);
+            $fileContent = str_replace(["ClassName", "tableName"], [$className, $userInput], $fileContent);
             
-            // update the migration file
             file_put_contents($file, $fileContent);
 
             $output->writeln($actualFileName . ' generated successfully');

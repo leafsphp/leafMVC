@@ -5,6 +5,7 @@
     use Symfony\Component\Console\Input\InputInterface;
     use Symfony\Component\Console\Output\OutputInterface;
     use Symfony\Component\Console\Input\InputArgument;
+    use Symfony\Component\Console\Input\InputOption;
     use Illuminate\Support\Str;
 
     class GenerateModelCommand extends Command
@@ -14,8 +15,8 @@
 
         public function __construct()
         {
-            $this->migrationPath = dirname(dirname(__DIR__)) . "/app/database/migrations/";
-            $this->modelPath     = dirname(dirname(__DIR__)). "/app/models/";
+            $this->migrationPath = dirname(dirname(__DIR__)) . \migrations_path();
+            $this->modelPath  = dirname(dirname(__DIR__)). \models_path();
             
             parent::__construct();
         }
@@ -25,7 +26,8 @@
             $this 
                 ->setDescription("Create a new model class")
                 ->setHelp("Create a new model class")
-                ->addArgument('model', InputArgument::REQUIRED, 'model file name');
+                ->addArgument('model', InputArgument::REQUIRED, 'model file name')
+                ->addOption("migration", "m", InputOption::VALUE_NONE, 'Create a migration for model');
         }
     
         protected function execute(InputInterface $input, OutputInterface $output)
@@ -37,13 +39,10 @@
                 $model = $this->_createModel($input);
                 $output->writeln($model . ' model generated');
 
-                $migration = $this->_createMigration($input);
-                $output->writeln($migration . ' file generated');
-
-                // $process = new Process("composer dump-autoload");
-                // $process->run();
-
-                // $output->writeln($process->getOutput());
+                if ($input->getOption('migration')):
+                    $migration = $this->_createMigration($input);
+                    $output->writeln($migration . ' file generated');
+                endif;
             else:
                 $output->writeln("Model already exists");
             endif;
@@ -70,7 +69,7 @@
             $model = $input->getArgument("model");
 
             $filename = Str::snake(Str::plural($model));
-            $file = $this->migrationPath . date("YmdHis") . '_create_' . $filename . '.php';
+            $file = $this->migrationPath . date("Y_m_d_His") . '_create_' . $filename . '.php';
 
             // create the migration file
             touch($file);
@@ -79,7 +78,7 @@
             $tableName = \strtolower(Str::plural($model));
 
             // get content of the migration stub
-            $fileContent = \file_get_contents(__DIR__ . '/stubs/create.stub');
+            $fileContent = \file_get_contents(__DIR__ . '/stubs/migration.stub');
 
             // replace all ClassName with className variable
             $fileContent = str_replace(["ClassName", "tableName"], [$className, "{$tableName}"], $fileContent);
