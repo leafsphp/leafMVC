@@ -21,6 +21,8 @@ class Console {
 		$this->app->add(new \Config\Command\GenerateControllerCommand());
 
 		// Delete Commands
+		$this->app->add(new \Config\Command\DeleteModelCommand());
+		$this->app->add(new \Config\Command\DeleteTemplateCommand());
 		$this->app->add(new \Config\Command\DeleteControllerCommand());
 
 		// Database Commands
