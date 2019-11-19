@@ -26,6 +26,48 @@ $ composer create project leafs/mvc <project-name>
 This will start a new LeafMVC app.
 
 
+## Basic Info
+```bash
+C:.
+├───app
+│   ├───console
+│   ├───controllers
+│   │   └───Auth
+│   ├───database
+│   │   ├───factories
+│   │   ├───migrations
+│   │   └───seeds
+│   ├───helpers
+│   ├───models
+│   ├───routes
+│   └───views
+│       ├───assets
+│       │   ├───css
+│       │   ├───images
+│       │   ├───js
+│       │   └───sass
+│       ├───components
+│       └───pages
+│           └───errors
+├───config
+│   └───command
+├───lib
+├───public
+├───storage
+│   ├───app
+│   │   └───public
+│   ├───framework
+│   │   └───views
+│   └───logs
+└───vendor
+```
+This directory structure is a blend of Ruby on Rails and Laravel
+
+To run your LeafMVC application, use 
+```bash
+php leaf serve
+```
+
 ## Learning LeafMVC
 
 LeafMVC has a very easy to understand [documentation](https://leafmvc.netlify.com/) which contains information on all operations in LeafMVC.
