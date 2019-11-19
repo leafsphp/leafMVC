@@ -7,9 +7,9 @@
 </p>
 
 
-[![Latest Stable Version](https://poser.pugx.org/leafs/leaf/v/stable)](https://packagist.org/packages/leafs/mvc)
-[![Total Downloads](https://poser.pugx.org/leafs/leaf/downloads)](https://packagist.org/packages/leafs/mvc)
-[![License](https://poser.pugx.org/leafs/leaf/license)](https://packagist.org/packages/leafs/mvc)
+[![Latest Stable Version](https://poser.pugx.org/leafs/mvc/v/stable)](https://packagist.org/packages/leafs/mvc)
+[![Total Downloads](https://poser.pugx.org/leafs/mvc/downloads)](https://packagist.org/packages/leafs/mvc)
+[![License](https://poser.pugx.org/leafs/mvc/license)](https://packagist.org/packages/leafs/mvc)
 
 
 # Leaf
