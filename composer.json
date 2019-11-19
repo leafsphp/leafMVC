@@ -13,7 +13,10 @@
             "name": "Michael Darko",
             "email": "mickdd22@gmail.com",
             "homepage": "https://mychi.netlify.com",
-            "role": "Developer"
+            "role": [
+                "Owner", 
+                "Developer"
+            ]
         }
     ],
     "require": {

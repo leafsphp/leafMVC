@@ -16,8 +16,14 @@ $leaf->set404(function() use($response) {
 
 $leaf->setNamespace('\App\Controllers');
 
-// $leaf->get('/', 'IndexController@index');
-
 $leaf->get('/', 'PagesController@index');
+
+$leaf->get('/posts', 'PostsController@index');
+$leaf->post('/posts', 'PostsController@store');
+$leaf->get('/posts/create', 'PostsController@create');
+$leaf->get('/posts/{post}', 'PostsController@show');
+$leaf->match('PUT|PATCH', '/posts/{post}', 'PostsController@update');
+$leaf->delete('/posts/{post}', 'PostsController@destroy');
+$leaf->get('/posts/{post}/edit', 'PostsController@edit');
 
 $leaf->run();

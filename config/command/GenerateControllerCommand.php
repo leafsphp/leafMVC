@@ -27,6 +27,9 @@ class GenerateControllerCommand extends Command
             ->setDescription("Create a new controller class")
             ->setHelp("Create a new controller class")
             ->addArgument("controller", InputArgument::REQUIRED, 'controller name')
+            ->addOption("all", "a", InputOption::VALUE_NONE, 'Create a model, migration and template for controller')
+            ->addOption("template", "t", InputOption::VALUE_NONE, 'Create a template for controller')
+            ->addOption("view", null, InputOption::VALUE_NONE, 'Create a template for controller')
             ->addOption("model", "m", InputOption::VALUE_NONE, 'Create a model for controller')
             ->addOption("resource", "r", InputOption::VALUE_NONE, 'Create a resource controller')
             ->addOption("api", null, InputOption::VALUE_NONE, 'Create an API controller');
@@ -59,9 +62,21 @@ class GenerateControllerCommand extends Command
                 $fileContent = file_get_contents(__DIR__ . '/stubs/apiController.stub');
             }
 
-            if ($input->getOption('model')) {
+            if ($input->getOption('all')) {
+                $process = new Process("php leaf g:model ".Str::studly(str_replace("Controller", "", $controller))." -m");
+                $process->run();
+                $output->writeln("Model ".Str::studly(str_replace("Controller", "", $controller))." generated successfully");
+                $process = new Process("php leaf g:template ".Str::lower(str_replace("Controller", "", $controller)));
+                $process->run();
+                $output->writeln(Str::lower(str_replace("Controller", "", $controller)).".vein.php generated successfully");
+            } elseif ($input->getOption('model')) {
                 $process = new Process("php leaf g:model ".Str::studly(str_replace("Controller", "", $controller)));
                 $process->run();
+                $output->writeln("Model ".Str::studly(str_replace("Controller", "", $controller))." generated successfully");
+            } elseif ($input->getOption('template') || $input->getOption('view')) {
+                $process = new Process("php leaf g:template ".Str::lower(str_replace("Controller", "", $controller)));
+                $process->run();
+                $output->writeln(Str::lower(str_replace("Controller", "", $controller)).".vein.php generated successfully");
             }
             
             $fileContent = str_replace(["ClassName"], [$controller], $fileContent);

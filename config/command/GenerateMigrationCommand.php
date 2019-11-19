@@ -30,9 +30,10 @@
         {
             $userInput = Str::plural($input->getArgument("migration"));
             $filename = Str::snake("Create_".$userInput);
+            
             $actualFileName = date("Y_m_d_His").'_'.$filename.'.php';
             $file = $this->migrationPath.$actualFileName;
-            // create the migration file
+            
             touch($file);
 
             $className = Str::studly("Create".$input->getArgument("migration"));
