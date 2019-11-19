@@ -40,10 +40,10 @@
                 $migration = $this->_createMigration($input);
                 $output->writeln($migration . ' file generated');
 
-                $process = new Process("composer dump-autoload");
-                $process->run();
+                // $process = new Process("composer dump-autoload");
+                // $process->run();
 
-                $output->writeln($process->getOutput());
+                // $output->writeln($process->getOutput());
             else:
                 $output->writeln("Model already exists");
             endif;

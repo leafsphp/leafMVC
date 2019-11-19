@@ -3,6 +3,7 @@
 namespace Config\Command;
 
 use InvalidArgumentException;
+use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -26,7 +27,8 @@ class GenerateControllerCommand extends Command
             ->setDescription("Create a new controller class")
             ->setHelp("Create a new controller class")
             ->addArgument("controller", InputArgument::REQUIRED, 'controller name')
-            ->addOption("resource", null, InputOption::VALUE_NONE, 'Create a resource controller')
+            ->addOption("model", "m", InputOption::VALUE_NONE, 'Create a model for controller')
+            ->addOption("resource", "r", InputOption::VALUE_NONE, 'Create a resource controller')
             ->addOption("api", null, InputOption::VALUE_NONE, 'Create an API controller');
     }
 
@@ -35,10 +37,10 @@ class GenerateControllerCommand extends Command
         if (!in_array($input->getOption('resource'), [true, false])) {
             throw new InvalidArgumentException('Invalid option.');
         }
-        $output->writeln($this->_generateController($input));
+        $output->writeln($this->_generateController($input, $output));
     }
 
-    public function _generateController($input)
+    public function _generateController($input, $output)
     {
         list($dirname, $filename) = BaseCommand::dir_and_file($input);
 
@@ -47,12 +49,8 @@ class GenerateControllerCommand extends Command
             $controller = str_replace(".php", "", $filename);
             touch($file);
 
-            $option = $input->getOption('api');
-
-            if (!$option) {
-                $option = $input->getOption('resource');
-
-                if (!$option) {
+            if (!$input->getOption('api')) {
+                if (!$input->getOption('resource')) {
                     $fileContent = file_get_contents(__DIR__ . '/stubs/controller.stub');
                 } else {
                     $fileContent = file_get_contents(__DIR__ . '/stubs/resourceController.stub');
@@ -60,13 +58,18 @@ class GenerateControllerCommand extends Command
             } else {
                 $fileContent = file_get_contents(__DIR__ . '/stubs/apiController.stub');
             }
+
+            if ($input->getOption('model')) {
+                $process = new Process("php leaf g:model ".Str::studly(str_replace("Controller", "", $controller)));
+                $process->run();
+            }
             
             $fileContent = str_replace(["ClassName"], [$controller], $fileContent);
             file_put_contents($file, $fileContent);
 
             return "$controller created successfully";
         else:
-            return "Controller already exists";
+            return str_replace(".php", "", $filename)." already exists";
         endif;
     }
 }
