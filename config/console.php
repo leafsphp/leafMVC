@@ -7,7 +7,7 @@ class Console {
 	private $app;
 
 	public function __construct() {
-		$this->app = new Application();
+		$this->app = new Application("LeafMVC Framework v1.3.0");
 
 		// Random Commands
 		$this->app->add(new \Config\Command\ServerCommand());

@@ -41,7 +41,7 @@ class GenerateControllerCommand extends Command
             // create the main controller file
             touch($file);  
 
-            $fileContent = file_get_contents(__DIR__ . '/stubs/subController.stub');
+            $fileContent = file_get_contents(__DIR__ . '/stubs/resourceController.stub');
             
             $fileContent = str_replace(["ClassName"], [$controller], $fileContent);
             file_put_contents($file, $fileContent);

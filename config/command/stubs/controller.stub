@@ -5,14 +5,5 @@
     use Leaf\Core\Http\Request;
 
     class ClassName extends Controller {
-        public function __construct() {
-            parent::__construct();
-        }
-
-        public function index() {
-            $this->set([
-                "title" => "Leaf Vein Integration"
-            ]);
-            $this->render("index");
-        }
+        // 
     }
