@@ -14,7 +14,7 @@ return [
     */
 
     'paths' => [
-        views_path('app/views'),
+        views_path('/'),
     ],
 
     /*

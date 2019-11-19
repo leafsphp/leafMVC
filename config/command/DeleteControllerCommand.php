@@ -20,8 +20,8 @@ class DeleteControllerCommand extends Command {
 
     protected function configure() {
         $this
-            ->setDescription("used to delete a controller")
-            ->setHelp("Command used to delete a controller")
+            ->setDescription("Delete a controller")
+            ->setHelp("Delete a controller")
             ->addArgument("controller", InputArgument::REQUIRED, "controller name");
     }
 

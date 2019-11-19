@@ -21,8 +21,8 @@ class DatabaseRollbackCommand extends Command  {
     protected function configure()
     {
         $this
-            ->setDescription("used to run migrations")
-            ->setHelp("Command used to run migration")
+            ->setDescription("Rollback all database migrations")
+            ->setHelp("Rollback all database migrations")
             ->addArgument('step', InputArgument::REQUIRED, 'step required');
     }
 

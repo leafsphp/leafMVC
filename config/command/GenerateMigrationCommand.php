@@ -21,8 +21,8 @@
         protected function configure()
         {
             $this 
-                ->setDescription("A command used to create migration")
-                ->setHelp("This command is used to create migration files")
+                ->setDescription("Create a new migration file")
+                ->setHelp("Create a new migration file")
                 ->addArgument('migration', InputArgument::REQUIRED, 'migration file name');
         }
     

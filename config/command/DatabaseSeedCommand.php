@@ -18,8 +18,8 @@ class DatabaseSeedCommand extends Command {
     protected function configure()
     {
         $this
-            ->setDescription("used to run seeds")
-            ->setHelp("Command used to run seeds");
+            ->setDescription("Seed the database with records")
+            ->setHelp("Seed the database with records");
     }
 
 

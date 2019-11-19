@@ -19,8 +19,8 @@ class DatabaseMigrationCommand extends Command {
     
     protected function configure() {
         $this
-        ->setDescription("used to run migrations")
-        ->setHelp("Command used to run migration");
+        ->setDescription("Run the database migrations")
+        ->setHelp("Run the database migrations");
     }
     
     

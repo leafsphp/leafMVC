@@ -22,8 +22,8 @@ class GenerateApiControllerCommand extends Command
     protected function configure()
     {
         $this 
-            ->setDescription("command to generate controller file")
-            ->setHelp("Used to generate controller file")
+            ->setDescription("Create a new controller class for APIs")
+            ->setHelp("Create a new controller class for APIs")
             ->addArgument("controller", InputArgument::REQUIRED, 'controller name');
     }
 

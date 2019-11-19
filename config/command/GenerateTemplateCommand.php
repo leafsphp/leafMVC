@@ -20,8 +20,8 @@ class GenerateTemplateCommand extends Command
     protected function configure()
     {
         $this 
-            ->setDescription("command to generate a new vein template")
-            ->setHelp("Used to generate a new vein template file")
+            ->setDescription("Create a new vein template")
+            ->setHelp("Create a new vein template")
             ->addArgument("template", InputArgument::REQUIRED, 'template name');
     }
 

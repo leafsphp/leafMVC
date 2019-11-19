@@ -20,8 +20,8 @@ class GenerateHelperCommand extends Command
     protected function configure()
     {
         $this 
-            ->setDescription("command to generate helper file")
-            ->setHelp("Used to generate helper file")
+            ->setDescription("Create a new helper class")
+            ->setHelp("Create a new helper class")
             ->addArgument("helper", InputArgument::REQUIRED, 'helper name');
     }
 

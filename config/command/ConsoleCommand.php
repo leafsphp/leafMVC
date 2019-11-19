@@ -13,8 +13,8 @@ class ConsoleCommand extends Command {
 
     protected function configure()  {
         $this
-            ->setDescription("used to run leaf console")
-            ->setHelp("Command used to run leaf console");
+            ->setDescription("Interact with your application")
+            ->setHelp("Interact with your application");
     }
 
 

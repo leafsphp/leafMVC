@@ -21,8 +21,8 @@ class GenerateControllerCommand extends Command
     protected function configure()
     {
         $this 
-            ->setDescription("command to generate controller file")
-            ->setHelp("Used to generate controller file")
+            ->setDescription("Create a new controller class")
+            ->setHelp("Create a new controller class")
             ->addArgument("controller", InputArgument::REQUIRED, 'controller name');
     }
 

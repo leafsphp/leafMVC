@@ -23,8 +23,8 @@
         protected function configure()
         {
             $this 
-                ->setDescription("A command used to create model")
-                ->setHelp("This command is used to create model files")
+                ->setDescription("Create a new model class")
+                ->setHelp("Create a new model class")
                 ->addArgument('model', InputArgument::REQUIRED, 'model file name');
         }
     
