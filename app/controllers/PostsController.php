@@ -4,19 +4,17 @@
     use Leaf\Core\Controller;
     use Leaf\Core\Http\Request;
 
-    class PostsController extends Controller {
-        public function __construct() {
-            parent::__construct();
-        }
+    use App\Models\Post;
 
+    class PostsController extends Controller {
         /**
          * Display a listing of the resource.
          */
         public function index() {
             $this->set([
-                "title" => "Leaf Vein Integration"
+                "posts" => Post::orderBy('created_at', 'desc')->paginate(2)
             ]);
-            $this->render("index");
+            $this->render("pages/posts/index");
         }
 
         /**
@@ -37,7 +35,8 @@
          * Display the specified resource.
          */
         public function show($id) {
-            //
+            $this->set(["post" => Post::find($id)]);
+            $this->render("pages/posts/show");
         }
 
         /**

@@ -1,1 +1,15 @@
-//
+// import partials
+@import 'variables';
+@import 'resets';
+@import 'utils';
+
+// media queries partials
+@import "sm";
+
+@media (min-width: 768px){
+    @import "md";
+}
+
+@media (min-width: 992px){
+    @import "lg";
+}

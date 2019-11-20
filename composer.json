@@ -13,20 +13,18 @@
             "name": "Michael Darko",
             "email": "mickdd22@gmail.com",
             "homepage": "https://mychi.netlify.com",
-            "role": [
-                "Owner", 
-                "Developer"
-            ]
+            "role": "Developer"
         }
     ],
     "require": {
-        "leafs/leaf": "1.4.2",
-        "vlucas/phpdotenv": "^3.6",
-        "symfony/console": "^4.3",
-        "illuminate/support": "^6.4",
         "doctrine/dbal": "^2.9",
+        "illuminate/console": "^6.3",
+        "illuminate/pagination": "^6.5",
+        "illuminate/support": "^6.4",
+        "leafs/leaf": "1.4.1",
         "psy/psysh": "^0.9.9",
-        "illuminate/console": "^6.3"
+        "symfony/console": "^4.3",
+        "vlucas/phpdotenv": "^3.6"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",

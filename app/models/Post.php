@@ -13,6 +13,7 @@
          * @var array
          */
         protected $fillable = [
-
+            
         ];
+        protected $table = 'posts';
     }

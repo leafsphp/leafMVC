@@ -10,29 +10,6 @@
         }
 
         public function index() {
-            $this->set([
-                "title" => "Leaf MVC Home",
-                "users" => [
-                    [
-                        "name" => "Mychi"
-                    ],
-                    [
-                        "name" => "Sandra"
-                    ]
-                ]
-            ]);
-            $this->render("home");
-        }
-
-        public function create() {
-            
-        }
-
-        public function show() {
-
-        }
-
-        public function destroy() {
-
+            $this->render("pages/index");
         }
     }
