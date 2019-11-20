@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px !important;">
 	<div class="container-fluid">
 		<a href="/" class="navbar-brand">Leaf MVC</a>
+		<div style="flex: 1000"></div>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle Nav">
 			<span class="navbar-toggler-icon"></span>
 		</button>

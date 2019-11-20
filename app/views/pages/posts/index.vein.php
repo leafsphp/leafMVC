@@ -7,7 +7,6 @@
 	<title>{function="env('APP_NAME')"}</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/app/views/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
 	{include="../../components/header"}
@@ -26,6 +25,7 @@
 			There are no posts
 		{/if}
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="/app/views/assets/js/jquery.min.js"></script>
+	<script src="/app/views/assets/js/bootstrap.min.js"></script>
 </body>
 </html>

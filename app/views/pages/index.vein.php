@@ -20,13 +20,15 @@
       </p>
       <div class="row">
         <div class="col-md-3">
-          <a class="btn btn-success" style="color: white;" href="https://leaf-docs.netlify.com">View Leaf Core docs &raquo;</a>
+          <a class="btn btn-success" style="color: white;" href="https://leaf-docs.netlify.com" target="_blank">View Leaf Core docs &raquo;</a>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-primary" style="color: white;" href="https://leafmvc.netlify.com">View LeafMVC docs &raquo;</a>
+          <a class="btn btn-primary" style="color: white;" href="https://leafmvc.netlify.com" target="_blank">View LeafMVC docs &raquo;</a>
         </div>
       </div>
     </div>
   </div> <!-- /container -->
+	<script src="/app/views/assets/js/jquery.min.js"></script>
+	<script src="/app/views/assets/js/bootstrap.min.js"></script>
 </body>
 </html>
