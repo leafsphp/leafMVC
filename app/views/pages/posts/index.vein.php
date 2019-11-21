@@ -21,6 +21,7 @@
 					<small>Written on {$post->created_at}</small>
 				</div>
 			{/loop}
+			{$posts->links()}
 		{else}
 			There are no posts
 		{/if}

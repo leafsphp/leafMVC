@@ -21,6 +21,7 @@
         "illuminate/console": "^6.3",
         "illuminate/pagination": "^6.5",
         "illuminate/support": "^6.4",
+        "laravelcollective/html": "^5.4.0",
         "leafs/leaf": "1.4.1",
         "psy/psysh": "^0.9.9",
         "symfony/console": "^4.3",

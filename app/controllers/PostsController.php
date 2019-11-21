@@ -7,12 +7,15 @@
     use App\Models\Post;
 
     class PostsController extends Controller {
+        public function __construct() {
+            $this->request = new Request;
+        }
         /**
          * Display a listing of the resource.
          */
         public function index() {
             $this->set([
-                "posts" => Post::orderBy('created_at', 'desc')->paginate(2)
+                "posts" => Post::orderBy('created_at', 'desc')->paginate(15)
             ]);
             $this->render("pages/posts/index");
         }
@@ -21,14 +24,15 @@
          * Show the form for creating a new resource.
          */
         public function create() {
-            //
+            $this->render("pages/posts/create");
         }
 
         /**
          * Store a newly created resource in storage.
          */
-        public function store(Request $request) {
-            //
+        public function store() {
+            echo $this->request->getParam("title")."<br>";
+            echo $this->request->getParam("body");
         }
 
         /**
@@ -49,7 +53,7 @@
         /**
          * Update the specified resource in storage.
          */
-        public function update(Request $request, $id) {
+        public function update($id) {
             //
         }
 

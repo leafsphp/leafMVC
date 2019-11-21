@@ -11,8 +11,8 @@
 		<div class="collapse navbar-collapse" id="mobileNav">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="/" class="navbar-brand" style="font-size: 16px;">Home</a></li>
-				<li style="margin-left: 10px;"></li>
 				<li><a href="/posts" class="navbar-brand" style="font-size: 16px;">All Posts</a></li>
+				<li><a href="/posts/create" class="navbar-brand" style="font-size: 16px;">New Post</a></li>
 			</ul>
 		</div>
 	</div>
