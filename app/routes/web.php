@@ -18,13 +18,4 @@ $leaf->setNamespace('\App\Controllers');
 
 $leaf->get('/', 'PagesController@index');
 
-$leaf->get('/posts', 'PostsController@index');
-$leaf->post('/posts', 'PostsController@store');
-$leaf->get('/posts/create', 'PostsController@create');
-$leaf->get('/posts/{post}/edit', 'PostsController@edit');
-$leaf->match('PUT|PATCH|POST', '/posts/{post}', 'PostsController@update');
-$leaf->get('/posts/delete/{post}', 'PostsController@destroy');
-$leaf->get('/posts/{post}', 'PostsController@show');
-// $leaf->delete('/posts/{post}', 'PostsController@destroy');
-
 $leaf->run();
