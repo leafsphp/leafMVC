@@ -52,7 +52,10 @@
          * Display the specified resource.
          */
         public function show($id) {
-            $this->set(["post" => Post::find($id)]);
+            $this->set([
+                "post" => Post::find($id)
+            ]);
+            
             $this->render("pages/posts/show");
         }
 
@@ -60,20 +63,38 @@
          * Show the form for editing the specified resource.
          */
         public function edit($id) {
-            //
+            $this->set([
+                "post" => Post::find($id)
+            ]);
+            
+            $this->render("pages/posts/edit");
         }
 
         /**
          * Update the specified resource in storage.
          */
         public function update($id) {
-            //
+            $post = Post::find($id);
+            $post->title = $this->request->getParam("title");
+            $post->body = $this->request->getParam("body");
+            $post->save();
+
+            $title = $this->request->getParam("title");
+
+            $this->session->set("success", "$title has been updated");
+
+            header('location: /posts');
         }
 
         /**
          * Remove the specified resource from storage.
          */
         public function destroy($id) {
-            //
+            $post = Post::find($id);
+            $post->delete();
+
+            $this->session->set("success", "Post deleted");
+
+            header('location: /posts');
         }
     }
