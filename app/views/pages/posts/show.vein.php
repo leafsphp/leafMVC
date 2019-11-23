@@ -11,6 +11,7 @@
 </head>
 <body>
 	{include="../../components/header"}
+	{include="../../components/notification"}	
 
 	<div class="container">
 		<p>

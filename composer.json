@@ -19,10 +19,8 @@
     "require": {
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^6.3",
-        "illuminate/pagination": "^6.5",
-        "illuminate/support": "^6.4",
-        "laravelcollective/html": "^5.4.0",
-        "leafs/leaf": "1.4.1",
+        "leafs/leaf": "^1.4.2",
+        "leafs/pagination": "dev-master",
         "psy/psysh": "^0.9.9",
         "symfony/console": "^4.3",
         "vlucas/phpdotenv": "^3.6"
@@ -33,7 +31,7 @@
     },
     "config": {
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": false
     },
     "scripts": {
         "post-root-package-install": [

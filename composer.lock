@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca7f9784b8e2963119eca73b4119a1ab",
+    "content-hash": "7d27623b5100e0d0e1e05e5ed12acb31",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -583,51 +583,6 @@
             "time": "2019-10-22T12:57:02+00:00"
         },
         {
-            "name": "illuminate/pagination",
-            "version": "v6.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/pagination.git",
-                "reference": "d139a99911a11abef8bac46a7fd6430f8904ee79"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/pagination/zipball/d139a99911a11abef8bac46a7fd6430f8904ee79",
-                "reference": "d139a99911a11abef8bac46a7fd6430f8904ee79",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "illuminate/contracts": "^6.0",
-                "illuminate/support": "^6.0",
-                "php": "^7.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Pagination\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate Pagination package.",
-            "homepage": "https://laravel.com",
-            "time": "2019-09-10T15:16:05+00:00"
-        },
-        {
             "name": "illuminate/support",
             "version": "v6.4.1",
             "source": {
@@ -778,16 +733,16 @@
         },
         {
             "name": "leafs/leaf",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafsphp/leaf.git",
-                "reference": "dc64ca86dfa6e359b77b5b28159aba5f9263d301"
+                "reference": "4c4ae839cc31eaf0e16e1f3a1df3828f68994b7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafsphp/leaf/zipball/dc64ca86dfa6e359b77b5b28159aba5f9263d301",
-                "reference": "dc64ca86dfa6e359b77b5b28159aba5f9263d301",
+                "url": "https://api.github.com/repos/leafsphp/leaf/zipball/4c4ae839cc31eaf0e16e1f3a1df3828f68994b7d",
+                "reference": "4c4ae839cc31eaf0e16e1f3a1df3828f68994b7d",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +769,49 @@
                 }
             ],
             "description": "Leaf is a PHP micro framework that helps you create clean, simple but powerful web apps and APIs quickly.",
-            "time": "2019-11-02T03:07:00+00:00"
+            "time": "2019-11-13T10:08:30+00:00"
+        },
+        {
+            "name": "leafs/pagination",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafsphp/leaf-mvc-pagination.git",
+                "reference": "2c5dc70c53161f10728eb627c3ce7a568ec7b202"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafsphp/leaf-mvc-pagination/zipball/2c5dc70c53161f10728eb627c3ce7a568ec7b202",
+                "reference": "2c5dc70c53161f10728eb627c3ce7a568ec7b202",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^6.0",
+                "illuminate/support": "^6.0",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Pagination\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Darko",
+                    "email": "mickdd22@gmail.com",
+                    "homepage": "https://mychi.netlify.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The LeafMVC Pagination package created from illumminate/pagination.",
+            "homepage": "https://leafmvc.netlify.com",
+            "time": "2019-11-23T09:51:51+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2045,6 +2042,51 @@
             "time": "2019-10-27T20:14:21+00:00"
         },
         {
+            "name": "illuminate/pagination",
+            "version": "v6.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/pagination.git",
+                "reference": "d139a99911a11abef8bac46a7fd6430f8904ee79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/pagination/zipball/d139a99911a11abef8bac46a7fd6430f8904ee79",
+                "reference": "d139a99911a11abef8bac46a7fd6430f8904ee79",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^6.0",
+                "illuminate/support": "^6.0",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Pagination\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Pagination package.",
+            "homepage": "https://laravel.com",
+            "time": "2019-09-10T15:16:05+00:00"
+        },
+        {
             "name": "laravel/ui",
             "version": "v1.1.1",
             "source": {
@@ -2262,7 +2304,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "leafs/pagination": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

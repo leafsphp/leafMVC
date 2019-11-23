@@ -10,17 +10,19 @@
 </head>
 <body>
 	{include="../../components/header"}
+	{include="../../components/notification"}
+	
 	<div class="container">
 		<h2>Create Post</h2>
 		<div class="body">
 			<form action="/posts" method="post">
 				<div class="form-group">
 					<label id="title">Title</label>
-					<input type="text" name="title" class="form-control" placeholder="This is my title">
+					<input type="text" name="title" class="form-control" placeholder="This is my title" required>
 				</div>
 				<div class="form-group">
 					<label id="body">Body</label>
-					<textarea type="text" name="body" class="form-control" placeholder="This is my body" rows="7"></textarea>
+					<textarea type="text" name="body" class="form-control" placeholder="This is my body" rows="7" required></textarea>
 				</div>
 				<button type="submit" name="add-posts-btn" class="btn btn-primary">Submit Post</button>
 			</form>

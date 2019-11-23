@@ -7,6 +7,7 @@ use Leaf\Core\Http\Request;
 
 class ClassName extends Controller {
     public function __construct() {
+        parent::__construct();
         $this->request = new Request;
     }
     

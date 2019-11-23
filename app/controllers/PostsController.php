@@ -8,7 +8,9 @@
 
     class PostsController extends Controller {
         public function __construct() {
+            parent::__construct();
             $this->request = new Request;
+            $this->configure();
         }
         /**
          * Display a listing of the resource.
@@ -17,7 +19,7 @@
             $this->set([
                 "posts" => Post::orderBy('created_at', 'desc')->paginate(15)
             ]);
-            $this->render("pages/posts/index");
+            return $this->render("pages/posts/index");
         }
 
         /**

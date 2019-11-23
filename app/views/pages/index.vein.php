@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="/app/views/assets/css/bootstrap.min.css">
 </head>
 <body>
-	{include="../components/header"}
+  {include="../components/header"}
+  {include="../components/notification"}
 
   <div class="container">
     <div class="jumbotron">
