@@ -3,6 +3,7 @@
 
     use Leaf\Core\Controller;
     use Leaf\Core\Http\Request;
+    use Leaf\Core\Http\Session;
 
     use App\Models\Post;
 
@@ -10,16 +11,18 @@
         public function __construct() {
             parent::__construct();
             $this->request = new Request;
-            $this->configure();
+            $this->session = new Session;
         }
         /**
          * Display a listing of the resource.
          */
         public function index() {
             $this->set([
-                "posts" => Post::orderBy('created_at', 'desc')->paginate(15)
+                "posts" => Post::orderBy('created_at', 'desc')->paginate(15),
+                "session" => $this->session->getBody()
             ]);
-            return $this->render("pages/posts/index");
+            $this->render("pages/posts/index");
+            $this->session->remove("success");
         }
 
         /**
@@ -33,8 +36,16 @@
          * Store a newly created resource in storage.
          */
         public function store() {
-            echo $this->request->getParam("title")."<br>";
-            echo $this->request->getParam("body");
+            $post = new Post;
+            $post->title = $this->request->getParam("title");
+            $post->body = $this->request->getParam("body");
+            $post->save();
+
+            $title = $this->request->getParam("title");
+
+            $this->session->set("success", "$title has been posted");
+
+            header('location: /posts');
         }
 
         /**

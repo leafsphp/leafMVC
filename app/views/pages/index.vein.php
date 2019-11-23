@@ -5,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Leaf MVC</title>
-	<link rel="stylesheet" href="/app/views/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 </head>
 <body>
   {include="../components/header"}
-  {include="../components/notification"}
 
   <div class="container">
     <div class="jumbotron">
@@ -29,7 +28,7 @@
       </div>
     </div>
   </div> <!-- /container -->
-	<script src="/app/views/assets/js/jquery.min.js"></script>
-	<script src="/app/views/assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>

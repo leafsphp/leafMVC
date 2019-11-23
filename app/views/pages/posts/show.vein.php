@@ -6,12 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>{function="env('APP_NAME')"}</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="/app/views/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
 </head>
 <body>
 	{include="../../components/header"}
-	{include="../../components/notification"}	
 
 	<div class="container">
 		<p>
@@ -21,6 +19,7 @@
 		<p style="font-size: 20px;">{$post->body}</p>
 		<small>Written on {$post->created_at}</small><br>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/bootstrap.min.js"></script>
 </body>
 </html>

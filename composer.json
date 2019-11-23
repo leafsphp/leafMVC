@@ -19,7 +19,7 @@
     "require": {
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^6.3",
-        "leafs/leaf": "^1.4.2",
+        "leafs/leaf": "dev-master",
         "leafs/pagination": "dev-master",
         "psy/psysh": "^0.9.9",
         "symfony/console": "^4.3",

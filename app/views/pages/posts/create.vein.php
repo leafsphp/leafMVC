@@ -10,7 +10,6 @@
 </head>
 <body>
 	{include="../../components/header"}
-	{include="../../components/notification"}
 	
 	<div class="container">
 		<h2>Create Post</h2>
