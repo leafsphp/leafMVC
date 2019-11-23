@@ -15,15 +15,15 @@
 # Leaf
 LeafMVC is a simple MVC framework built on top of the leaf php micro-framework. LeafMVC lets you create clean but powerful web apps and APIs quickly. Leaf provides simple to use functions to take care of complex issues, eventually speeding up development and taking the pain out of development.
 
+
 ## Installation
 
-It's recommended that you use [Composer](https://getcomposer.org/) to install Leaf.
-
+**This is a simple blog built as a demo for leafMVC, you can start a project with this demo with:**
 ```bash
-$ composer create project leafs/mvc <project-name>
+$ composer create project leafs/mvc <project-name> --prefer-dist dev-blog
 ```
 
-This will start a new LeafMVC app.
+This will start a new LeafMVC blog app.
 
 
 ## Basic Info
@@ -48,6 +48,7 @@ C:.
 │       │   └───sass
 │       ├───components
 │       └───pages
+│           ├───posts
 │           └───errors
 ├───config
 │   └───command
@@ -66,6 +67,15 @@ To run your LeafMVC application, use
 ```bash
 php leaf serve
 ```
+
+## Setup
+
+Connect your database and run:
+```bash
+php leaf db:migrate
+```
+
+That's all✔✔🔥
 
 ## Learning LeafMVC
 
