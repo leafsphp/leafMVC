@@ -1,9 +1,7 @@
 <?php
 namespace App\Models;
 
-use Leaf\Core\Model;
-
-class Index extends Model {
+class Index extends ApplicationModel {
 	public function getNotes() {
 		$notes = [
 			"title", "title 2", "title 3"

@@ -18,4 +18,6 @@ $leaf->setNamespace('\App\Controllers');
 
 $leaf->get('/', 'PagesController@index');
 
+$leaf->get('/home', 'PostsController@AllPosts');
+
 $leaf->run();
