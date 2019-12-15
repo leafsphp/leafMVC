@@ -1,18 +1,7 @@
 <?php
-    namespace App\Models;
 
-    use Leaf\Core\Database;
-    new Database();
+namespace App\Models;
 
-    use Leaf\Core\Model;
+class ClassName extends Model {
 
-    class ClassName extends Model {
-        /**
-        * The attributes that are mass assignable.
-        *
-        * @var array
-        */
-        protected $fillable = [
-
-        ];
-    }
+}

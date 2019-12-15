@@ -1,9 +1,6 @@
 <?php
-    namespace App\Models;
+namespace App\Models;
 
-    use Leaf\Core\Database;
-    new Database();
-
-    class Post extends AppModel {
-        
-    }
+class Post extends Model {
+    
+}
