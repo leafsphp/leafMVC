@@ -1,16 +1,7 @@
 <?php
-
 namespace App\Controllers;
 
-use Leaf\Core\Controller;
-use Leaf\Core\Http\Request;
-
-class ClassName extends Controller {
-    public function __construct() {
-        parent::__construct();
-        $this->request = new Request;
-    }
-    
+class ClassName extends Controller {    
     /**
      * Display a listing of the resource.
      */
