@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Leaf MVC</title>
-	<link rel="stylesheet" href="/app/views/assets/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Leaf MVC</title>
+  <!-- example asset import -->
+  <link rel="stylesheet" href="/app/views/assets/css/wynter.css" />
+  <style>
+    .demo-ribbon {
+      width: 100%;
+      height: 40vh;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
-<body>
+
+<body class="wynter bg-grey-100">
+  <!-- you can break up components -->
   {include="../components/header"}
 
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Hurray! You're now on LeafMVC!!</h1>
-      <p style="line-height: 35px;">
-        This is the LeafMVC framework. Quickly create web apps and APIs. Open up <i>app/routes/web.php</i> to add your routes. <br>
-        Edit <i>app/views/pages/index.vein.php</i> and reload to see changes. <br>
-        Open up the root directory in your console and type <code>php leaf list</code> to view all available commands.
-      </p>
-      <div class="row">
-        <div class="col-md-3">
-          <a class="btn btn-success" style="color: white;" href="https://leaf-docs.netlify.com" target="_blank">View Leaf Core docs &raquo;</a>
-        </div>
-        <div class="col-md-3">
-          <a class="btn btn-primary" style="color: white;" href="https://leafmvc.netlify.com" target="_blank">View LeafMVC docs &raquo;</a>
-        </div>
+  <div class="demo-ribbon wynter bg-green-800"></div>
+  <div class="wynter content" style="margin-top: -34.3vh; width: 100%;">
+    <div class="wynter grid">
+      <div class="wynter cell col-2 hide-on-tablet hide-on-phone"></div>
+      <div class="wynter cell col-8 bg-white shadow-4dp content text-grey-800 padding default container">
+        <h3>Yay, you're on Leaf MVC🎉</h3>
+        <p>
+          This is the LeafMVC framework. A simple MVC framework built for <a href="https://leafphp.netlify.app" class="wynter text-green">Leaf PHP Framework</a>
+        </p>
+        <h4>Getting Started</h4>
+        <p>
+          Open up <code>app/routes/web.php</code> to add your routes.
+        </p>
+        <p>
+          Edit <code>app/views/pages/index.vein.php</code> and reload to see changes.
+        </p>
+        <p>
+          Open up the root directory in your console and type <code>php leaf list</code> to view all available commands.
+        </p>
+        <h4>Learning LeafMVC</h4>
+        <p>
+          <ul class="wynter list">
+            <li>
+              <a href="https://leafmvc.netlify.app" class="wynter text-green">Read our informative docs</a>
+            </li>
+            <li>
+              <a href="https://leafphp.netlify.app" class="wynter text-green">Read Leaf Framework's docs</a>
+            </li>
+          </ul>
+        </p>
       </div>
+      <div class="wynter cell col-2 hide-on-tablet hide-on-phone"></div>
     </div>
-  </div> <!-- /container -->
-	<script src="/app/views/assets/js/jquery.min.js"></script>
-	<script src="/app/views/assets/js/bootstrap.min.js"></script>
+  </div>
 </body>
+
 </html>
