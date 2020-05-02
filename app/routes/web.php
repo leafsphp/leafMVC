@@ -11,7 +11,7 @@
 $response = new Leaf\Core\Http\Response;
 
 $leaf->set404(function() use($response) {
-	$response->renderHtml('app/views/pages/errors/404.html');
+	$response->renderPage('app/views/pages/errors/404.html');
 });
 
 $leaf->setNamespace('\App\Controllers');
