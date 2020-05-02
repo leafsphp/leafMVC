@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Leaf MVC</title>
   <!-- example asset import -->
-  <link rel="stylesheet" href="/app/views/assets/css/wynter.css" />
+  <link rel="stylesheet" href="../assets/css/wynter.css" />
   <style>
     .demo-ribbon {
       width: 100%;
