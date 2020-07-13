@@ -9,11 +9,10 @@
 */
 
 $app->set404(function() use($app) {
-	$app->response->renderPage('app/views/pages/errors/404.html');
+	$app->response->renderPage(views_path('errors/404.html'));
 });
 
 $app->setNamespace('\App\Controllers');
 
 $app->get('/', 'PagesController@index');
-
 $app->get('/home', 'PostsController@AllPosts');
