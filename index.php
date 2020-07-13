@@ -62,7 +62,7 @@ $app->response->cors();
 | You might want to set this to false for production
 |
 */
-// Config\App::error_debug(true);
+Config\App::error_debug(true);
 
 /*
 |--------------------------------------------------------------------------
@@ -78,23 +78,14 @@ require __DIR__ . "/Config/functions.php";
 
 /*
 |--------------------------------------------------------------------------
-| Initialise the Leaf Debugger
-|--------------------------------------------------------------------------
-|
-| Hide/Show errors
-|
-*/
-new \Config\Debug;
-
-/*
-|--------------------------------------------------------------------------
 | Route Config
 |--------------------------------------------------------------------------
 |
 | Require app routes
 |
 */
-require __DIR__. "/config/routes.php";
+require __DIR__ . "/App/routes/api.php";
+require __DIR__ . "/App/routes/web.php";
 
 /*
 |--------------------------------------------------------------------------
