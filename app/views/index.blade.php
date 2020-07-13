@@ -36,15 +36,9 @@
       This is the LeafMVC framework. A simple MVC framework built for <a href="https://leafphp.netlify.app" class="wynter text-green">Leaf PHP Framework</a>
     </p>
     <h4>Getting Started</h4>
-    <p>
-      Open up <code>App/Routes/web.php</code> to add your routes.
-    </p>
-    <p>
-      Edit <code>App/Views/index.blade.php</code> and reload to see changes.
-    </p>
-    <p>
-      Open up the root directory in your console and type <code>php leaf list</code> to view all available commands.
-    </p>
+    <p>Open up <code>App/Routes/web.php</code> to add your routes.</p>
+    <p>Edit <code>App/Views/index.blade.php</code> and reload to see changes.</p>
+    <p>Open up the root directory in your console and type <code>php leaf list</code> to view all available commands.</p>
     <h4>Learning LeafMVC</h4>
     <p>
       <div class="collection">
