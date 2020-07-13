@@ -8,16 +8,12 @@
 | Now create something great!
 */
 
-$response = new Leaf\Core\Http\Response;
-
-$leaf->set404(function() use($response) {
-	$response->renderPage('app/views/pages/errors/404.html');
+$app->set404(function() use($app) {
+	$app->response->renderPage('app/views/pages/errors/404.html');
 });
 
-$leaf->setNamespace('\App\Controllers');
+$app->setNamespace('\App\Controllers');
 
-$leaf->get('/', 'PagesController@index');
+$app->get('/', 'PagesController@index');
 
-$leaf->get('/home', 'PostsController@AllPosts');
-
-$leaf->run();
+$app->get('/home', 'PostsController@AllPosts');

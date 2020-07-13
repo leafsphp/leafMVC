@@ -9,18 +9,23 @@
 |
 */
 
-$response = new Leaf\Core\Http\Response;
-
-$leaf->before('GET|POST', function() {
+/*
+|--------------------------------------------------------------------------
+| Example Middleware
+|--------------------------------------------------------------------------
+|
+| This is an example middleware you can add to your 
+| API routes. This won't affect your web routes.
+|
+*/
+$app->before('GET|POST', '/api/.*', function() {
     header('Content-Type: application/json');
-}, null);
-
-$leaf->set404(function() use($response) {
-	$response->respond(["message" => "Error 404, route not found"]);
 });
 
-$leaf->get('/api/user/{id}', function($id) use($response) {
-    $response->respond(["message" => "User $id"]);
+$app->set404(function() {
+	respond(["message" => "Error 404, route not found"]);
 });
 
-$leaf->run();
+$app->get('/api/user/{id}', function($id) {
+    respond(["message" => "User $id"]);
+});
