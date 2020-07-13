@@ -13,7 +13,7 @@ class DeleteModelCommand extends Command {
     protected static $defaultName = "d:model";
 
     public function __construct() {
-        $this->modelPath = dirname(dirname(__DIR__)).\models_path();
+        $this->modelPath = dirname(dirname(__DIR__)) . models_path();
         parent::__construct();
     }
 

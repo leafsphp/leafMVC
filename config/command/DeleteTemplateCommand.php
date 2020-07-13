@@ -13,7 +13,7 @@ class DeleteTemplateCommand extends Command {
     protected static $defaultName = "d:template";
 
     public function __construct() {
-        $this->templatePath = dirname(dirname(__DIR__)).\views_path();
+        $this->templatePath = dirname(dirname(__DIR__)) . views_path();
         parent::__construct();
     }
 

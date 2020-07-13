@@ -11,7 +11,7 @@ class DatabaseSeedCommand extends Command {
     protected static $defaultName = "db:seed";
 
     public function __construct() {
-        $this->seedPath = dirname(dirname(__DIR__)) . '/app/database/seeds/';
+        $this->seedPath = dirname(dirname(__DIR__)) . seeds_path();
         parent::__construct();
     }
 

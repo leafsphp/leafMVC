@@ -8,7 +8,7 @@ class BaseCommand
 {
     public static function dir_and_file($input): array
     {
-        $controllerPath = dirname(dirname(__DIR__)) . '/App/Controllers/';
+        $controllerPath = dirname(dirname(__DIR__)) . controllers_path();
         $path_info = pathinfo($input->getArgument("controller"));
 
         $dirname = $path_info["dirname"] == "." ? $controllerPath : $controllerPath . $path_info["dirname"];

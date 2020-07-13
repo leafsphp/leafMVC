@@ -14,7 +14,7 @@ class DeleteControllerCommand extends Command {
     protected static $defaultName = "d:controller";
 
     public function __construct() {
-        $this->controllerPath = dirname(dirname(__DIR__)) . '/app/controllers/';
+        $this->controllerPath = dirname(dirname(__DIR__)) . controllers_path();
         parent::__construct();
     }
 

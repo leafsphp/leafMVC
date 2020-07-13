@@ -13,7 +13,7 @@ class DatabaseMigrationCommand extends Command {
     protected static $defaultName = "db:migrate";
     
     public function __construct() {
-        $this->migrationPath = dirname(dirname(__DIR__)) . '/app/database/migrations/';
+        $this->migrationPath = dirname(dirname(__DIR__)) . migrations_path();
         parent::__construct();
     }
     

@@ -13,7 +13,7 @@ class GenerateTemplateCommand extends Command
     protected static $defaultName = 'g:template';
 
     public function __construct(){
-        $this->templatePath = dirname(dirname(__DIR__)) . '/app/views/';
+        $this->templatePath = dirname(dirname(__DIR__)) . views_path();
         parent::__construct();
     }
 
