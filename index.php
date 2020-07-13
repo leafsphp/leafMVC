@@ -14,13 +14,23 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
+| Bring in (env)
+|--------------------------------------------------------------------------
+|
+| Quickly use our environment variables
+|
+*/
+\Dotenv\Dotenv::create(__DIR__)->load();
+
+/*
+|--------------------------------------------------------------------------
 | Register The Leaf Auto Loader
 |--------------------------------------------------------------------------
 |
-| Require all Leaf's Files
+| Require all Leaf API's Files
 |
 */
-require __DIR__. "/config/bootstrap.php";
+require __DIR__ . "/Config/bootstrap.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +40,41 @@ require __DIR__. "/config/bootstrap.php";
 | Plant a seed, grow the stem and return Leaf🤷‍
 |
 */
-$leaf = new Leaf\Core\Leaf;
+$app = new Leaf\App;
+
+/*
+|--------------------------------------------------------------------------
+| Default fix for CORS
+|--------------------------------------------------------------------------
+|
+| This just prevents the connection client from throwing
+| CORS errors at you.
+|
+*/
+$app->response->cors();
+
+/*
+|--------------------------------------------------------------------------
+| Error Configuration
+|--------------------------------------------------------------------------
+|
+| Show or hide errors  for easy debugging
+| You might want to set this to false for production
+|
+*/
+// Config\App::error_debug(true);
+
+/*
+|--------------------------------------------------------------------------
+| Initialise Shortcut Functions
+|--------------------------------------------------------------------------
+|
+| Simple functions you can call from anywhere in your application.
+| This is not a core feature, you can remove it and your app would still
+| work fine.
+|
+*/
+require __DIR__ . "/Config/functions.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +95,13 @@ new \Config\Debug;
 |
 */
 require __DIR__. "/config/routes.php";
+
+/*
+|--------------------------------------------------------------------------
+| Run Leaf Application
+|--------------------------------------------------------------------------
+|
+| Require app routes
+|
+*/
+$app->run();
