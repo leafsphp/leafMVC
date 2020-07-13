@@ -13,15 +13,15 @@ class GenerateTemplateCommand extends Command
     protected static $defaultName = 'g:template';
 
     public function __construct(){
-        $this->templatePath = dirname(dirname(__DIR__)) . views_path();
         parent::__construct();
+        $this->templatePath = dirname(dirname(__DIR__)) . views_path();
     }
 
     protected function configure()
     {
-        $this 
-            ->setDescription("Create a new vein template")
-            ->setHelp("Create a new vein template")
+        $this
+            ->setDescription("Create a new blade template")
+            ->setHelp("Create a new blade template")
             ->addArgument("template", InputArgument::REQUIRED, 'template name');
     }
 
@@ -29,7 +29,7 @@ class GenerateTemplateCommand extends Command
     {
         $template = $input->getArgument("template");
 
-        $file = $this->templatePath . $template . '.vein.php';
+        $file = $this->templatePath . $template . '.blade.php';
 
         touch($file);
 
