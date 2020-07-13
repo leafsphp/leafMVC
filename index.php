@@ -94,8 +94,7 @@ require __DIR__ . "/Config/functions.php";
 | Require app routes
 |
 */
-require __DIR__ . "/App/Routes/api.php";
-require __DIR__ . "/App/Routes/web.php";
+require __DIR__ . "/App/Routes.php";
 
 /*
 |--------------------------------------------------------------------------
