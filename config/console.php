@@ -1,6 +1,8 @@
 <?php
 namespace Config;
 
+require __DIR__ . "/paths.php";
+
 use Symfony\Component\Console\Application;
 
 class Console {
