@@ -1,19 +1,25 @@
-<?php 
-    namespace Config\Command;
+<?php
 
-    use Illuminate\Support\Str;
+namespace Config\Command;
 
-    class BaseCommand {
-        public static function dir_and_file($input): Array {
-            $controllerPath = dirname(dirname(__DIR__)). '/app/controllers/';
+use Illuminate\Support\Str;
 
-            $path_to_controller = ($input->getArgument("controller"));
-            $path_info = pathinfo($path_to_controller);
-    
-            $dirname = $path_info["dirname"] == "." ? $controllerPath : $controllerPath . $path_info["dirname"];
-            $filename = Str::studly($path_info['filename']) . '.php';
-    
-            return [$dirname, $filename];
+class BaseCommand
+{
+    public static function dir_and_file($input): array
+    {
+        $controllerPath = dirname(dirname(__DIR__)) . '/App/Controllers/';
+        $path_info = pathinfo($input->getArgument("controller"));
+
+        $dirname = $path_info["dirname"] == "." ? $controllerPath : $controllerPath . $path_info["dirname"];
+        $truename = $path_info['filename'];
+
+        if (strpos(Str::plural($truename) . '.php', "Controller")) {
+            $filename = Str::studly($truename) . '.php';
+        } else {
+            $filename = Str::plural($truename) . 'Controller.php';
         }
+
+        return [$dirname, $filename];
     }
-    
+}
