@@ -1,41 +1,51 @@
 <?php
 
-function views_path($path = null) {
-	return "/app/views/$path";
-};
-
-function storage_path($path = null) {
-	return "/storage/$path";
-};
-
-function controllers_path($path = null) {
-	return "/app/controllers/$path";
+function views_path($path = null)
+{
+	return "App/Views/$path";
 }
 
-function models_path($path = null) {
-	return "/app/models/$path";
-};
+function storage_path($path = null)
+{
+	return "storage/$path";
+}
 
-function migrations_path($path = null) {
-	return "/app/database/migrations/$path";
-};
+function controllers_path($path = null)
+{
+	return "/App/Controllers/$path";
+}
 
-function seeds_path($path = null) {
-	return "/app/database/seeds/$path";
-};
+function models_path($path = null)
+{
+	return "/App/Models/$path";
+}
 
-function factories_path($path = null) {
-	return "/app/database/factories/$path";
-};
+function migrations_path($path = null)
+{
+	return "/App/Database/Migrations/$path";
+}
 
-function routes_path($path = null) {
-	return "/app/routes/$path";
-};
+function seeds_path($path = null)
+{
+	return "/App/Database/Seeds/$path";
+}
 
-function helpers_path($path = null) {
-	return "/app/helpers/$path";
-};
+function factories_path($path = null)
+{
+	return "/App/Database/Factories/$path";
+}
 
-function public_path($path = null) {
+function routes_path($path = null)
+{
+	return "/App/Routes/$path";
+}
+
+function helpers_path($path = null)
+{
+	return "/App/Helpers/$path";
+}
+
+function public_path($path = null)
+{
 	return "/public/$path";
-};
+}
