@@ -9,7 +9,7 @@ class Console {
 	private $app;
 
 	public function __construct() {
-		$this->app = new Application("LeafMVC Framework v2.0");
+		$this->app = new Application("<comment>Leaf MVC <info>v2.0</info></comment>");
 
 		// Random Commands
 		$this->app->add(new \Config\Command\ServerCommand());
@@ -31,10 +31,6 @@ class Console {
 		$this->app->add(new \Config\Command\DatabaseMigrationCommand());
 		$this->app->add(new \Config\Command\DatabaseRollbackCommand());
 		$this->app->add(new \Config\Command\DatabaseSeedCommand());
-
-		// UI Commands
-		// $this->app->add(new \Config\Command\UiCommand());
-		$this->app->add(new \Config\Command\AuthCommand());
 	}
 
 	/**

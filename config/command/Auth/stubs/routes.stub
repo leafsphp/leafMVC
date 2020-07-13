@@ -1,8 +1,0 @@
-
-	$leaf->get('/auth/login', 'AuthController@login');
-	$leaf->get('/auth/register', 'AuthController@register');
-	$leaf->get('/auth/verify', 'AuthController@verify');
-	$leaf->get('/auth/confirm', 'AuthController@confirm');
-	$leaf->get('/auth/email/confirm', 'AuthController@confirmEmail');
-	$leaf->get('/auth/reset', 'AuthController@reset');
-	$leaf->get('/home', 'HomeController@index');
