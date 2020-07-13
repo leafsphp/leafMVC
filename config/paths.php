@@ -1,8 +1,8 @@
 <?php
 
-function views_path($path = null)
+function views_path($path = null, $slash = null)
 {
-	return "App/Views/$path";
+	return $slash ? "/App/Views/$path" : "App/Views/$path";
 }
 
 function storage_path($path = null)
