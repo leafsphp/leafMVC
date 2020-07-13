@@ -1,10 +1,10 @@
 <?php 
-    namespace App\Helpers;
+namespace App\Helpers;
 
-    use Leaf\Core\Helper;
+use Leaf\Helper;
 
-    class ClassName extends Helper  {
-        public function __construct() {
-            parent::__construct();
-        }
+class ClassName extends Helper  {
+    public function __construct() {
+        parent::__construct();
     }
+}

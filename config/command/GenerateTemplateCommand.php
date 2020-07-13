@@ -28,8 +28,9 @@ class GenerateTemplateCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $template = $input->getArgument("template");
+        $extension = '.blade.php'; // '.vein.php'
 
-        $file = $this->templatePath . $template . '.blade.php';
+        $file = $this->templatePath . $template . $extension;
 
         touch($file);
 
