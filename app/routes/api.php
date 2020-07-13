@@ -22,10 +22,6 @@ $app->before('GET|POST', '/api/.*', function() {
     header('Content-Type: application/json');
 });
 
-$app->set404(function() {
-	respond(["message" => "Error 404, route not found"]);
-});
-
 $app->get('/api/user/{id}', function($id) {
     respond(["message" => "User $id"]);
 });
