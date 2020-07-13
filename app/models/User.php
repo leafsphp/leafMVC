@@ -2,16 +2,8 @@
 
 namespace App\Models;
 
-use Leaf\Core\Database;
-new Database();
-
-use Leaf\Core\Model;
-use Illuminate\Notifications\Notifiable;
-
 class User extends Model
 {
-    use Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -29,6 +21,13 @@ class User extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 
     /**
      * The attributes that should be cast to native types.
