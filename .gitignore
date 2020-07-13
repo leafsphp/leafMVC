@@ -1,5 +1,5 @@
 vendor
-vendor2
+composer.lock
 .env
 node_modules
 build
