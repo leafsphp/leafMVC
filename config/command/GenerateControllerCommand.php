@@ -37,9 +37,6 @@ class GenerateControllerCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        if (!in_array($input->getOption('resource'), [true, false])) {
-            throw new InvalidArgumentException('Invalid option.');
-        }
         $output->writeln($this->_generateController($input, $output));
     }
 
@@ -72,11 +69,11 @@ class GenerateControllerCommand extends Command
             } elseif ($input->getOption('model')) {
                 $process = new Process("php leaf g:model ".Str::studly(str_replace("Controller", "", $controller)));
                 $process->run();
-                $output->writeln("Model ".Str::studly(str_replace("Controller", "", $controller))." generated successfully");
+                $output->writeln("Model " . Str::singular(Str::studly(str_replace("Controller", "", $controller))) . " generated successfully");
             } elseif ($input->getOption('template') || $input->getOption('view')) {
                 $process = new Process("php leaf g:template ".Str::lower(str_replace("Controller", "", $controller)));
                 $process->run();
-                $output->writeln(Str::lower(str_replace("Controller", "", $controller)).".vein.php generated successfully");
+                $output->writeln(Str::lower(str_replace("Controller", "", $controller)).".blade.php generated successfully");
             }
             
             $fileContent = str_replace(["ClassName"], [$controller], $fileContent);
