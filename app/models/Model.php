@@ -1,11 +1,6 @@
 <?php
 namespace App\Models;
 
-use Leaf\Core\Model as CoreModel;
+new \Leaf\Database();
 
-use Leaf\Core\Database;
-new Database();
-
-class Model extends CoreModel{
-	
-}
+class Model extends \Leaf\Model {}
