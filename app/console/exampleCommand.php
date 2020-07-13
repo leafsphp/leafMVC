@@ -10,15 +10,12 @@ use Symfony\Component\Console\Input\InputOption;
 class ExampleCommand extends Command
 {
     protected static $defaultName = 'example';
-
     protected $description = 'Testing example command';
-
     protected $help = 'Example command\'s help';
 
     public function __construct(){
         parent::__construct();
     }
-
 
     protected function configure()
     {
