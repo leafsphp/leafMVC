@@ -1,7 +1,7 @@
 <?php 
     namespace App\Database\Migrations;
     
-    use Leaf\Core\Database;
+    use Leaf\Database;
     
     class CreateUsers extends Database {
         public function __construct() {
