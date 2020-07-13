@@ -6,6 +6,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 use Illuminate\Support\Str;
 
 class DeleteTemplateCommand extends Command {
@@ -13,15 +14,16 @@ class DeleteTemplateCommand extends Command {
     protected static $defaultName = "d:template";
 
     public function __construct() {
-        $this->templatePath = dirname(dirname(__DIR__)) . views_path();
         parent::__construct();
+        $this->templatePath = dirname(dirname(__DIR__)) . views_path(null, true);
     }
 
     protected function configure() {
         $this
             ->setDescription("Delete a template")
             ->setHelp("Delete a template")
-            ->addArgument("template", InputArgument::REQUIRED, "template name");
+            ->addArgument("template", InputArgument::REQUIRED, "template name")
+            ->addOption("type", "t", InputOption::VALUE_OPTIONAL, "Type of template to generate", "blade");
     }
 
 
@@ -48,20 +50,20 @@ class DeleteTemplateCommand extends Command {
                 rmdir($dirname);
             endif;
         else:
-            return "Template does not exists";
+            return "Template does not exist!";
         endif;
 
         return "{$filename} deleted successfully";
     }
 
     public function dir_and_file($input): Array {
-        $templatePath = dirname(dirname(__DIR__)).\views_path();
+        $templatePath = dirname(dirname(__DIR__)) . views_path(null, true);
 
         $path_to_template = ($input->getArgument("template"));
         $path_info = pathinfo($path_to_template);
 
         $dirname = $path_info["dirname"] == "." ? $templatePath : $templatePath . $path_info["dirname"];
-        $filename = $path_info['filename'] . '.vein.php';
+        $filename = $input->getOption("type") === "blade" ? $path_info['filename'] . ".blade.php" : $path_info['filename'] . ".vein.php";
 
         return [$dirname, $filename];
     }
