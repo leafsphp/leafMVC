@@ -14,8 +14,8 @@ class DatabaseRollbackCommand extends Command  {
 
     public function __construct()
     {
-        $this->migrationPath = dirname(dirname(__DIR__)) . migrations_path();
         parent::__construct();
+        $this->migrationPath = dirname(dirname(__DIR__)) . migrations_path();
     }
 
     protected function configure()
@@ -23,7 +23,7 @@ class DatabaseRollbackCommand extends Command  {
         $this
             ->setDescription("Rollback all database migrations")
             ->setHelp("Rollback all database migrations")
-            ->addArgument('step', InputArgument::REQUIRED, 'step required');
+            ->addArgument('step', InputArgument::OPTIONAL, 'The batch to rollback', 'all');
     }
 
 
@@ -51,7 +51,7 @@ class DatabaseRollbackCommand extends Command  {
             $class = new $className;
             $class->down();
 
-            $output->writeln('db rollback on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/database/migrations/', "", $migration));
+            $output->writeln('db rollback on => ' . str_replace(dirname(dirname(__DIR__)) . migrations_path(), "", $migration));
         }
     }
 }
