@@ -1,0 +1,10 @@
+<?php
+namespace App\Controllers;
+
+class ClassName extends Controller {
+    public function index() {
+        respond([
+            "message" => "This is the ClassName"
+        ]);
+    }
+}

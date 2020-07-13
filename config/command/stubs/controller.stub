@@ -1,6 +1,0 @@
-<?php
-namespace App\Controllers;
-
-class ClassName extends Controller {
-    // 
-}
