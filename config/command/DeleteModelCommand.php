@@ -46,14 +46,14 @@ class DeleteModelCommand extends Command {
                 rmdir($dirname);
             endif;
         else:
-            return "Model does not exists";
+            return "Model does not exist!";
         endif;
 
         return "{$filename} deleted successfully";
     }
 
     public function dir_and_file($input): Array {
-        $modelPath = dirname(dirname(__DIR__)).\models_path();
+        $modelPath = dirname(dirname(__DIR__)) . models_path();
 
         $path_to_model = ($input->getArgument("model"));
         $path_info = pathinfo($path_to_model);

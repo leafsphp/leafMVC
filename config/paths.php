@@ -1,6 +1,6 @@
 <?php
 
-function views_path($path = null, $slash = null)
+function views_path($path = null, bool $slash = false)
 {
 	return $slash ? "/App/Views/$path" : "App/Views/$path";
 }
@@ -20,9 +20,9 @@ function models_path($path = null)
 	return "/App/Models/$path";
 }
 
-function migrations_path($path = null)
+function migrations_path($path = null, bool $slash = true)
 {
-	return "/App/Database/Migrations/$path";
+	return  $slash ? "/App/Database/Migrations/$path" : "App/Database/Migrations/$path";
 }
 
 function seeds_path($path = null)

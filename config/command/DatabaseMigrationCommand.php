@@ -40,13 +40,13 @@ class DatabaseMigrationCommand extends Command {
                 $className = '\App\Database\Migrations\\' . Str::studly(\substr($filename, 17));
                 $this->migrate($className, $filename);
 
-                $output->writeln('db migration on => ' . str_replace(dirname(dirname(__DIR__)) . '/app/database/migrations/', "", $migration));
+                $output->writeln('db migration on => ' . str_replace(dirname(dirname(__DIR__)) . migrations_path(), "", $migration));
             endif;
         }
     }
 
     protected function migrate($className, $filename) {
-        require_once "app/database/migrations/$filename.php";
+        require_once migrations_path("$filename.php", false);
 
         $class = new $className;
         $class->up();

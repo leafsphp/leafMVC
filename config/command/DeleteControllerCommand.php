@@ -47,7 +47,7 @@ class DeleteControllerCommand extends Command {
                 rmdir($dirname);
             endif;
         else:
-            return "Controller does not exists";
+            return "Controller does not exist!";
         endif;
 
         return "{$filename} controller deleted successfully";
