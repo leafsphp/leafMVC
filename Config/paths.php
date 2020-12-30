@@ -1,51 +1,17 @@
 <?php
 
-function views_path($path = null, bool $slash = false)
-{
-	return $slash ? "/App/Views/$path" : "App/Views/$path";
-}
-
-function storage_path($path = null)
-{
-	return "storage/$path";
-}
-
-function controllers_path($path = null)
-{
-	return "/App/Controllers/$path";
-}
-
-function models_path($path = null)
-{
-	return "/App/Models/$path";
-}
-
-function migrations_path($path = null, bool $slash = true)
-{
-	return  $slash ? "/App/Database/Migrations/$path" : "App/Database/Migrations/$path";
-}
-
-function seeds_path($path = null)
-{
-	return "/App/Database/Seeds/$path";
-}
-
-function factories_path($path = null)
-{
-	return "/App/Database/Factories/$path";
-}
-
-function routes_path($path = null)
-{
-	return "/App/Routes/$path";
-}
-
-function helpers_path($path = null)
-{
-	return "/App/Helpers/$path";
-}
-
-function public_path($path = null)
-{
-	return "/public/$path";
-}
+return [
+	"controllers_path" => "/App/Controllers",
+	"models_path" => "/App/Models",
+	"migrations_path" => "/App/Database/Migrations",
+	"seeds_path" => "/App/Database/Seeds",
+	"factories_path" => "/App/Database/Factories",
+	"helpers_path" => "/App/Helpers",
+	"views_path" => "/App/Views",
+	"config_path" => "/App/Config",
+	"storage_path" => "/App/storage",
+	"commands_path" => "/App/Console",
+	"routes_path" => "/App/Routes",
+	"lib_path" => "/Lib",
+	"public_path" => "/public",
+];

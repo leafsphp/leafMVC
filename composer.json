@@ -1,21 +1,28 @@
 {
-    "name": "leafs/mvc",
-    "description": "A lightweight PHP MVC framework for creating simple but powerful web apps and APIs quickly.",
+    "name": "leafs/api",
+    "description": "A lightweight PHP MVC framework for rapid API development.",
     "type": "library",
-    "keywords": ["framework", "leaf", "leafPHP", "laravel"],
+    "keywords": [
+        "framework",
+        "leaf",
+        "leafPHP",
+        "mvc",
+        "leaf api"
+    ],
     "license": "MIT",
     "authors": [
         {
             "name": "Michael Darko",
             "email": "mickdd22@gmail.com",
-            "homepage": "https://mychi.netlify.com",
-            "role": "Developer"
+            "homepage": "https://mychi.netlify.app",
+            "role": "Maintainer"
         }
     ],
     "require": {
+        "leafs/leaf": "^2.4",
+        "leafs/aloe": "^1.0",
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^6.3",
-        "leafs/leaf": "v2.2.0-beta",
         "psy/psysh": "^0.9.9",
         "symfony/console": "^4.3",
         "vlucas/phpdotenv": "^3.6"

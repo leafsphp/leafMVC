@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Database\Seeds;
 
 use Illuminate\Database\Seeder;
@@ -10,8 +11,10 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run() : array
     {
-        // $this->call(UsersTableSeeder::class);
+        return [
+            UsersSeeder::class,
+        ];
     }
 }

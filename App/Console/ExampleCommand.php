@@ -1,40 +1,26 @@
 <?php
 namespace App\Console;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
+use Aloe\Command;
 
 class ExampleCommand extends Command
 {
-    protected static $defaultName = 'example';
-    protected $description = 'Testing example command';
-    protected $help = 'Example command\'s help';
+    public $name = "example";
+    public $description = "example command's description";
+    public $help = "example command's help";
 
-    public function __construct(){
-        parent::__construct();
+    public function config()
+    {
+        // you can add arguments and options in the config method
+        $this
+            ->setArgument("argument", "required", "argument description")
+            ->setOption("option", "o", "required", "option description");
     }
 
-    protected function configure()
+    public function handle()
     {
-        $this 
-            ->setDescription($this->description)
-            ->setHelp($this->help)
-            ->addOption('example', null, InputOption::VALUE_OPTIONAL, 'description', 'default');
-    }
-
-
-    public function execute(InputInterface $input, OutputInterface $output)
-    {
-        $this->outputSomething($input, $output);
-    }
-
-
-    protected function outputSomething($input, $output)
-    {
-		$option = $input->getOption('example');
-        isset($option) ? $output->writeln("Example output. Your option was $option") : $output->writeln("Example output");
+        $this->comment(
+            "example command's output {$this->argument('argument')} {$this->option('option')}"
+        );
     }
 }

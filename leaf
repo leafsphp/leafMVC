@@ -21,7 +21,7 @@ require __DIR__.'/vendor/autoload.php';
 | Require all the files containing the Leaf Commands
 |
 */
-require __DIR__.'/config/bootstrap.php';
+require __DIR__.'/Config/bootstrap.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ require __DIR__.'/config/bootstrap.php';
 | Initialise pre-defined console commands
 |
 */
-$console = new \Config\Console;
+$console = new \Aloe\Console;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +51,9 @@ $console = new \Config\Console;
 | If you have a new command to add to Leaf
 |
 */
-$console->registerCustom(new \App\Console\ExampleCommand());
+$console->register(new \App\Console\ExampleCommand());
+
+$console->register(\Aloe\Console::commands());
 
 /*
 |--------------------------------------------------------------------------

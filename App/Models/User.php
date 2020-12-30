@@ -27,7 +27,7 @@ class User extends Model
      *
      * @var bool
      */
-    public $timestamps = false;
+    public $timestamps = true;
 
     /**
      * The attributes that should be cast to native types.
