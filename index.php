@@ -66,16 +66,6 @@ Config\App::error_debug(true);
 
 /*
 |--------------------------------------------------------------------------
-| Initialise App paths
-|--------------------------------------------------------------------------
-|
-| These is the Leaf MVC directory configuration.
-|
-*/
-require __DIR__ . "/Config/paths.php";
-
-/*
-|--------------------------------------------------------------------------
 | Initialise Shortcut Functions
 |--------------------------------------------------------------------------
 |
@@ -94,7 +84,7 @@ require __DIR__ . "/Config/functions.php";
 | Require app routes
 |
 */
-require __DIR__ . "/App/Routes.php";
+require __DIR__ . "/App/Routes/index.php";
 
 /*
 |--------------------------------------------------------------------------
