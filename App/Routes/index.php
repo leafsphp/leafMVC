@@ -39,7 +39,3 @@ $app->get("/app", function () {
 // From v1.1, you can use this Route method anywhere in your app
 // This links to the login method of the UsersController
 // Route("POST", "/login", "UsersController@login");
-
-// You can define your routes here directly or
-// import an independent route file
-require "_users.php";
