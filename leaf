@@ -38,22 +38,21 @@ require __DIR__.'/Config/bootstrap.php';
 | Initialise Leaf CMD
 |--------------------------------------------------------------------------
 |
-| Initialise pre-defined console commands
+| Initialise aloe CLI
 |
 */
 $console = new \Aloe\Console;
 
 /*
 |--------------------------------------------------------------------------
-| Add custom command
+| Add commands
 |--------------------------------------------------------------------------
 |
-| If you have a new command to add to Leaf
+| Add aloe & custom commands
 |
 */
-$console->register(new \App\Console\ExampleCommand());
-
 $console->register(\Aloe\Console::commands());
+$console->register(new \App\Console\ExampleCommand());
 
 /*
 |--------------------------------------------------------------------------

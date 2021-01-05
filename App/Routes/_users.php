@@ -5,15 +5,20 @@
 // with Leaf API.
 
 // Demo autentication routes
-$app->mount("/auth", function() use($app) {
-	$app->post("/login", "UsersController@login");
-	$app->post("/register", "UsersController@register");
-    $app->post("/reset", "UsersController@reset_password");
-    $app->post("/recover", "UsersController@recover_account"); 
+$app->group("/auth", function() use($app) {
+    $app->get("/login", "Auth\LoginController@show");
+    $app->post("/login", "Auth\LoginController@store");
+    $app->get("/register", "Auth\RegisterController@show");
+    $app->post("/register", "Auth\RegisterController@store");
+    // Reset and recover account will be added later
 });
 
+$app->get("/home", "Auth\HomeController@index");
+$app->get("/auth/logout", "Auth\LoginController@logout");
+
 // Demo User routes
-$app->mount("/user", function() use($app) {
-    $app->get("/", "UsersController@user");
-	$app->post("/update", "UsersController@edit");
+$app->group("/user", function() use($app) {
+    $app->get("/", "Auth\AccountController@user");
+    $app->get("/update", "Auth\AccountController@show_update");
+    $app->post("/update", "Auth\AccountController@update");
 });

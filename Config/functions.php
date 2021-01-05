@@ -227,6 +227,17 @@ if (!function_exists('view')) {
 	}
 }
 
+// Auth
+
+/**
+ * Get an auth configuration
+ */
+function authConfig($setting = null)
+{
+	$config = require __DIR__ . "/auth.php";
+	return !$setting ? $config : $config[$setting];
+}
+
 // App paths as callable methods
 
 /**
@@ -242,7 +253,7 @@ function app_paths($path = null, bool $slash = false)
 /**
  * Views directory path
  */
-function views_path($path = null, bool $slash = false)
+function views_path($path = null, bool $slash = true)
 {
 	return app_paths("views_path", $slash) . "/$path";
 }

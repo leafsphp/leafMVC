@@ -9,7 +9,8 @@
 |
 */
 $app->set404(function() {
-	response()->page(views_path("errors/404.html"));
+	response()->headers->status(404);
+	response()->page(views_path("errors/404.html", false));
 });
 
 /*

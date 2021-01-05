@@ -13,6 +13,7 @@ use Leaf\Helpers\Password;
  */
 class Controller extends \Leaf\ApiController
 {
+	/** @var \Leaf\Auth */
 	public $auth;
 
 	public function __construct()
@@ -30,22 +31,14 @@ class Controller extends \Leaf\ApiController
 		$this->auth->tokenLifetime(60 * 60 * 24 * 365);
 
 		// You can configure auth to get additional customizations
-		$this->auth->config("LOGIN_PARAMS_ERROR", "Username not registered!");
-
-		// Password encode is run when leaf wants to encode passwords on register
-		// This exact method is used by default in Leaf, so you can delete it if
-		// you want to.
-		$this->auth->config("PASSWORD_ENCODE", function ($password) {
-			return Password::hash($password);
-		});
-
-		// this function is run to verify the password. It's done by default,
-		// so you can remove this line and the above line if you wish to.
-		$this->auth->config("PASSWORD_VERIFY", function ($password, $hashedPassword) {
-			// Inside the password_verify method, you have access to the password and the hashed password
-			return Password::verify($password, $hashedPassword);
-		});
+		// This can be done here with the Auth::config method or
+		// simply in the Config/auth.php file
+		$this->auth->config(authConfig("settings"));
 
 		// You can refer to https://leafphp.netlify.app/#/leaf/v/2.4/core/auth for auth docs
+
+		// New in v2.5. This alloows us to direct our attention
+		// to session authentication instead of the default API JWT method.
+		$this->auth->useSession();
 	}
 }
