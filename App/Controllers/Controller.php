@@ -33,12 +33,12 @@ class Controller extends \Leaf\ApiController
         // You can configure auth to get additional customizations
         // This can be done here with the Auth::config method or
         // simply in the Config/auth.php file
-        $this->auth->config(authConfig("settings"));
+        $this->auth->config(authConfig());
 
         // You can refer to https://leafphp.netlify.app/#/leaf/v/2.4/core/auth for auth docs
 
-        // New in v2.5. This alloows us to direct our attention
-        // to session authentication instead of the default API JWT method.
+        // New in v2.5. This allows us to use session
+        // authentication instead of the default API JWT method.
         $this->auth->useSession();
     }
 }

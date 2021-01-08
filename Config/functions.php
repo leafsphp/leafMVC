@@ -110,7 +110,11 @@ if (!function_exists('plural')) {
 if (!function_exists('render')) {
 	function render(string $view, array $data = [], array $mergeData = [])
 	{
-		markup(view($view, $data, $mergeData));
+		if (viewConfig("view_engine") === \Leaf\Blade::class) {
+			return markup(view($view, $data, $mergeData));
+		}
+
+		return viewConfig("render")($view, $data);
 	}
 }
 
@@ -222,7 +226,7 @@ if (!function_exists('view')) {
 	 */
 	function view(string $view, array $data = [], array $mergeData = [])
 	{
-		app()->blade->configure(views_path(), storage_path("framework/views"));
+		app()->blade->configure(viewConfig("views_path"), viewConfig("cache_path"));
 		return app()->blade->render($view, $data, $mergeData);
 	}
 }
@@ -235,6 +239,17 @@ if (!function_exists('view')) {
 function authConfig($setting = null)
 {
 	$config = require __DIR__ . "/auth.php";
+	return !$setting ? $config : $config[$setting];
+}
+
+// Views
+
+/**
+ * Get view configuration
+ */
+function viewConfig($setting = null)
+{
+	$config = require __DIR__ . "/view.php";
 	return !$setting ? $config : $config[$setting];
 }
 
