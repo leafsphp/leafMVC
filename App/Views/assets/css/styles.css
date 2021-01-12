@@ -26,11 +26,6 @@ strong {
     color: #038f03;
 }
 
-a:hover {
-    background-color: #eee;
-    border-radius: 4px;
-}
-
 .collection {
     display: flex;
     flex-direction: column;

@@ -24,10 +24,6 @@ $app->set404(function() {
 */
 $app->setNamespace("\App\Controllers");
 
-// $app is the instance of Leaf
+// New in Leaf v2.4.1.
+// You can assign a view directly
 $app->view("/", "index");
-
-$app->get("/app", function () {
-	json(app()->routes(), 200);
-});
-

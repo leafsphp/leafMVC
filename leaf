@@ -11,7 +11,7 @@
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +21,7 @@ require __DIR__.'/vendor/autoload.php';
 | Require all the files containing the Leaf Commands
 |
 */
-require __DIR__.'/Config/bootstrap.php';
+require __DIR__ . '/Config/bootstrap.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ require __DIR__.'/Config/bootstrap.php';
 | Initialise aloe CLI
 |
 */
-$console = new \Aloe\Console;
+$console = new \Aloe\Console("Leaf MVC", "v2.3");
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ $console = new \Aloe\Console;
 |
 */
 $console->register(\Aloe\Console::commands());
-$console->register(new \App\Console\ExampleCommand());
+$console->register(\App\Console\ExampleCommand::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -70,6 +70,16 @@ if (!function_exists('fs')) {
 	}
 }
 
+if (!function_exists('hasAuth')) {
+	/**
+	 * Find out if there's an active sesion
+	 */
+	function hasAuth()
+	{
+		return !!sessionUser();
+	}
+}
+
 if (!function_exists('json')) {
 	/**
 	 * json uses Leaf's now `json` method
@@ -179,6 +189,32 @@ if (!function_exists('Route')) {
 	function Route($methods, $pattern, $fn)
 	{
 		app()->match($methods, $pattern, $fn);
+	}
+}
+
+if (!function_exists('session')) {
+	/**
+	 * Get a session variable or the session object
+	 * 
+	 * @param string|null $key The variable to get
+	 */
+	function session($key = null)
+	{
+		if ($key) {
+			return \Leaf\Http\Session::get($key);
+		}
+
+		return (new \Leaf\Http\Session);
+	}
+}
+
+if (!function_exists('sessionUser')) {
+	/**
+	 * Get the currently logged in user
+	 */
+	function sessionUser()
+	{
+		return session('AUTH_USER');
 	}
 }
 

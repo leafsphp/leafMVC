@@ -20,8 +20,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | Password encode is run when leaf wants to encode passwords on register
-    | This exact method is used by default in Leaf, so you can delete it if
-    | you want to.
+    | This exact method is used by default in Leaf, so you can set it to null
+    | if you want to.
+    |
+    | You can set your own implementation instead of Password::hash
     |
     */
     "PASSWORD_ENCODE" => function ($password) {
@@ -33,12 +35,13 @@ return [
     | Verify Password
     |--------------------------------------------------------------------------
     |
-    | this function is run to verify the password. It's done by default,
-    | so you can remove/set this and the above lines null if you wish to.
+    | This function is run to verify the password. This implementation is done
+    | by default, so you can set it to null, and it will still work fine.
+    |
+    | You can add your own implementation instead of Password::verify
     |
     */
     "PASSWORD_VERIFY" => function ($password, $hashedPassword) {
-        // Inside the password_verify method, you have access to the password and the hashed password
         return Password::verify($password, $hashedPassword);
     },
 
@@ -47,7 +50,8 @@ return [
     | Password Key
     |--------------------------------------------------------------------------
     |
-    | the default password key
+    | The default password key. Leaf will expect this key to hold passwords
+    | in your database.
     |
     */
     "PASSWORD_KEY" => "password",
@@ -57,7 +61,7 @@ return [
     | Hide id
     |--------------------------------------------------------------------------
     |
-    | Hide id field from user object?
+    | Hide id field from user object returned in login, register and update
     |
     */
     "HIDE_ID" => true,
@@ -67,7 +71,7 @@ return [
     | Hide password
     |--------------------------------------------------------------------------
     |
-    | Hide user password field
+    | Hide password from user object returned in login, register and update
     |
     */
     "HIDE_PASSWORD" => true,
@@ -75,13 +79,19 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Login params error
+    |--------------------------------------------------------------------------
+    |
+    | Error to show when the login params aren't found in db
     |
     */
     "LOGIN_PARAMS_ERROR" => "Username not registered!",
 
     /*
     |--------------------------------------------------------------------------
-    | Login password error
+    | Password error
+    |--------------------------------------------------------------------------
+    |
+    | Error to show when the login password is wrong
     |
     */
     "LOGIN_PASSWORD_ERROR" => "Password is incorrect!",
@@ -102,41 +112,40 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Template Engine [EXPERIMENTAL]
+    | Session on register
     |--------------------------------------------------------------------------
     |
-    | Leaf MVC unlike other frameworks tries to give you as much control as
-    | you need. As such, you can decide which view engine to use.
+    | If true, a session will be created on a successful registration, else
+    | you it'll be created on login rather.
     |
     */
-    // Create a session on registration?
     "SESSION_ON_REGISTER" => false,
 
     /*
     |--------------------------------------------------------------------------
     | Login page route
-    |
+    |--------------------------------------------------------------------------
     */
     "GUARD_LOGIN" => "/auth/login",
 
     /*
     |--------------------------------------------------------------------------
-    | Rehgister page route
-    |
+    | Register page route
+    |--------------------------------------------------------------------------
     */
     "GUARD_REGISTER" => "/auth/register",
 
     /*
     |--------------------------------------------------------------------------
     | Logout route
-    |
+    |--------------------------------------------------------------------------
     */
     "GUARD_LOGOUT" => "/auth/logout",
 
     /*
     |--------------------------------------------------------------------------
     | Home page route
-    |
+    |--------------------------------------------------------------------------
     */
     "GUARD_HOME" => "/home",
 

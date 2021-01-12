@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" style="margin-top: 35px;">
     <section>
       <h1>{{ getenv('APP_NAME') ?? "Leaf MVC" }}</h1>
       <p>
