@@ -31,7 +31,7 @@ require __DIR__ . '/Config/bootstrap.php';
 | Quickly use our environment variables
 |
 */
-\Dotenv\Dotenv::create(__DIR__)->load();
+file_exists(__DIR__ . "/.env") && \Dotenv\Dotenv::create(__DIR__)->load();
 
 /*
 |--------------------------------------------------------------------------
