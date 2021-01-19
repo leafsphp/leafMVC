@@ -8,6 +8,9 @@
 | Create a handler for 404 errors
 |
 */
+
+use function Leaf\Traits\auth;
+
 $app->set404(function() {
 	response()->headers->status(404);
 	response()->page(views_path("errors/404.html", false));

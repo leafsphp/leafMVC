@@ -10,6 +10,22 @@ if (!function_exists('app')) {
 	}
 }
 
+if (!function_exists('auth')) {
+	/**
+	 * Return Leaf's auth object
+	 */
+	function auth($guard = null)
+	{
+		if (!$guard) return \Leaf\Auth::class;
+
+		if ($guard === 'session') {
+			return \Leaf\Auth::session();
+		}
+
+		return \Leaf\Auth::guard($guard);
+	}
+}
+
 if (!function_exists('d')) {
 	/**
 	 * Return Leaf's date object
@@ -272,7 +288,7 @@ if (!function_exists('view')) {
 /**
  * Get an auth configuration
  */
-function authConfig($setting = null)
+function AuthConfig($setting = null)
 {
 	$config = require __DIR__ . "/auth.php";
 	return !$setting ? $config : $config[$setting];
