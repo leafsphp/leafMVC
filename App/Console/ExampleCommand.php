@@ -6,10 +6,10 @@ use Aloe\Command;
 class ExampleCommand extends Command
 {
     protected static $defaultName = "example";
-    private $description = "example command's description";
-    private $help = "example command's help";
+    public $description = "example command's description";
+    public $help = "example command's help";
 
-    protected function configure()
+    protected function config()
     {
         $this
             ->setArgument("argument", "optional", "argument description")
