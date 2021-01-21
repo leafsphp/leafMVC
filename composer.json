@@ -19,12 +19,12 @@
         }
     ],
     "require": {
-        "leafs/leaf": "^2.4",
-        "leafs/aloe": "^1.0",
+        "leafs/leaf": "^2.4.2-beta",
+        "leafs/aloe": "^1.1.0-beta",
         "doctrine/dbal": "^2.9",
-        "illuminate/console": "^6.3",
+        "illuminate/console": "^8.0",
         "psy/psysh": "^0.9.9",
-        "symfony/console": "^4.3",
+        "symfony/console": "^5.1",
         "vlucas/phpdotenv": "^3.6"
     },
     "require-dev": {

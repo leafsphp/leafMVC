@@ -5,19 +5,18 @@ use Aloe\Command;
 
 class ExampleCommand extends Command
 {
-    public $name = "example";
-    public $description = "example command's description";
-    public $help = "example command's help";
+    protected static $defaultName = "example";
+    private $description = "example command's description";
+    private $help = "example command's help";
 
-    public function config()
+    protected function configure()
     {
-        // you can add arguments and options in the config method
         $this
-            ->setArgument("argument", "required", "argument description")
+            ->setArgument("argument", "optional", "argument description")
             ->setOption("option", "o", "required", "option description");
     }
 
-    public function handle()
+    protected function handle()
     {
         $this->comment(
             "example command's output {$this->argument('argument')} {$this->option('option')}"
