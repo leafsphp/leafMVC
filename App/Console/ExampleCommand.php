@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Console;
 
 use Aloe\Command;

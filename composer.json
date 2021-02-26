@@ -20,7 +20,7 @@
     ],
     "require": {
         "leafs/leaf": "^2.4.2-beta",
-        "leafs/aloe": "^1.1.0-beta",
+        "leafs/aloe": "^1.1",
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^8.0",
         "psy/psysh": "^0.9.9",
