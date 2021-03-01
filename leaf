@@ -25,6 +25,16 @@ require __DIR__ . '/Config/bootstrap.php';
 
 /*
 |--------------------------------------------------------------------------
+| Register Leaf Shortcut functions
+|--------------------------------------------------------------------------
+|
+| Allows you to use leaf features
+|
+*/
+require __DIR__ . '/Config/functions.php';
+
+/*
+|--------------------------------------------------------------------------
 | Bring in (env)
 |--------------------------------------------------------------------------
 |
@@ -48,10 +58,9 @@ $console = new \Aloe\Console("Leaf MVC", "v2.3");
 | Add commands
 |--------------------------------------------------------------------------
 |
-| Add aloe & custom commands
+| Add custom commands
 |
 */
-$console->register(\Aloe\Console::commands());
 $console->register(\App\Console\ExampleCommand::class);
 
 /*
