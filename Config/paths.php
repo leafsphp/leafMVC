@@ -17,7 +17,7 @@ return [
 
 	"config_path" => "App/Config",
 
-	"storage_path" => "App/storage",
+	"storage_path" => "storage",
 
 	"commands_path" => "App/Console",
 
