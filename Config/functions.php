@@ -39,11 +39,11 @@ if (!function_exists('d')) {
 if (!function_exists('dbRow')) {
 	/**
 	 * Return a db row by it's id
-	 * 
+	 *
 	 * @param string $table The table to find row
 	 * @param string|int $row_id The row's id
 	 * @param string $columns The columns to get
-	 * 
+	 *
 	 * @return array|null The database field
 	 */
 	function dbRow($table, $row_id, $columns = "*")
@@ -56,7 +56,7 @@ if (!function_exists('dbRow')) {
 if (!function_exists('email')) {
 	/**
 	 * Write and send an email
-	 * 
+	 *
 	 * @param array $email The email block to write and send
 	 */
 	function email(array $email)
@@ -86,6 +86,16 @@ if (!function_exists('fs')) {
 	}
 }
 
+if (!function_exists('flash')) {
+    /**
+     * Return Leaf's flash object
+     */
+    function flash()
+    {
+        return \Leaf\Flash::class;
+    }
+}
+
 if (!function_exists('hasAuth')) {
 	/**
 	 * Find out if there's an active sesion
@@ -99,9 +109,9 @@ if (!function_exists('hasAuth')) {
 if (!function_exists('json')) {
 	/**
 	 * json uses Leaf's now `json` method
-	 * 
+	 *
 	 * json() packs in a bunch of functionality and customization into one method
-	 * 
+	 *
 	 * @param array|string|object $data The data to output
 	 * @param int $code HTTP Status code for response, it's set in header
 	 * @param bool $showCode Show response code in response body?
@@ -116,7 +126,7 @@ if (!function_exists('json')) {
 if (!function_exists('markup')) {
 	/**
 	 * Output markup as response
-	 * 
+	 *
 	 * @param string $data The markup to output
 	 * @param int $code The http status code
 	 */
@@ -147,7 +157,7 @@ if (!function_exists('render')) {
 if (!function_exists('request')) {
 	/**
 	 * Return request or request data
-	 * 
+	 *
 	 * @param array|string $data — Get data from request
 	 */
 	function request($data = null)
@@ -160,7 +170,7 @@ if (!function_exists('request')) {
 if (!function_exists('requestBody')) {
 	/**
 	 * Get request body
-	 * 
+	 *
 	 * @param bool $safeData — Sanitize output
 	 */
 	function requestBody($safeOutput = true)
@@ -172,7 +182,7 @@ if (!function_exists('requestBody')) {
 if (!function_exists('requestData')) {
 	/**
 	 * Get request data
-	 * 
+	 *
 	 * @param string|array $param The item(s) to get from request
 	 * @param bool $safeData — Sanitize output
 	 */
@@ -186,7 +196,7 @@ if (!function_exists('requestData')) {
 if (!function_exists('response')) {
 	/**
 	 * Return response or set response data
-	 * 
+	 *
 	 * @param array|string $data — The JSON response to set
 	 */
 	function response($data = null)
@@ -211,7 +221,7 @@ if (!function_exists('Route')) {
 if (!function_exists('session')) {
 	/**
 	 * Get a session variable or the session object
-	 * 
+	 *
 	 * @param string|null $key The variable to get
 	 */
 	function session($key = null)
@@ -237,7 +247,7 @@ if (!function_exists('sessionUser')) {
 if (!function_exists('setHeader')) {
 	/**
 	 * Set a response header
-	 * 
+	 *
 	 * @param string|array $key The header key
 	 * @param string $value Header value
 	 * @param bool $replace Replace header if exists
@@ -271,7 +281,7 @@ if (!function_exists('throwErr')) {
 if (!function_exists('view')) {
 	/**
 	 * Return a blade view
-	 * 
+	 *
 	 * @param string $view The view to return
 	 * @param array $data Data to pass into app
 	 * @param array $mergeData
@@ -281,6 +291,17 @@ if (!function_exists('view')) {
 		app()->blade->configure(viewConfig("views_path"), viewConfig("cache_path"));
 		return app()->blade->render($view, $data, $mergeData);
 	}
+}
+
+// App
+
+/**
+ * Get app configuration
+ */
+function AppConfig($setting = null)
+{
+	$config = require __DIR__ . "/app.php";
+	return !$setting ? $config : $config[$setting];
 }
 
 // Auth
@@ -334,7 +355,7 @@ function config_path($path = null)
 }
 
 /**
- * Storage directory path 
+ * Storage directory path
  */
 function storage_path($path = null, bool $slash = false)
 {

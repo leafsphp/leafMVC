@@ -11,7 +11,7 @@ return [
     | the usual LeafMVC view path has already been registered for you.
     |
     */
-    "views_path" => views_path(),
+    "views_path" => views_path("", false),
 
     /*
     |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ return [
     |
     */
     "cache_path" => storage_path('framework/views'),
-    
+
     /*
     |--------------------------------------------------------------------------
     | Template Engine [EXPERIMENTAL]

@@ -1,5 +1,7 @@
 <?php
 
+/**@var Leaf\App $app */
+
 /*
 |--------------------------------------------------------------------------
 | Set up 404 handler
@@ -8,8 +10,6 @@
 | Create a handler for 404 errors
 |
 */
-
-use function Leaf\Traits\auth;
 
 $app->set404(function() {
 	response()->headers->status(404);
@@ -27,6 +27,6 @@ $app->set404(function() {
 */
 $app->setNamespace("\App\Controllers");
 
-// New in Leaf v2.4.1.
-// You can assign a view directly
-$app->view("/", "index");
+$app->get("/", function () {
+    echo view("index");
+});
