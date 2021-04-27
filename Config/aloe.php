@@ -10,7 +10,7 @@ return [
         "helpers_path" => "/App/Helpers",
         "views_path" => "/App/Views",
         "config_path" => "/App/Config",
-        "storage_path" => "/App/storage",
+        "storage_path" => "/storage",
         "commands_path" => "/App/Console",
         "routes_path" => "/App/Routes",
         "lib_path" => "/Lib",
