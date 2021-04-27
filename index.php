@@ -34,38 +34,6 @@ require __DIR__ . "/Config/bootstrap.php";
 
 /*
 |--------------------------------------------------------------------------
-| Initialise Leaf Core
-|--------------------------------------------------------------------------
-|
-| Plant a seed, grow the stem and return Leaf🤷‍
-|
-*/
-$app = new Leaf\App;
-
-/*
-|--------------------------------------------------------------------------
-| Default fix for CORS
-|--------------------------------------------------------------------------
-|
-| This just prevents the connection client from throwing
-| CORS errors at you.
-|
-*/
-$app->response->cors();
-
-/*
-|--------------------------------------------------------------------------
-| Error Configuration
-|--------------------------------------------------------------------------
-|
-| Show or hide errors  for easy debugging
-| You might want to set this to false for production
-|
-*/
-Config\App::error_debug(true);
-
-/*
-|--------------------------------------------------------------------------
 | Initialise Shortcut Functions
 |--------------------------------------------------------------------------
 |
@@ -78,10 +46,43 @@ require __DIR__ . "/Config/functions.php";
 
 /*
 |--------------------------------------------------------------------------
+| Attach blade view
+|--------------------------------------------------------------------------
+|
+| Since blade no longer ships with Leaf by default, we
+| can attach blade back to Leaf so you can use Leaf MVC
+| as you've always used it.
+|
+*/
+Leaf\View::attach(\Leaf\Blade::class);
+
+/*
+|--------------------------------------------------------------------------
+| Initialise Leaf Core
+|--------------------------------------------------------------------------
+|
+| Plant a seed, grow the stem and return Leaf🤷‍
+|
+*/
+$app = new Leaf\App(AppConfig());
+
+/*
+|--------------------------------------------------------------------------
+| Default fix for CORS
+|--------------------------------------------------------------------------
+|
+| This just prevents the connection client from throwing
+| CORS errors at you.
+|
+*/
+$app->evadeCors(false);
+
+/*
+|--------------------------------------------------------------------------
 | Route Config
 |--------------------------------------------------------------------------
 |
-| Require app routes
+| Require app routes.
 |
 */
 require __DIR__ . "/App/Routes/index.php";
