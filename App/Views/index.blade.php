@@ -15,7 +15,7 @@
       <h1>{{ getenv('APP_NAME') ?? "Leaf MVC" }}</h1>
       <p>
         This is the LeafMVC framework. A simple MVC framework built for
-        <a href="https://leafphp.netlify.app" class="wynter text-green">Leaf PHP Framework</a>
+        <a href="https://leafphp.netlify.app" class="text-green">Leaf PHP Framework</a>
       </p>
     </section>
     <section>
