@@ -2,9 +2,6 @@
 
 /**@var Leaf\App $app */
 
-// You can break up routes into individual files
-require __DIR__ . "/_app.php";
-
 /*
 |--------------------------------------------------------------------------
 | Set up 404 handler
@@ -14,8 +11,7 @@ require __DIR__ . "/_app.php";
 |
 */
 $app->set404(function() {
-	Leaf\Http\Headers::status(404);
-	response()->page(views_path("errors/404.html", false));
+	response()->page(views_path("errors/404.html", false), 404);
 });
 
 /*
@@ -27,8 +23,7 @@ $app->set404(function() {
 |
 */
 $app->setErrorHandler(function() {
-	Leaf\Http\Headers::status(500);
-	response()->page(views_path("errors/500.html", false));
+	response()->page(views_path("errors/500.html", false), 500);
 });
 
 /*
@@ -41,3 +36,6 @@ $app->setErrorHandler(function() {
 |
 */
 $app->setNamespace("\App\Controllers");
+
+// You can break up routes into individual files
+require __DIR__ . "/_app.php";
