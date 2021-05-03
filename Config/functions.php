@@ -415,7 +415,6 @@ function factories_path($path = null)
  */
 function routes_path($path = null)
 {
-	return "/App/Routes/$path";
 	return app_paths("routes_path") . "/$path";
 }
 
@@ -424,7 +423,6 @@ function routes_path($path = null)
  */
 function helpers_path($path = null)
 {
-	return "/App/Helpers/$path";
 	return app_paths("helpers_path") . "/$path";
 }
 
