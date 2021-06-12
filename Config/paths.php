@@ -26,4 +26,6 @@ return [
 	"lib_path" => "Lib",
 
 	"public_path" => "public",
+
+    "database_storage_path" => "storage/app/db"
 ];
