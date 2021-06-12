@@ -76,6 +76,26 @@ if (!function_exists('email')) {
 	}
 }
 
+if (!function_exists('_env')) {
+    /**
+     * Gets the value of an environment variable.
+     *
+     * @param  string  $key
+     * @param  mixed  $default
+     * @return mixed
+     */
+    function _env($key, $default = null)
+    {
+        $item = getenv($key);
+
+        if (!isset($_ENV[$key]) || (isset($_ENV[$key]) && $_ENV[$key] == null)) {
+            $item = $default;
+        }
+
+        return $item;
+    }
+}
+
 if (!function_exists('fs')) {
 	/**
 	 * Return Leaf's FS object
@@ -326,6 +346,14 @@ function viewConfig($setting = null)
 	return !$setting ? $config : $config[$setting];
 }
 
+// Db
+
+function dbConfig($setting = null)
+{
+    $config = require __DIR__ . "/database.php";
+    return !$setting ? $config : $config[$setting];
+}
+
 // App paths as callable methods
 
 /**
@@ -440,4 +468,12 @@ function lib_path($path = null)
 function public_path($path = null)
 {
 	return app_paths("public_path") . "/$path";
+}
+
+/**
+ * Database storage path
+ */
+function database_path($path = null)
+{
+    return app_paths("database_storage_path") . "/$path";
 }
