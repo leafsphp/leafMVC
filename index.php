@@ -10,29 +10,17 @@
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-require_once __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Register The Leaf Auto Loader
+| Shortcut functions
 |--------------------------------------------------------------------------
 |
-| Require all Leaf API's Files
+| Attach shortcut functions to your leaf app.
 |
 */
-require __DIR__ . "/Config/bootstrap.php";
-
-/*
-|--------------------------------------------------------------------------
-| Initialise Shortcut Functions
-|--------------------------------------------------------------------------
-|
-| Simple functions you can call from anywhere in your application.
-| This is not a core feature, you can remove it and your app would still
-| work fine.
-|
-*/
-require __DIR__ . "/Config/functions.php";
+require __DIR__ . '/Config/functions.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +43,16 @@ Leaf\View::attach(\Leaf\Blade::class);
 |
 */
 $app = new Leaf\App(AppConfig());
+
+/*
+|--------------------------------------------------------------------------
+| Load application paths
+|--------------------------------------------------------------------------
+|
+| Tell Leaf MVC Core where to locate application paths
+|
+*/
+Leaf\Core::paths(PathsConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -89,7 +87,7 @@ $app->evadeCors(false);
 | Load leaf database configuration
 |
 */
-Leaf\Database::config(dbConfig());
+Leaf\Database::config(DatabaseConfig());
 
 /*
 |--------------------------------------------------------------------------
