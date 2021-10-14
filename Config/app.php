@@ -50,7 +50,7 @@ return [
     | This tells leaf which directory to save and look for logs.
     |
     */
-    "log.dir" => storage_path("logs/"),
+    "log.dir" => storagePath("logs/"),
 
     /*
     |--------------------------------------------------------------------------
@@ -136,7 +136,7 @@ return [
     | contains your Leaf application’s view files.
     |
     */
-    "views.path" => views_path(),
+    "views.path" => ViewsPath(null, false),
 
     /*
     |--------------------------------------------------------------------------
@@ -146,5 +146,5 @@ return [
     | This config tells leaf where to save cached and compiled views.
     |
     */
-    "views.cachePath" => storage_path('framework/views'),
+    "views.cachePath" => StoragePath('framework/views'),
 ];

@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ getenv('APP_NAME') ?? "Leaf MVC" }}</title>
   <link rel="shortcut icon" href="https://leafphp.netlify.app/img/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="{{ views_path("assets/css/styles.css") }}">
+  <link rel="stylesheet" href="{{ ViewsPath("assets/css/styles.css") }}">
+  <script src="https://unpkg.com/petite-vue" defer init></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
       <h1>{{ getenv('APP_NAME') ?? "Leaf MVC" }}</h1>
       <p>
         This is the LeafMVC framework. A simple MVC framework built for
-        <a href="https://leafphp.netlify.app" class="text-green">Leaf PHP Framework</a>
+        <a href="https://leafphp.dev" class="text-green">Leaf PHP Framework</a>
       </p>
     </section>
     <section>
@@ -30,9 +31,9 @@
         <li>Grow something amazing. Happy gardening!</li>
       </ul>
     </section>
-    <section>
-      <button @click="showExtras = !showExtras">Learn Leaf MVC</button>
-      <div class="collection" v-if="showExtras">
+    <section v-scope="{ show: 0 }">
+      <button @click="show = !show">Learn Leaf MVC</button>
+      <div class="collection" v-if="show">
         <a href="https://leafphp.netlify.app/#/leaf-mvc/" target="_blank" class="collection-item">
             Read our informative docs
         </a>
@@ -48,18 +49,6 @@
       </div>
     </section>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-  <script>
-    new Vue({
-      el: "#app",
-      data() {
-        return {
-          showExtras: false,
-        };
-      },
-    });
-  </script>
 </body>
 
 </html>
