@@ -11,7 +11,7 @@
 |
 */
 $app->set404(function() {
-	response()->page(views_path("errors/404.html", false), 404);
+	response()->page(ViewsPath("errors/404.html", false), 404);
 });
 
 /*
@@ -22,9 +22,9 @@ $app->set404(function() {
 | Create a handler for error 500
 |
 */
-$app->setErrorHandler(function() {
-	response()->page(views_path("errors/500.html", false), 500);
-});
+// $app->setErrorHandler(function() {
+// 	response()->page(ViewsPath("errors/500.html", false), 500);
+// });
 
 /*
 |--------------------------------------------------------------------------
