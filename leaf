@@ -15,23 +15,14 @@ require __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Register The Leaf Command Auto Loader
+| Load MVC Core
 |--------------------------------------------------------------------------
 |
-| Require all the files containing the Leaf Commands
+| MVC core provides Leaf's auto loading, configuration and shortcut
+| functions right off the bat.
 |
 */
-require __DIR__ . '/Config/bootstrap.php';
-
-/*
-|--------------------------------------------------------------------------
-| Register Leaf Shortcut functions
-|--------------------------------------------------------------------------
-|
-| Allows you to use leaf features
-|
-*/
-require __DIR__ . '/Config/functions.php';
+Leaf\Core::paths(PathsConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +32,11 @@ require __DIR__ . '/Config/functions.php';
 | Quickly use our environment variables
 |
 */
-file_exists(__DIR__ . "/.env") && \Dotenv\Dotenv::create(__DIR__)->load();
+try {
+    \Dotenv\Dotenv::create(__DIR__)->load();
+} catch (\Throwable $th) {
+    trigger_error($th);
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +46,8 @@ file_exists(__DIR__ . "/.env") && \Dotenv\Dotenv::create(__DIR__)->load();
 | Load leaf database configuration
 |
 */
-Leaf\Database::config(dbConfig());
+Leaf\Database::config(DatabaseConfig());
+Leaf\Database::connect();
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +57,7 @@ Leaf\Database::config(dbConfig());
 | Initialise aloe CLI
 |
 */
-$console = new \Aloe\Console("Leaf MVC", "v2.3");
+$console = new \Aloe\Console("Leaf MVC", "v2.4");
 
 /*
 |--------------------------------------------------------------------------
