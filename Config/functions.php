@@ -55,16 +55,6 @@ if (!function_exists('auth')) {
     }
 }
 
-if (!function_exists('d')) {
-    /**
-     * Return Leaf's date object
-     */
-    function d()
-    {
-        return app()->date;
-    }
-}
-
 if (!function_exists('dbRow')) {
     /**
      * Return a db row by it's id
@@ -102,16 +92,6 @@ if (!function_exists('email')) {
             );
         }
         $mail->write($email)->send();
-    }
-}
-
-if (!function_exists('fs')) {
-    /**
-     * Return Leaf's FS object
-     */
-    function fs()
-    {
-        return app()->fs;
     }
 }
 
@@ -211,36 +191,5 @@ if (!function_exists('setHeader')) {
     function setHeader($key, $value = "", $replace = true, $code = 200)
     {
         app()->headers()->set($key, $value, $replace, $code);
-    }
-}
-
-if (!function_exists("view")) {
-    function view(string $view, array $data = [])
-    {
-        if (ViewConfig("render")) {
-            ViewConfig("config")([
-                "views_path" => AppConfig("views.path"),
-                "cache_path" => AppConfig("views.cachePath"),
-            ]);
-
-            return ViewConfig("render")($view, $data);
-        }
-
-        $engine = ViewConfig("view_engine");
-
-        $className = strtolower(get_class(new $engine));
-
-        $fullName = explode("\\", $className);
-        $className = $fullName[count($fullName) - 1];
-
-        if (forward_static_call_array(["Leaf\\View", $className], [])) {
-            forward_static_call_array(["Leaf\\View", $className], [])->configure(AppConfig("views.path"), AppConfig("views.cachePath"));
-            return forward_static_call_array(["Leaf\\View", $className], [])->render($view, $data);
-        }
-
-        $engine = new $engine($engine);
-        $engine->config(AppConfig("views.path"), AppConfig("views.cachePath"));
-
-        return $engine->render($view, $data);
     }
 }

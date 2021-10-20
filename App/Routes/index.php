@@ -22,9 +22,9 @@ $app->set404(function() {
 | Create a handler for error 500
 |
 */
-// $app->setErrorHandler(function() {
-// 	response()->page(ViewsPath("errors/500.html", false), 500);
-// });
+$app->setErrorHandler(function() {
+	response()->page(ViewsPath("errors/500.html", false), 500);
+});
 
 /*
 |--------------------------------------------------------------------------

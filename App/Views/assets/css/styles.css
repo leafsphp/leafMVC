@@ -6,7 +6,10 @@ body {
     align-items: center;
     font: 12px/1.5 Helvetica, Arial, Verdana, sans-serif;
     flex-direction: column;
-    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./../img/bg.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./../img/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center 200px;
+    width: 100vw;
 }
 
 h1 {
