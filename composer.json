@@ -42,5 +42,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php -r \"unlink('README.MD'); rename('README2.MD', 'README.MD');\""
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
