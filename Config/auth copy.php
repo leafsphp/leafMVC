@@ -1,0 +1,161 @@
+<?php
+
+use Leaf\Helpers\Password;
+
+return [
+    /*
+    |--------------------------------------------------------------------------
+    | Generate timestamps
+    |--------------------------------------------------------------------------
+    |
+    | Automatically generate created_at/updated_at timestamps for register
+    | and update methods
+    |
+    */
+    "USE_TIMESTAMPS" => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Encode password
+    |--------------------------------------------------------------------------
+    |
+    | Password encode is run when leaf wants to encode passwords on register
+    | This exact method is used by default in Leaf, so you can set it to null
+    | if you want to.
+    |
+    | You can set your own implementation instead of Password::hash
+    |
+    */
+    "PASSWORD_ENCODE" => function ($password) {
+        return Password::hash($password);
+    },
+
+    /*
+    |--------------------------------------------------------------------------
+    | Verify Password
+    |--------------------------------------------------------------------------
+    |
+    | This function is run to verify the password. This implementation is done
+    | by default, so you can set it to null, and it will still work fine.
+    |
+    | You can add your own implementation instead of Password::verify
+    |
+    */
+    "PASSWORD_VERIFY" => function ($password, $hashedPassword) {
+        return Password::verify($password, $hashedPassword);
+    },
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password Key
+    |--------------------------------------------------------------------------
+    |
+    | The default password key. Leaf will expect this key to hold passwords
+    | in your database.
+    |
+    */
+    "PASSWORD_KEY" => "password",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Hide id
+    |--------------------------------------------------------------------------
+    |
+    | Hide id field from user object returned in login, register and update
+    |
+    */
+    "HIDE_ID" => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Hide password
+    |--------------------------------------------------------------------------
+    |
+    | Hide password from user object returned in login, register and update
+    |
+    */
+    "HIDE_PASSWORD" => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Login params error
+    |--------------------------------------------------------------------------
+    |
+    | Error to show when the login params aren't found in db
+    |
+    */
+    "LOGIN_PARAMS_ERROR" => "Username not registered!",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password error
+    |--------------------------------------------------------------------------
+    |
+    | Error to show when the login password is wrong
+    |
+    */
+    "LOGIN_PASSWORD_ERROR" => "Password is incorrect!",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Use session [EXPERIMENTAL]
+    |--------------------------------------------------------------------------
+    |
+    | Use session based authentication instead of the default JWT based auth.
+    |
+    | If you encounter any problems using any new auth session features,
+    | revert to the default auth and manage sessions manually.
+    | Don't forget to open an issue.
+    |
+    */
+    "USE_SESSION" => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Session on register
+    |--------------------------------------------------------------------------
+    |
+    | If true, a session will be created on a successful registration, else
+    | you it'll be created on login rather.
+    |
+    */
+    "SESSION_ON_REGISTER" => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Login page route
+    |--------------------------------------------------------------------------
+    */
+    "GUARD_LOGIN" => "/auth/login",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Register page route
+    |--------------------------------------------------------------------------
+    */
+    "GUARD_REGISTER" => "/auth/register",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Logout route
+    |--------------------------------------------------------------------------
+    */
+    "GUARD_LOGOUT" => "/auth/logout",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Home page route
+    |--------------------------------------------------------------------------
+    */
+    "GUARD_HOME" => "/home",
+
+    /*
+    |--------------------------------------------------------------------------
+    | JWT + Session
+    |--------------------------------------------------------------------------
+    |
+    | Add an auth token to the auth session?
+    |
+    */
+    "SAVE_SESSION_JWT" => false,
+];

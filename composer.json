@@ -19,7 +19,6 @@
         }
     ],
     "require": {
-        "leafs/leaf": "^2.6",
         "leafs/aloe": "^1.2",
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^8.0",
@@ -27,11 +26,31 @@
         "symfony/console": "^5.1",
         "vlucas/phpdotenv": "^3.6",
         "leafs/blade": "^1.2",
-        "leafs/mvc-core": "^1.1"
+        "leafs/mvc-core": "^1.1",
+        "leafs/leaf": "v3.0-alpha",
+        "leafs/logger": "^1.0",
+        "leafs/cors": "^1.0"
     },
     "require-dev": {
-        "fzaninotto/faker": "^1.4",
-        "deployer/deployer": "^6.4"
+        "fzaninotto/faker": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lib\\": "lib/",
+            "App\\": "app/",
+            "Config\\": "config/",
+            "App\\Views\\": "app/views/",
+            "App\\Utils\\": "app/utils/",
+            "App\\Models\\": "app/models/",
+            "App\\Console\\": "app/console/",
+            "App\\Helpers\\": "app/helpers/",
+            "App\\Services\\": "app/services/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Database\\Seeds\\": "app/database/Seeds/",
+            "App\\Database\\Schema\\": "app/database/Schema/",
+            "App\\Database\\Factories\\": "app/database/factories/",
+            "App\\Database\\Migrations\\": "app/database/Migrations/"
+        }
     },
     "config": {
         "optimize-autoloader": true,

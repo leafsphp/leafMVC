@@ -50,7 +50,7 @@ return [
     | This tells leaf which directory to save and look for logs.
     |
     */
-    "log.dir" => storagePath("logs/"),
+    "log.dir" => StoragePath("logs/"),
 
     /*
     |--------------------------------------------------------------------------

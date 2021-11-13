@@ -10,7 +10,7 @@
 | Create a handler for 404 errors
 |
 */
-$app->set404(function() {
+app()->set404(function() {
 	response()->page(ViewsPath("errors/404.html", false), 404);
 });
 
@@ -22,7 +22,7 @@ $app->set404(function() {
 | Create a handler for error 500
 |
 */
-// $app->setErrorHandler(function() {
+// app()->setErrorHandler(function() {
 // 	response()->page(ViewsPath("errors/500.html", false), 500);
 // });
 
@@ -35,7 +35,7 @@ $app->set404(function() {
 | the controller namespace first.
 |
 */
-$app->setNamespace("\App\Controllers");
+app()->setNamespace("\App\Controllers");
 
 // You can break up routes into individual files
 require __DIR__ . "/_app.php";

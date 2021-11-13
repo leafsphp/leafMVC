@@ -2,53 +2,77 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ getenv('APP_NAME') ?? "Leaf MVC" }}</title>
-  <link rel="shortcut icon" href="https://leafphp.netlify.app/img/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="{{ ViewsPath("assets/css/styles.css") }}">
-  <script src="https://unpkg.com/petite-vue" defer init></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ getenv('APP_NAME') ?? 'Leaf MVC' }}</title>
+    <link rel="shortcut icon" href="https://leafphp.netlify.app/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ ViewsPath('assets/css/styles.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700;display=swap">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body>
-  <div id="app" style="margin-top: 35px;">
-    <section>
-      <h1>{{ getenv('APP_NAME') ?? "Leaf MVC" }}</h1>
-      <p>
-        This is the LeafMVC framework. A simple MVC framework built for
-        <a href="https://leafphp.dev" class="text-green">Leaf PHP Framework</a>
-      </p>
-    </section>
-    <section>
-      <h2>Getting Started</h2>
-      <ul>
-        <li>Open up <b><code>App/Routes/index.php</code></b> to add your routes.</li>
-        <li>Edit <b><code>App/Views/index.blade.php</code></b> and reload to see changes.</li>
-        <li>
-            Open up the root directory in your console and type <code>php leaf list</code>
-            to view all available commands.
-        </li>
-        <li>Grow something amazing. Happy gardening!</li>
-      </ul>
-    </section>
-    <section v-scope="{ show: 0 }">
-      <button @click="show = !show">Learn Leaf MVC</button>
-      <div class="collection" v-if="show">
-        <a href="https://leafphp.netlify.app/#/leaf-mvc/" target="_blank" class="collection-item">
-            Read our informative docs
-        </a>
-        <a href="https://leafphp.netlify.app/#/leaf/" target="_blank" class="collection-item">
-            Read Leaf Framework's docs
-        </a>
-        <a href="https://twitter.com/leafphp" target="_blank" class="collection-item">
-            Follow @leafphp on twitter for updates on Leaf
-        </a>
-        <a href="https://www.youtube.com/channel/UCllE-GsYy10RkxBUK0HIffw" target="_blank" class="collection-item">
-            Subscribe to our Youtube channel
-        </a>
-      </div>
-    </section>
-  </div>
+<body class="flex center-all h-screen">
+	<div class="container">
+		<div class="mt-3">
+			<div class="flex center-start">
+				<img src="https://www.leafphp.dev/logo-circle.png" alt="">
+				<h4 style="font-size: 22px;">Welcome to Leaf <span class="green">3</span></h4>
+			</div>
+			<div class="flex card mt-3">
+				<div class="flex" style="width: calc(50% - 80px); padding: 30px;">
+					<ion-icon name="book-outline"></ion-icon>
+					<div class="ml-1">
+						<h4>
+							Leaf MVC Documentation
+						</h4>
+						<p class="mt-1">
+							Leaf MVC comes with a clean and developer-friendly documentation for both beginners and seasoned users.
+						</p>
+						<a href="https://leafphp.dev/mvc/" target="_blank" rel="noopener">
+							Leaf MVC Docs
+						</a>
+					</div>
+				</div>
+                <div class="flex" style="width: calc(50% - 80px); padding: 30px;">
+					<ion-icon name="laptop-outline"></ion-icon>
+					<div class="ml-1">
+						<h4>
+							Leaf Documentation
+						</h4>
+						<p class="mt-1">
+							Since Skeleton is basically a boilerplate built with Leaf, we recommend checking out the leaf docs first.
+						</p>
+						<a href="https://leafphp.dev" target="_blank" rel="noopener">
+							Leaf Docs
+						</a>
+					</div>
+				</div>
+				<div class="flex" style="width: calc(50% - 80px); padding: 30px;">
+					<ion-icon name="logo-twitter"></ion-icon>
+					<div class="ml-1">
+						<h4>Twitter</h4>
+						<p class="mt-1">
+							Follow Leaf PHP on Twitter to get latest news about releases, new modules, tutorials
+							and amazing tips.
+						</p>
+						<a href="https://twitter.com/leafphp" target="_blank" rel="noopener">@leafphp</a>
+					</div>
+				</div>
+				<div class="flex" style="width: calc(50% - 80px); padding: 30px;">
+					<ion-icon name="logo-youtube"></ion-icon>
+					<div class="ml-1">
+						<h4>YouTube</h4>
+						<p class="mt-1">
+							We have a youtube channel where we upload videos on leaf, our modules, frameworks and other projects.
+						</p>
+						<a href="https://www.youtube.com/channel/UCllE-GsYy10RkxBUK0HIffw" target="_blank" rel="noopener">Leaf YouTube Channel</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

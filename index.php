@@ -14,13 +14,27 @@ require __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Shortcut functions
+| Bring in (env)
 |--------------------------------------------------------------------------
 |
-| Attach shortcut functions to your leaf app.
+| Quickly use our environment variables
 |
 */
-require __DIR__ . '/Config/functions.php';
+try {
+    \Dotenv\Dotenv::create(__DIR__)->load();
+} catch (\Throwable $th) {
+    trigger_error($th);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Load application paths
+|--------------------------------------------------------------------------
+|
+| Tell Leaf MVC Core where to locate application paths
+|
+*/
+Leaf\Core::paths(PathsConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -42,31 +56,7 @@ Leaf\View::attach(\Leaf\Blade::class);
 | Plant a seed, grow the stem and return Leaf🤷‍
 |
 */
-$app = new Leaf\App(AppConfig());
-
-/*
-|--------------------------------------------------------------------------
-| Load application paths
-|--------------------------------------------------------------------------
-|
-| Tell Leaf MVC Core where to locate application paths
-|
-*/
-Leaf\Core::paths(PathsConfig());
-
-/*
-|--------------------------------------------------------------------------
-| Bring in (env)
-|--------------------------------------------------------------------------
-|
-| Quickly use our environment variables
-|
-*/
-try {
-    \Dotenv\Dotenv::create(__DIR__)->load();
-} catch (\Throwable $th) {
-    trigger_error($th);
-}
+Leaf\Config::set(AppConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +67,7 @@ try {
 | CORS errors at you.
 |
 */
-$app->evadeCors(false);
+app()->cors(CorsConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -97,7 +87,7 @@ Leaf\Database::config(DatabaseConfig());
 | Require app routes.
 |
 */
-require __DIR__ . "/App/Routes/index.php";
+require __DIR__ . "/app/routes/index.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -107,4 +97,4 @@ require __DIR__ . "/App/Routes/index.php";
 | Require app routes
 |
 */
-$app->run();
+app()->run();
