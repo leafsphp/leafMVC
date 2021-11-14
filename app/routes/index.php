@@ -1,7 +1,5 @@
 <?php
 
-/**@var Leaf\App $app */
-
 /*
 |--------------------------------------------------------------------------
 | Set up 404 handler
@@ -10,9 +8,9 @@
 | Create a handler for 404 errors
 |
 */
-app()->set404(function() {
-	response()->page(ViewsPath("errors/404.html", false), 404);
-});
+// app()->set404(function() {
+// 	response()->page(ViewsPath("errors/404.html", false), 404);
+// });
 
 /*
 |--------------------------------------------------------------------------
