@@ -57,7 +57,7 @@ Leaf\Database::connect();
 | Initialise aloe CLI
 |
 */
-$console = new \Aloe\Console("Leaf MVC", "v2.4");
+$console = new \Aloe\Console("Leaf MVC", "v3.0");
 
 /*
 |--------------------------------------------------------------------------
