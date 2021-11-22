@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Database\Migrations;
-
 use Leaf\Database;
 use Illuminate\Database\Schema\Blueprint;
 use Leaf\Schema;

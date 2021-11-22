@@ -39,6 +39,7 @@
             "Lib\\": "lib/",
             "App\\": "app/",
             "Config\\": "config/",
+            "App\\Jobs\\": "app/jobs/",
             "App\\Http\\": "app/http/",
             "App\\Views\\": "app/views/",
             "App\\Utils\\": "app/utils/",
@@ -51,8 +52,7 @@
             "App\\Controllers\\": "app/controllers/",
             "App\\Database\\Seeds\\": "app/database/seeds/",
             "App\\Database\\Schema\\": "app/database/schema/",
-            "App\\Database\\Factories\\": "app/database/factories/",
-            "App\\Database\\Migrations\\": "app/database/migrations/"
+            "App\\Database\\Factories\\": "app/database/factories/"
         }
     },
     "config": {

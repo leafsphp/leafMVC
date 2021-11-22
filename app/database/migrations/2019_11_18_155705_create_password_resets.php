@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Database\Migrations;
-
 use Leaf\Database;
 
 class CreatePasswordResets extends Database {
