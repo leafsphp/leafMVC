@@ -43,16 +43,16 @@
             "App\\Views\\": "app/views/",
             "App\\Utils\\": "app/utils/",
             "App\\Models\\": "app/models/",
-            "App\\Scripts\\": "app/cripts/",
             "App\\Workers\\": "app/workers/",
             "App\\Console\\": "app/console/",
+            "App\\Scripts\\": "app/scripts/",
             "App\\Helpers\\": "app/helpers/",
             "App\\Services\\": "app/services/",
             "App\\Controllers\\": "app/controllers/",
-            "App\\Database\\Seeds\\": "app/database/Seeds/",
-            "App\\Database\\Schema\\": "app/database/Schema/",
+            "App\\Database\\Seeds\\": "app/database/seeds/",
+            "App\\Database\\Schema\\": "app/database/schema/",
             "App\\Database\\Factories\\": "app/database/factories/",
-            "App\\Database\\Migrations\\": "app/database/Migrations/"
+            "App\\Database\\Migrations\\": "app/database/migrations/"
         }
     },
     "config": {
