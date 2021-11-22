@@ -22,18 +22,14 @@ class Controller extends \Leaf\Controller
         // autoConnect uses the .env variables to quickly connect to db
         Auth::autoConnect();
 
-        // set default token expiry time
-        Auth::tokenLifetime(60 * 60 * 24 * 365);
-
         // You can configure auth to get additional customizations
         // This can be done here with the Auth::config method or
-        // simply in the Config/auth.php file
+        // simply in the config/auth.php file
         Auth::config(AuthConfig());
 
-        // You can refer to https://leafphp.netlify.app/#/leaf/v/2.4/core/auth for auth docs
+        // You can refer to https://leafphp.dev/modules/auth for auth docs
 
-        // New in v2.5. This allows us to use session
-        // authentication instead of the default API JWT method.
-        Auth::useSession();
+        // To use session instead of JWT, open up config/auth.php and set
+        // USE_SESSION to true
     }
 }
