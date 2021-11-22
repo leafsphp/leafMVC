@@ -1,5 +1,5 @@
 {
-    "name": "leafs/api",
+    "name": "leafs/mvc",
     "description": "A lightweight PHP MVC framework for rapid API development.",
     "type": "library",
     "keywords": [
@@ -7,7 +7,7 @@
         "leaf",
         "leafPHP",
         "mvc",
-        "leaf api"
+        "leaf mvc"
     ],
     "license": "MIT",
     "authors": [
@@ -19,20 +19,19 @@
         }
     ],
     "require": {
-        "leafs/aloe": "^1.2",
+        "leafs/aloe": "^1.2.6",
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^8.0",
-        "psy/psysh": "^0.9.9",
-        "symfony/console": "^5.1",
-        "vlucas/phpdotenv": "^3.6",
         "leafs/blade": "^1.2",
         "leafs/mvc-core": "^1.1",
         "leafs/leaf": "v3.0-alpha",
         "leafs/logger": "^1.0",
-        "leafs/cors": "^1.0"
+        "leafs/cors": "^1.0",
+        "leafs/router": "^0.1.4",
+        "leafs/auth": "^1.1"
     },
     "require-dev": {
-        "fzaninotto/faker": "^1.4"
+        "fakerphp/faker": "^1.16"
     },
     "autoload": {
         "psr-4": {
