@@ -1,30 +1,38 @@
 <p align="center">
     <br><br>
-    <img src="https://leaf-docs.netlify.app/images/logo.png" height="100"/>
-    <h1 align="center">Leaf MVC</h1>
+    <img src="https://leafphp.dev/logo-circle.png" height="100"/>
     <br>
-    <br><br><br>
 </p>
 
 [![Latest Stable Version](https://poser.pugx.org/leafs/mvc/v/stable)](https://packagist.org/packages/leafs/mvc)
 [![Total Downloads](https://poser.pugx.org/leafs/mvc/downloads)](https://packagist.org/packages/leafs/mvc)
 [![License](https://poser.pugx.org/leafs/mvc/license)](https://packagist.org/packages/leafs/mvc)
 
-# Leaf
+# Leaf MVC 3
 
-LeafMVC is a simple MVC framework built on top of the leaf php micro-framework. LeafMVC lets you create clean but powerful web apps and APIs quickly. Leaf provides simple to use functions to take care of complex issues, eventually speeding up development and taking the pain out of development.
+Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). Leaf MVC provides an simple and opinionated structure with a tons of functionality built in.
 
-## Installation
+Leaf MVC 3 is built on Leaf 3 which makes it even more lightweight and faster than earlier versions, but comes with a ton of upgrades and security fixes.
 
-It's recommended that you use [Composer](https://getcomposer.org/) to install Leaf.
+## 📦 Installation
 
-```bash
-composer create project leafs/mvc <project-name>
+You can install Leaf MVC v3 with the [Leaf CLI](https://cli.leafphp.dev)
+
+```sh
+leaf create <project-name> --v3 --mvc
 ```
 
-This will start a new LeafMVC app.
+`<project-name>` is your project name
 
-## Basic Info
+You can also use [Composer](https://getcomposer.org/) to install Leaf MVC quickly.
+
+```bash
+composer create-project leafs/mvc <project-name>
+```
+
+This will start a new Leaf MVC app.
+
+## 📚 Basic Info
 
 ```bash
 C:.
@@ -40,17 +48,17 @@ C:.
 │   ├───models
 │   ├───routes
 │   └───views
-│       ├───assets
-│       │   ├───css
-│       │   ├───images
-│       │   ├───js
-│       │   └───sass
 │       ├───components
 │       └───pages
 │           └───errors
 ├───config
 │   └───command
 ├───public
+│   └───assets
+│       ├───css
+│       ├───images
+│       ├───js
+│       └───sass
 ├───storage
 │   ├───app
 │   │   └───public
@@ -62,22 +70,37 @@ C:.
 
 This directory structure is a blend of Ruby on Rails and Laravel
 
-To run your LeafMVC application, use
+To run your Leaf MVC application, use
 
 ```bash
 php leaf serve
 ```
 
-## Learning LeafMVC
+## 📓 Learning Leaf MVC
 
-LeafMVC has a very easy to understand [documentation](https://leafmvc.netlify.app/) which contains information on all operations in LeafMVC.
+Leaf MVC has a very easy to understand [documentation](https://mvc.leafphp.dev) which contains information on all operations in Leaf MVC.
 
-Since LeafMVC runs on Leaf, you can check out the Leaf PHP Framework documentation [here](https://leaf-docs.netlify.app).
+Since Leaf MVC runs on Leaf, you should check out the Leaf PHP Framework documentation [here](https://leafphp.dev).
 
-## License
+## 😇 Contributing
 
-The LeafMVC framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+We are glad to have you. All contributions are welcome! To get started, familiarize yourself with our [contribution guide](https://leafphp.dev/community/contributing.html) and you'll be ready to make your first pull request 🚀.
 
-## View LeafMVC's docs [here](https://leafmvc.netlify.com/)
+To report a security vulnerability, you can reach out to [@mychidarko](https://twitter.com/mychidarko) or [@leafphp](https://twitter.com/leafphp) on twitter. We will coordinate the fix and eventually commit the solution in this project.
 
-## View Leaf's docs [here](https://leaf-docs.netlify.com/)
+## 🤩 Sponsoring Leaf
+
+Your cash contributions go a long way to help us make Leaf even better for you. You can sponsor Leaf and any of our packages on [open collective](https://opencollective.com/leaf) or check the [contribution page](https://leafphp.dev/support/) for a list of ways to contribute.
+
+We will furthermore like to thank our existing supporters, we love you all ❤️
+
+## 📃 License
+
+The Leaf MVC framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Links
+
+- [Leaf Docs](https://leafphp.dev)
+- [Leaf MVC Docs](https://mvc.leafphp.dev)
+- [Leaf CLI Docs](https://cli.leafphp.dev)
+- [Aloe CLI Docs](https://leafphp.dev/aloe-cli/)
