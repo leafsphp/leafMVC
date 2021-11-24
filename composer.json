@@ -23,7 +23,7 @@
         "doctrine/dbal": "^2.9",
         "illuminate/console": "^8.0",
         "leafs/blade": "^1.2",
-        "leafs/mvc-core": "^1.1",
+        "leafs/mvc-core": "dev-main",
         "leafs/leaf": "v3.0-alpha",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
