@@ -1,7 +1,7 @@
 <p align="center">
     <br><br>
     <img src="https://leafphp.dev/logo-circle.png" height="100"/>
-    <br>
+    <br><br>
 </p>
 
 [![Latest Stable Version](https://poser.pugx.org/leafs/mvc/v/stable)](https://packagist.org/packages/leafs/mvc)
