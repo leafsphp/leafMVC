@@ -32,7 +32,7 @@ composer create-project leafs/mvc <project-name>
 
 This will start a new Leaf MVC app.
 
-## 📚 Basic Info
+## 🗂 Directory Structure
 
 ```bash
 C:.
