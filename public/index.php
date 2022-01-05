@@ -33,7 +33,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 |
 */
 try {
-    \Dotenv\Dotenv::createUnsafeImmutable(dirname(__DIR__))->load();
+    \Dotenv\Dotenv::createImmutable(dirname(__DIR__))->load();
 } catch (\Throwable $th) {
     trigger_error($th);
 }
@@ -108,6 +108,7 @@ app()->cors(CorsConfig());
 |
 */
 Leaf\Database::config(DatabaseConfig());
+Leaf\Database::connect();
 
 /*
 |--------------------------------------------------------------------------
