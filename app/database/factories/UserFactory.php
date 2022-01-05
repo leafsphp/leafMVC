@@ -12,7 +12,7 @@ class UserFactory extends Factory
 
 	// You define your factory blueprint here
 	// It should return an associative array
-	public function definition()
+	public function definition(): array
 	{
 		return [
 			'username' => strtolower($this->faker->firstName),
