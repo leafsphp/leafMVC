@@ -19,16 +19,15 @@
         }
     ],
     "require": {
-        "leafs/aloe": "^1.2",
-        "doctrine/dbal": "^2.9",
+        "leafs/aloe": "^1.2.6",
         "illuminate/console": "^8.75",
-        "leafs/blade": "^1.2",
-        "leafs/mvc-core": "^1.1",
+        "leafs/blade": "^1.2.4",
+        "leafs/mvc-core": "^1.1.6",
         "leafs/leaf": "v3.0-rc",
-        "leafs/logger": "^1.0",
+        "leafs/logger": "^1.0.1",
         "leafs/cors": "^1.0",
         "leafs/router": "^0.1.4",
-        "leafs/auth": "^1.1"
+        "leafs/auth": "^1.1.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.16"
