@@ -108,7 +108,6 @@ app()->cors(CorsConfig());
 |
 */
 Leaf\Database::config(DatabaseConfig());
-Leaf\Database::connect();
 
 /*
 |--------------------------------------------------------------------------
