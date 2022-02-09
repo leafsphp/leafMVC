@@ -30,7 +30,7 @@
 						<p class="mt-1">
 							Leaf MVC comes with a clean and developer-friendly documentation for both beginners and seasoned users.
 						</p>
-						<a href="https://leafphp.dev/mvc/" target="_blank" rel="noopener">
+						<a href="https://mvc.leafphp.dev/" target="_blank" rel="noopener">
 							Leaf MVC Docs
 						</a>
 					</div>
