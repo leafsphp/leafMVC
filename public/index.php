@@ -80,10 +80,10 @@ Leaf\View::attach(\Leaf\Blade::class);
 
 /*
 |--------------------------------------------------------------------------
-| Initialise Leaf Core
+| Initialise Config
 |--------------------------------------------------------------------------
 |
-| Plant a seed, grow the stem and return Leaf🤷‍
+| Pass your application configuration into your leaf app.
 |
 */
 Leaf\Config::set(AppConfig());
