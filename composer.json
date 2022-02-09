@@ -24,11 +24,13 @@
         "illuminate/console": "^8.75",
         "leafs/blade": "^1.2",
         "leafs/mvc-core": "^1.1",
-        "leafs/leaf": "v3.0-rc",
+        "leafs/leaf": "v3.0-rc.2",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
-        "leafs/router": "^0.1.4",
-        "leafs/auth": "^1.1"
+        "leafs/router": "^0.1.5",
+        "leafs/auth": "^2.0",
+        "leafs/http": "^1.2",
+        "leafs/session": "^1.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.16"
