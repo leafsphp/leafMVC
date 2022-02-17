@@ -5,6 +5,17 @@ use Leaf\Helpers\Password;
 return [
     /*
     |--------------------------------------------------------------------------
+    | Database table
+    |--------------------------------------------------------------------------
+    |
+    | This is the table that leaf auth will perform authentication
+    | checks on and edit/retrieve users from.
+    |
+    */
+    "DB_TABLE" => "users",
+
+    /*
+    |--------------------------------------------------------------------------
     | Generate timestamps
     |--------------------------------------------------------------------------
     |
@@ -98,17 +109,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Use session [EXPERIMENTAL]
+    | Use session
     |--------------------------------------------------------------------------
     |
     | Use session based authentication instead of the default JWT based auth.
     |
-    | If you encounter any problems using any new auth session features,
-    | revert to the default auth and manage sessions manually.
-    | Don't forget to open an issue.
-    |
     */
-    "USE_SESSION" => false,
+    "USE_SESSION" => true,
 
     /*
     |--------------------------------------------------------------------------
