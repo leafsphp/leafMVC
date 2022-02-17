@@ -12,7 +12,7 @@ return [
     | you need. As such, you can decide which view engine to use.
     |
     */
-    "view_engine" => \Leaf\Blade::class,
+    'view_engine' => \Leaf\Blade::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -22,8 +22,8 @@ return [
     | Configuration for your templating engine.
     |
     */
-    "config" => function ($config) {
-        View::blade()->config($config["views_path"], $config["cache_path"]);
+    'config' => function ($config) {
+        View::blade()->config($config['views_path'], $config['cache_path']);
     },
 
     /*
@@ -35,5 +35,5 @@ return [
     | in your app if you're using a custom view engine.
     |
     */
-    "render" => null,
+    'render' => null,
 ];

@@ -28,7 +28,7 @@ return [
     |   non-function value of the origin option) as the second.
     |
     */
-    "origin" => "*",
+    'origin' => '*',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     | an array (ex: ['GET', 'PUT', 'POST'])
     |
     */
-    "methods" => "GET,HEAD,PUT,PATCH,POST,DELETE",
+    'methods' => 'GET,HEAD,PUT,PATCH,POST,DELETE',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     | Access-Control-Request-Headers header.
     |
     */
-    "allowedHeaders" => "*",
+    'allowedHeaders' => '*',
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     | If not specified, no custom headers are exposed.
     |
     */
-    "exposedHeaders" => "",
+    'exposedHeaders' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     | Set to true to pass the header, otherwise it is omitted.
     |
     */
-    "credentials" => false,
+    'credentials' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -89,7 +89,7 @@ return [
     | an integer to pass the header, otherwise it is omitted.
     |
     */
-    "maxAge" => null,
+    'maxAge' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +99,7 @@ return [
     | Pass the CORS preflight response to the next handler.
     |
     */
-    "preflightContinue" => false,
+    'preflightContinue' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -110,5 +110,5 @@ return [
     | since some legacy browsers (IE11, various SmartTVs) choke on 204.
     |
     */
-    "optionsSuccessStatus" => 204,
+    'optionsSuccessStatus' => 204,
 ];

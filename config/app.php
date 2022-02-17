@@ -14,7 +14,7 @@ return [
     | https://leafphp.netlify.app/#/leaf/v/2.5.0/config/settings?id=appdown-new
     |
     */
-    "app.down" => false,
+    'app.down' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     | You might want to turn this off in production.
     |
     */
-    "debug" => true,
+    'debug' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     | Use this setting if you need to return an HTTP/1.0 response.
     |
     */
-    "http.version" => "1.1",
+    'http.version' => '1.1',
 
     /*
     |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ return [
     | This tells leaf which directory to save and look for logs.
     |
     */
-    "log.dir" => "storage/logs/",
+    'log.dir' => 'storage/logs/',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ return [
     | $app->log or $app->logWriter.
     |
     */
-    "log.enabled" => true,
+    'log.enabled' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -73,7 +73,7 @@ return [
     | This setting tells leaf which file to write logs to.
     |
     */
-    "log.file" => "app.log",
+    'log.file' => 'app.log',
 
     /*
     |--------------------------------------------------------------------------
@@ -92,7 +92,7 @@ return [
     | - \Leaf\Log::DEBUG
     |
     */
-    "log.level" => \Leaf\Log::DEBUG,
+    'log.level' => \Leaf\Log::DEBUG,
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     | the specified log file if it doesn't exist.
     |
     */
-    "log.open" => true,
+    'log.open' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -114,7 +114,7 @@ return [
     | to the appropriate output destination.
     |
     */
-    "log.writer" => null,
+    'log.writer' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -125,7 +125,7 @@ return [
     | The mode does not affect a Leaf application’s internal functionality.
     |
     */
-    "mode" => "development",
+    'mode' => 'development',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,7 +136,7 @@ return [
     | contains your Leaf application’s view files.
     |
     */
-    "views.path" => ViewsPath(null, false),
+    'views.path' => ViewsPath(null, false),
 
     /*
     |--------------------------------------------------------------------------
@@ -146,5 +146,5 @@ return [
     | This config tells leaf where to save cached and compiled views.
     |
     */
-    "views.cachePath" => StoragePath('framework/views'),
+    'views.cachePath' => StoragePath('framework/views')
 ];

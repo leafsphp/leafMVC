@@ -1,31 +1,31 @@
 <?php
 
 return [
-    "controllersPath" => "app/controllers",
+    'controllersPath' => 'app/controllers',
 
-    "modelsPath" => "app/models",
+    'modelsPath' => 'app/models',
 
-    "migrationsPath" => "app/database/migrations",
+    'migrationsPath' => 'app/database/migrations',
 
-    "seedsPath" => "app/database/seeds",
+    'seedsPath' => 'app/database/seeds',
 
-    "factoriesPath" => "app/database/factories",
+    'factoriesPath' => 'app/database/factories',
 
-    "helpersPath" => "app/helpers",
+    'helpersPath' => 'app/helpers',
 
-    "viewsPath" => "app/views",
+    'viewsPath' => 'app/views',
 
-    "configPath" => "config",
+    'configPath' => 'config',
 
-    "storagePath" => "storage",
+    'storagePath' => 'storage',
 
-    "commandsPath" => "app/console",
+    'commandsPath' => 'app/console',
 
-    "routesPath" => "app/routes",
+    'routesPath' => 'app/routes',
 
-    "libPath" => "lib",
+    'libPath' => 'lib',
 
-    "publicPath" => "public",
+    'publicPath' => 'public',
 
-    "databaseStoragePath" => "storage/app/db"
+    'databaseStoragePath' => 'storage/app/db'
 ];
