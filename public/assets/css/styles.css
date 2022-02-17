@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(0, 30, 38);
-    color: white;
+    background-color: rgb(0, 30, 38) !important;
+    color: white !important;
     font-family: DM Sans, sans-serif;
     font-size: 14px;
 }
