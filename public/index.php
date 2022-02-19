@@ -117,7 +117,7 @@ Leaf\Database::config(DatabaseConfig());
 | Require app routes.
 |
 */
-require dirname(__DIR__) . "/app/routes/index.php";
+require dirname(__DIR__) . '/app/routes/index.php';
 
 /*
 |--------------------------------------------------------------------------

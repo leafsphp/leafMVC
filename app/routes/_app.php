@@ -1,5 +1,5 @@
 <?php
 
-app()->get("/", function () {
-    echo view("index");
+app()->get('/', function () {
+    echo view('index');
 });

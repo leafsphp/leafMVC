@@ -25,7 +25,7 @@ class CreateUsers extends Database {
         // endif;
 
         // you can now build your migrations with schemas
-        Schema::build(static::$capsule, dirname(__DIR__) . "/Schema/users.json");
+        Schema::build(static::$capsule, dirname(__DIR__) . '/Schema/users.json');
 	}
 
 	/**
@@ -34,6 +34,6 @@ class CreateUsers extends Database {
 	 * @return void
 	 */
 	public function down() {
-		static::$capsule::schema()->dropIfExists("users");
+		static::$capsule::schema()->dropIfExists('users');
 	}
 }
