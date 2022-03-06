@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "leafs/aloe": "v1.2.9",
+        "leafs/aloe": "^1.2",
         "illuminate/console": "^8.75",
         "leafs/blade": "^1.2.4",
         "leafs/mvc-core": "^1.1.6",
