@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
     {
         // You can directly create db records
         // $user = new User();
-        // $user->name = 'Mychi';
+        // $user->fullname = 'Mychi';
         // $user->email = "mickdd22@gmail.com";
         // $user->password = md5("password.demo");
         // $user->save();

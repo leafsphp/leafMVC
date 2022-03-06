@@ -16,7 +16,7 @@ class UserFactory extends Factory
 	{
 		return [
 			'username' => strtolower($this->faker->firstName),
-			'name' => $this->faker->name,
+			'fullname' => $this->faker->name,
 			'email' => $this->faker->unique()->safeEmail,
 			'email_verified_at' => \Leaf\Date::now(),
 			'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
