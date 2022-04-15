@@ -23,7 +23,7 @@
         "illuminate/console": "^8.75",
         "leafs/blade": "^1.2.4",
         "leafs/mvc-core": "^1.1.6",
-        "leafs/leaf": "v3.0-rc.2",
+        "leafs/leaf": "^3.0",
         "leafs/logger": "^1.0.1",
         "leafs/cors": "^1.0",
         "leafs/router": "^0.1.5",
