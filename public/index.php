@@ -33,7 +33,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 |
 */
 try {
-    \Dotenv\Dotenv::createImmutable(dirname(__DIR__))->load();
+    \Dotenv\Dotenv::createUnsafeImmutable(dirname(__DIR__))->load();
 } catch (\Throwable $th) {
     trigger_error($th);
 }
