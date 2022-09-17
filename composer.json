@@ -19,15 +19,15 @@
         }
     ],
     "require": {
-        "leafs/aloe": "^1.2",
+        "leafs/aloe": "*",
         "illuminate/console": "^8.75",
-        "leafs/blade": "^1.2.4",
-        "leafs/mvc-core": "^1.1.6",
+        "leafs/blade": "*",
+        "leafs/mvc-core": "*",
         "leafs/leaf": "^3.0",
-        "leafs/logger": "^1.0.1",
-        "leafs/cors": "^1.0",
-        "leafs/auth": "^2.1",
-        "leafs/db": "^2.0"
+        "leafs/logger": "*",
+        "leafs/cors": "*",
+        "leafs/auth": "*",
+        "leafs/db": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.16"
