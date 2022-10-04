@@ -80,13 +80,23 @@ Leaf\View::attach(\Leaf\Blade::class);
 
 /*
 |--------------------------------------------------------------------------
+| Additional Leaf Database Config
+|--------------------------------------------------------------------------
+|
+| Load leaf database configuration
+|
+*/
+Leaf\Database::config(DatabaseConfig());
+
+/*
+|--------------------------------------------------------------------------
 | Initialise Config
 |--------------------------------------------------------------------------
 |
 | Pass your application configuration into your leaf app.
 |
 */
-Leaf\Config::set(AppConfig());
+app()->config(AppConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -98,16 +108,6 @@ Leaf\Config::set(AppConfig());
 |
 */
 app()->cors(CorsConfig());
-
-/*
-|--------------------------------------------------------------------------
-| Additional Leaf Database Config
-|--------------------------------------------------------------------------
-|
-| Load leaf database configuration
-|
-*/
-Leaf\Database::config(DatabaseConfig());
 
 /*
 |--------------------------------------------------------------------------
