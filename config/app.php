@@ -1,5 +1,20 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| App Config
+|--------------------------------------------------------------------------
+|
+| This file contains the configuration for your app. Most of this
+| configuration is for Leaf's core but has been made available
+| to you for your convenience.
+|
+| You can link your environment variables to this file by using the
+| _env() helper function. This function will return the value set in
+| your .env file. You can use the below settings as a reference.
+|
+*/
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -10,11 +25,10 @@ return [
     | your app in a maintainance like state. It will display Leaf's default
     | app down page if a custom handler is not set.
     |
-    | See:
-    | https://leafphp.netlify.app/#/leaf/v/2.5.0/config/settings?id=appdown-new
+    | See: https://leafphp.dev/docs/config/settings.html#app-down
     |
     */
-    'app.down' => false,
+    'app.down' => _env('APP_DOWN', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +43,7 @@ return [
     | You might want to turn this off in production.
     |
     */
-    'debug' => true,
+    'debug' => _env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
