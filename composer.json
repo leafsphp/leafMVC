@@ -23,7 +23,7 @@
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
         "leafs/mvc-core": "*",
-        "leafs/leaf": "^3.0",
+        "leafs/leaf": "^3.2",
         "leafs/logger": "*",
         "leafs/cors": "*",
         "leafs/auth": "*",
