@@ -9,11 +9,14 @@ use Illuminate\Support\Str;
  * Base Factory Class
  * ----------------
  * You can define methods here that would be used
- * throughout your factory classes. 
+ * throughout your factory classes.
  */
 class Factory extends Base
 {
     public $str;
+
+    /**@var \Faker\Generator $faker*/
+    public $faker;
 
     public function __construct()
     {
@@ -23,4 +26,3 @@ class Factory extends Base
         $this->faker = \Faker\Factory::create();
     }
 }
-
