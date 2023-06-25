@@ -22,5 +22,7 @@ class ExampleCommand extends Command
         $this->comment(
             "example command's output {$this->argument('argument')} {$this->option('option')}"
         );
+
+        return 0;
     }
 }
