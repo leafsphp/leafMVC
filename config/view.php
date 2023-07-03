@@ -12,7 +12,7 @@ return [
     | you need. As such, you can decide which view engine to use.
     |
     */
-    'view_engine' => \Leaf\Blade::class,
+    'viewEngine' => \Leaf\Blade::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ return [
     |
     */
     'config' => function ($config) {
-        View::blade()->config($config['views_path'], $config['cache_path']);
+        View::blade()->configure($config['views'], $config['cache']);
     },
 
     /*
