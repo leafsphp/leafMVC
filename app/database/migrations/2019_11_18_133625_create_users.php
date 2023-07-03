@@ -4,13 +4,15 @@ use Leaf\Database;
 use Illuminate\Database\Schema\Blueprint;
 use Leaf\Schema;
 
-class CreateUsers extends Database {
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()  {
+class CreateUsers extends Database
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
         // if (!static::$capsule::schema()->hasTable("users")):
         // 	static::$capsule::schema()->create("users", function (Blueprint $table) {
         //         $table->increments('id');
@@ -26,14 +28,15 @@ class CreateUsers extends Database {
 
         // you can now build your migrations with schemas
         Schema::build(static::$capsule, dirname(__DIR__) . '/Schema/users.json');
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down() {
-		static::$capsule::schema()->dropIfExists('users');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        static::$capsule::schema()->dropIfExists('users');
+    }
 }

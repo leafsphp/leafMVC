@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run() : array
+    public function run(): array
     {
         return [
             UsersSeeder::class,
