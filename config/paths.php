@@ -1,31 +1,66 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Paths Config
+|--------------------------------------------------------------------------
+|
+| Leaf allows you to completely modify the directory structure of your
+| MVC application. This file just tells Leaf and other components
+| where to find the important files in your app.
+|
+*/
+
 return [
-    'controllersPath' => 'app/controllers',
+    'assets' => 'public/assets',
 
-    'modelsPath' => 'app/models',
+    'commands' => 'app/console',
 
-    'migrationsPath' => 'app/database/migrations',
+    'config' => 'config',
 
-    'seedsPath' => 'app/database/seeds',
+    'channels' => 'app/channels',
 
-    'factoriesPath' => 'app/database/factories',
+    'components' => 'app/components',
 
-    'helpersPath' => 'app/helpers',
+    'controllers' => 'app/controllers',
 
-    'viewsPath' => 'app/views',
+    'databaseStorage' => 'storage/app/db',
 
-    'configPath' => 'config',
+    'events' => 'app/events',
 
-    'storagePath' => 'storage',
+    'factories' => 'app/database/factories',
 
-    'commandsPath' => 'app/console',
+    'helpers' => 'app/helpers',
 
-    'routesPath' => 'app/routes',
+    'jobs' => 'app/jobs',
 
-    'libPath' => 'lib',
+    'lib' => 'lib',
 
-    'publicPath' => 'public',
+    'mail' => 'app/mail',
 
-    'databaseStoragePath' => 'storage/app/db'
+    'middleware' => 'app/middleware',
+
+    'migrations' => 'app/database/migrations',
+
+    'models' => 'app/models',
+
+    'public' => 'public',
+
+    'routes' => 'app/routes',
+
+    'schema' => 'app/database/schema',
+
+    'scripts' => 'app/scripts',
+
+    'seeds' => 'app/database/seeds',
+
+    'services' => 'app/services',
+
+    'storage' => 'storage',
+
+    'utils' => 'app/utils',
+
+    'views' => 'app/views',
+
+    'workers' => 'app/workers',
 ];
