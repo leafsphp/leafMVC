@@ -27,7 +27,7 @@ class CreateUsers extends Database
         // endif;
 
         // you can now build your migrations with schemas
-        Schema::build(static::$capsule, dirname(__DIR__) . '/Schema/users.json');
+        Schema::build('users');
     }
 
     /**
