@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -12,17 +13,6 @@
 |
 */
 require __DIR__ . '/vendor/autoload.php';
-
-/*
-|--------------------------------------------------------------------------
-| Load MVC Core
-|--------------------------------------------------------------------------
-|
-| MVC core provides Leaf's auto loading, configuration and shortcut
-| functions right off the bat.
-|
-*/
-Leaf\Core::paths(PathsConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -40,13 +30,16 @@ try {
 
 /*
 |--------------------------------------------------------------------------
-| Additional Leaf Database Config
+| Load Leaf configuration
 |--------------------------------------------------------------------------
 |
-| Load leaf database configuration
+| Leaf MVC allows you to customize Leaf and it's modules using
+| configuration files defined in the config folder. This line
+| loads the configuration files and makes them available to
+| your application.
 |
 */
-Leaf\Database::config(DatabaseConfig());
+Leaf\Core::loadApplicationConfig();
 Leaf\Database::connect();
 
 /*
@@ -57,7 +50,7 @@ Leaf\Database::connect();
 | Initialise aloe CLI
 |
 */
-$console = new \Aloe\Console("Leaf MVC", "v3.0");
+$console = new \Aloe\Console("Leaf MVC", "v3.5.0");
 
 /*
 |--------------------------------------------------------------------------

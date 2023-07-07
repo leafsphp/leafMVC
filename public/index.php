@@ -43,16 +43,6 @@ try {
 | Load application paths
 |--------------------------------------------------------------------------
 |
-| Tell Leaf MVC Core where to locate application paths
-|
-*/
-Leaf\Core::paths(PathsConfig());
-
-/*
-|--------------------------------------------------------------------------
-| Load application paths
-|--------------------------------------------------------------------------
-|
 | Decline static file requests back to the PHP built-in webserver
 |
 */
@@ -80,13 +70,16 @@ Leaf\View::attach(\Leaf\Blade::class);
 
 /*
 |--------------------------------------------------------------------------
-| Additional Leaf Database Config
+| Load Leaf configuration
 |--------------------------------------------------------------------------
 |
-| Load leaf database configuration
+| Leaf MVC allows you to customize Leaf and it's modules using
+| configuration files defined in the config folder. This line
+| loads the configuration files and makes them available to
+| your application.
 |
 */
-Leaf\Database::config(DatabaseConfig());
+Leaf\Core::loadApplicationConfig();
 
 /*
 |--------------------------------------------------------------------------
@@ -97,32 +90,12 @@ Leaf\Database::config(DatabaseConfig());
 | This allows you to use Leaf Db without having to initialize it
 | in your controllers.
 |
-| This is optional, you can still use Leaf Db in your controllers. If you
-| want to opt into this, just uncomment the line below.
+| This is optional, you can still use your own Leaf Db connections in
+| your controllers. If you want to opt into this,
+| just uncomment the line below.
 |
 */
 // Leaf\Database::syncLeafDb();
-
-/*
-|--------------------------------------------------------------------------
-| Initialise Config
-|--------------------------------------------------------------------------
-|
-| Pass your application configuration into your leaf app.
-|
-*/
-app()->config(AppConfig());
-
-/*
-|--------------------------------------------------------------------------
-| Default fix for CORS
-|--------------------------------------------------------------------------
-|
-| This just prevents the connection client from throwing
-| CORS errors at you.
-|
-*/
-app()->cors(CorsConfig());
 
 /*
 |--------------------------------------------------------------------------

@@ -13,11 +13,10 @@ class Controller extends \Leaf\Controller
     {
         parent::__construct();
 
-        // In this version, request isn't initialised for you. You can use
-        // request() to get request data or initialise it yourself
-
         // autoConnect uses the .env variables to quickly connect to db
-        // Leaf auth will smartly connect to this db connection
+        // Leaf auth will smartly connect to this db connection.
+        // If you enabled db sync in public/index.php, you can
+        // delete this line.
         db()->autoConnect();
 
         // You can configure auth to get additional customizations
