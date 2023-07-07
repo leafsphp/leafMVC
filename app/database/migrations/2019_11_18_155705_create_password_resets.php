@@ -11,7 +11,7 @@ class CreatePasswordResets extends Database
      */
     public function up()
     {
-        if (!static::$capsule::schema()->hasTable('password_resets')) :
+        if (!static::$capsule::schema()->hasTable('password_resets')):
             static::$capsule::schema()->create('password_resets', function ($table) {
                 $table->string('email')->index();
                 $table->string('token');
