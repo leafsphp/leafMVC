@@ -22,7 +22,7 @@
         "leafs/aloe": "*",
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
-        "leafs/mvc-core": "*",
+        "leafs/mvc-core": "dev-main",
         "leafs/leaf": "^3.3",
         "leafs/logger": "*",
         "leafs/cors": "*",
@@ -63,12 +63,18 @@
     },
     "config": {
         "optimize-autoloader": true,
-        "sort-packages": false
+        "sort-packages": false,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php -r \"unlink('README.MD'); rename('README2.MD', 'README.MD');\""
+        ],
+        "post-create-project-cmd": [
+            "@php leaf key:generate --ansi"
         ]
     },
     "minimum-stability": "dev",
