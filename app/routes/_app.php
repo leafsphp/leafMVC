@@ -1,5 +1,8 @@
 <?php
 
 app()->get('/', function () {
-    echo view('index');
+    /**
+     * `render(view, [])` is the same as `echo view(view, [])`
+     */
+    render('index');
 });
