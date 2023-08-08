@@ -1,14 +1,13 @@
 <?php
 
+use Leaf\Schema;
 use Leaf\Database;
 use Illuminate\Database\Schema\Blueprint;
-use Leaf\Schema;
 
 class CreateUsers extends Database
 {
     /**
      * Run the migrations.
-     *
      * @return void
      */
     public function up()
@@ -26,13 +25,20 @@ class CreateUsers extends Database
         // 	});
         // endif;
 
+        /**
+         * Leaf Schema allows you to build migrations
+         * from a JSON representation of your database
+         *
+         * Check app/database/schema/users.json for an example
+         *
+         * Docs @ https://leafphp.dev/docs/mvc/schema.html
+         */
         // you can now build your migrations with schemas
         Schema::build('users');
     }
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
     public function down()
