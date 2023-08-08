@@ -4,11 +4,11 @@
     <br><br>
 </p>
 
+# Leaf MVC 3
+
 [![Latest Stable Version](https://poser.pugx.org/leafs/mvc/v/stable)](https://packagist.org/packages/leafs/mvc)
 [![Total Downloads](https://poser.pugx.org/leafs/mvc/downloads)](https://packagist.org/packages/leafs/mvc)
 [![License](https://poser.pugx.org/leafs/mvc/license)](https://packagist.org/packages/leafs/mvc)
-
-# Leaf MVC 3
 
 Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). Leaf MVC provides an simple and opinionated structure with a tons of functionality built in.
 
