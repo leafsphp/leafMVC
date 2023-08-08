@@ -87,32 +87,24 @@ Leaf\Core::loadApplicationConfig();
 |--------------------------------------------------------------------------
 |
 | Sync Leaf Db with ORM and connect to the database
-| This allows you to use Leaf Db without having to initialize it
-| in your controllers.
+| This allows you to use Leaf Db and Leaf Auth without
+| having to initialize them in your controllers.
 |
-| This is optional, you can still use your own Leaf Db connections in
-| your controllers. If you want to opt into this,
-| just uncomment the line below.
+| If you want to use a different connection from those
+| used in, your models, you can remove the line below and
+| add your own connection with:
+| db()->connect(...)
 |
+| **Uncomment the line below to use Leaf Db or Auth**
 */
-// Leaf\Database::syncLeafDb();
+// \Leaf\Database::initDb();
 
 /*
 |--------------------------------------------------------------------------
-| Route Config
+| Run your Leaf MVC application
 |--------------------------------------------------------------------------
 |
-| Require app routes.
+| This line brings in all your routes and starts your application
 |
 */
-require dirname(__DIR__) . '/app/routes/index.php';
-
-/*
-|--------------------------------------------------------------------------
-| Run Leaf Application
-|--------------------------------------------------------------------------
-|
-| Require app routes
-|
-*/
-app()->run();
+\Leaf\Core::runApplication();
