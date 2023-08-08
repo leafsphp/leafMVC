@@ -7,6 +7,7 @@
     <title>{{ getenv('APP_NAME') ?? 'Leaf MVC' }}</title>
     <link rel="shortcut icon" href="https://leafphp.dev/logo-circle.png" type="image/x-icon">
     <link rel="stylesheet" href="{{ assets('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ ViewsPath('css/app.css') }}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700;display=swap">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
