@@ -1,9 +1,12 @@
-vendor
-composer.lock
 .env
-node_modules
+.env.backup
+.env.production
 build
 dist
 compiled
 .idea
-Auth2
+hot
+vendor
+node_modules
+npm-debug.log
+yarn-error.log

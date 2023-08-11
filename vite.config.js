@@ -4,7 +4,7 @@ import leaf from '@leafphp/vite-plugin';
 export default defineConfig({
     plugins: [
         leaf({
-            input: ['js/app.js', 'css/app.css'],
+            input: ['app/views/js/app.js', 'app/views/css/app.css'],
             refresh: true,
         }),
     ],
