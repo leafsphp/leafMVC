@@ -10,9 +10,7 @@
 [![Total Downloads](https://poser.pugx.org/leafs/mvc/downloads)](https://packagist.org/packages/leafs/mvc)
 [![License](https://poser.pugx.org/leafs/mvc/license)](https://packagist.org/packages/leafs/mvc)
 
-Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). Leaf MVC provides an simple and opinionated structure with a tons of functionality built in.
-
-Leaf MVC 3 is built on Leaf 3 which makes it even more lightweight and faster than earlier versions, but comes with a ton of upgrades and security fixes.
+Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). It provides a simple and opinionated structure with a tons of functionality built in.
 
 ## 📦 Installation
 
@@ -28,7 +26,7 @@ Or for a more personalized installation, you can add `--custom` to the command
 leaf create <project-name> --mvc --custom
 ```
 
-You can also use [Composer](https://getcomposer.org/):
+You can also use [Composer](https://getcomposer.org/) if you don't want to use the Leaf CLI, although we recommend using the CLI for a better experience:
 
 ```bash
 composer create-project leafs/mvc <project-name>
@@ -101,10 +99,6 @@ To report a security vulnerability, you can reach out to [@mychidarko](https://t
 Your cash contributions go a long way to help us make Leaf even better for you. You can sponsor Leaf and any of our packages on [open collective](https://opencollective.com/leaf) or check the [contribution page](https://leafphp.dev/support/) for a list of ways to contribute.
 
 We will furthermore like to thank our existing supporters, we love you all ❤️
-
-## 📃 License
-
-The Leaf MVC framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## 💬 Stay In Touch
 
