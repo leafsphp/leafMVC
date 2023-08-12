@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ getenv('APP_NAME') ?? 'Leaf MVC' }}</title>
     <link rel="shortcut icon" href="https://leafphp.dev/logo-circle.png" type="image/x-icon">
+    {{-- assets() points to the public/assets folder --}}
     <link rel="stylesheet" href="{{ assets('css/styles.css') }}">
+    {{-- ViewsPath() points to app/views --}}
     <link rel="stylesheet" href="{{ ViewsPath('css/app.css') }}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700;display=swap">
