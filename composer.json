@@ -1,6 +1,6 @@
 {
     "name": "leafs/mvc",
-    "description": "A lightweight PHP MVC framework for rapid API development.",
+    "description": "A lightweight PHP MVC framework powered by Leaf",
     "type": "library",
     "keywords": [
         "framework",
@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "leafs/aloe": "*",
+        "leafs/aloe": "dev-master",
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
         "leafs/mvc-core": "dev-main",
@@ -75,7 +75,7 @@
             "@php -r \"unlink('README.MD'); rename('README2.MD', 'README.MD');\""
         ],
         "post-create-project-cmd": [
-            "@php leaf key:generate --ansi"
+            "@php leaf key:generate"
         ]
     },
     "minimum-stability": "dev",
