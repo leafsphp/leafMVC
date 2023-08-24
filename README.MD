@@ -44,6 +44,7 @@ C:.
 │   ├───database
 │   │   ├───factories
 │   │   ├───migrations
+│   │   ├───schema
 │   │   └───seeds
 │   ├───helpers
 │   ├───models
@@ -52,7 +53,6 @@ C:.
 │       ├───css
 │       └───errors
 ├───config
-│   └───command
 ├───lib
 ├───public
 │   └───assets
