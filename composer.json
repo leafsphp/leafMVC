@@ -35,7 +35,6 @@
     },
     "autoload": {
         "psr-4": {
-            "Lib\\": "lib/",
             "App\\": "app/",
             "Tests\\": "tests/",
             "Config\\": "config/",

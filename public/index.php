@@ -101,6 +101,18 @@ Leaf\Core::loadApplicationConfig();
 
 /*
 |--------------------------------------------------------------------------
+| Load custom libraries
+|--------------------------------------------------------------------------
+|
+| You can load your custom libraries here. If you have
+| anything defined in your lib folder, you can load
+| them here. Simply uncomment the line below.
+|
+*/
+// \Leaf\Core::loadLibs();
+
+/*
+|--------------------------------------------------------------------------
 | Run your Leaf MVC application
 |--------------------------------------------------------------------------
 |
