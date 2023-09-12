@@ -36,7 +36,7 @@ return [
 
     'lib' => 'lib',
 
-    'mail' => 'app/mail',
+    'mail' => 'app/mailers',
 
     'middleware' => 'app/middleware',
 
