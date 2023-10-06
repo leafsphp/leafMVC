@@ -37,6 +37,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Set timestamps format
+    |--------------------------------------------------------------------------
+    |
+    | Use this property to specify the format that you want your timestamps to be saved in.
+    | Be aware that auth uses the leafs/date module, so the accepted formats are listed in the leafs/date documentation
+    |
+    */
+    'TIMESTAMP_FORMAT' => 'c',
+
+    /*
+    |--------------------------------------------------------------------------
     | Encode password
     |--------------------------------------------------------------------------
     |
@@ -76,6 +87,17 @@ return [
     |
     */
     'PASSWORD_KEY' => 'password',
+
+    /*
+    |--------------------------------------------------------------------------
+    | ID Key
+    |--------------------------------------------------------------------------
+    |
+    |  Set your primary key name. For instance, you might have used id_user instead of id.
+    |  This setting allows you to quickly switch your key name
+    |
+    */
+    'ID_KEY' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -130,6 +152,30 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Session redirect on login
+    |--------------------------------------------------------------------------
+    |
+    | When set to true, the options set in GUARD_LOGIN, GUARD_REGISTER and GUARD_HOME
+    | will be used to redirect the user to the right page based on their state.
+    | Set to false to not redirect on login
+    |
+    */
+    'SESSION_REDIRECT_ON_LOGIN' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Session lifetime
+    |--------------------------------------------------------------------------
+    |
+    | Set the lifetime of the session. After this time, the session will expire and the user will have to login again.
+    | You can either use '1 day' format or as an integer: 86400
+    | You can also set SESSION_LIFETIME to 0 to disable session expiration.
+    |
+    */
+    'SESSION_LIFETIME' => 60 * 60 * 24,
+
+    /*
+    |--------------------------------------------------------------------------
     | Login page route
     |--------------------------------------------------------------------------
     */
@@ -161,7 +207,7 @@ return [
     | JWT + Session
     |--------------------------------------------------------------------------
     |
-    | Add an auth token to the auth session?
+    | Add an auth token to the auth session
     |
     */
     'SAVE_SESSION_JWT' => false,
