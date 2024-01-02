@@ -5,6 +5,12 @@
 
     RewriteEngine On
 
+    # prevent http access to .env
+    <Files ".env">
+        Order Allow,Deny
+        Deny from all
+    </Files>
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
