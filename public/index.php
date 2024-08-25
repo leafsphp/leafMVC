@@ -66,7 +66,7 @@ if (php_sapi_name() === 'cli-server') {
 | as you've always used it.
 |
 */
-Leaf\View::attach(\Leaf\Blade::class);
+Leaf\Config::attachView(\Leaf\Blade::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -87,15 +87,16 @@ Leaf\Core::loadApplicationConfig();
 |--------------------------------------------------------------------------
 |
 | Sync Leaf Db with ORM and connect to the database
-| This allows you to use Leaf Db and Leaf Auth without
-| having to initialize them in your controllers.
+| This allows you to use Leaf Db without having
+| to initialize it in your controllers.
 |
 | If you want to use a different connection from those
-| used in, your models, you can remove the line below and
+| used in your models, you can remove the line below and
 | add your own connection with:
 | db()->connect(...)
 |
-| **Uncomment the line below to use Leaf Db or Auth**
+| **Uncomment the line below to use Leaf Db**
+| **You don't need this line to use Leaf Auth**
 */
 // \Leaf\Database::initDb();
 
