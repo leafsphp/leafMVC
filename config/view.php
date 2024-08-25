@@ -1,7 +1,5 @@
 <?php
 
-use Leaf\View;
-
 return [
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +21,7 @@ return [
     |
     */
     'config' => function ($config) {
-        View::blade()->configure($config['views'], $config['cache']);
+        \Leaf\Config::get('views.blade')->configure($config['views'], $config['cache']);
     },
 
     /*
