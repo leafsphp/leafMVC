@@ -15,8 +15,14 @@ class DatabaseSeeder extends Seeder
         // get all classes in the seeder directory
         $classes = array_diff(scandir(__DIR__), ['.', '..', basename(__FILE__)]);
 
-        return array_map(function ($class) {
+        $seederClasses = array_map(function ($class) {
             return __NAMESPACE__ . '\\' . pathinfo($class, PATHINFO_FILENAME);
         }, $classes);
+
+        $ignoredSeeders = [
+            # ExampleSeed::class,
+        ];
+
+        return array_diff($seederClasses, $ignoredSeeders);
     }
 }
