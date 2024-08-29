@@ -22,13 +22,13 @@
         "leafs/aloe": "dev-master",
         "illuminate/console": "^8.75",
         "leafs/blade": "*",
-        "leafs/mvc-core": "dev-main",
+        "leafs/mvc-core": "*",
         "leafs/leaf": "^3.3",
         "leafs/logger": "*",
         "leafs/cors": "*",
         "leafs/auth": "*",
         "leafs/db": "*",
-        "leafs/vite": "^0.1.0"
+        "leafs/vite": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.16"

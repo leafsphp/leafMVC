@@ -12,8 +12,6 @@
 */
 
 return [
-    'assets' => 'public/assets',
-
     'commands' => 'app/console',
 
     'config' => 'config',
@@ -36,15 +34,13 @@ return [
 
     'lib' => 'lib',
 
-    'mail' => 'app/mailers',
+    'mail' => 'app/mail',
 
     'middleware' => 'app/middleware',
 
     'migrations' => 'app/database/migrations',
 
     'models' => 'app/models',
-
-    'public' => 'public',
 
     'routes' => 'app/routes',
 

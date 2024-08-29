@@ -164,6 +164,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Session redirect on register
+    |--------------------------------------------------------------------------
+    |
+    | When set to true, the options set in GUARD_LOGIN, GUARD_REGISTER and GUARD_HOME
+    | will be used to redirect the user to the right page based on their state.
+    | Set to false to not redirect on login
+    |
+    */
+    'SESSION_REDIRECT_ON_REGISTER' => true,
+
+    /*
+    |--------------------------------------------------------------------------
     | Session lifetime
     |--------------------------------------------------------------------------
     |
