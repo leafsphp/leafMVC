@@ -11,7 +11,7 @@ class Commands
      * @return void
      * 
      */
-    public static function register($console, $scan=true): void
+    public static function register($console): void
     {
         $console->register([
             ExampleCommand::class,
