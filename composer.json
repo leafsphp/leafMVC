@@ -1,5 +1,6 @@
 {
     "name": "leafs/mvc",
+    "version": "1.0.0",
     "description": "A lightweight PHP MVC framework powered by Leaf",
     "type": "library",
     "keywords": [
@@ -59,7 +60,10 @@
             "App\\Database\\Seeds\\": "app/database/seeds/",
             "App\\Database\\Schema\\": "app/database/schema/",
             "App\\Database\\Factories\\": "app/database/factories/"
-        }
+        },
+        "exclude-from-classmap": [
+            "app/database/migrations"
+        ]
     },
     "config": {
         "optimize-autoloader": true,
@@ -71,7 +75,7 @@
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php -r \"unlink('README.MD'); rename('README2.MD', 'README.MD');\""
+            "@php -r \"if (file_exists('README2.MD')) {unlink('README.MD'); rename('README2.MD', 'README.MD');}\""
         ],
         "post-create-project-cmd": [
             "@php leaf key:generate"
