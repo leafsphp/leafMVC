@@ -1,6 +1,6 @@
 {
     "name": "leafs/mvc",
-    "version": "1.0.0",
+    "version": "3.5.0",
     "description": "A lightweight PHP MVC framework powered by Leaf",
     "type": "library",
     "keywords": [
