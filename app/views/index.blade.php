@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ getenv('APP_NAME') ?? 'Leaf MVC' }}</title>
+    <title>{{ _env('APP_NAME', 'My Leaf MVC App') }}</title>
     <link rel="shortcut icon" href="https://leafphp.dev/logo-circle.png" type="image/x-icon">
 
     {{-- assets() points to the public/assets folder --}}
@@ -14,7 +14,9 @@
         You generally want to keep all your css and js in the public folder
         unless you are using a bundler like vite. vite() looks for assets in
         the app/views folder by default. You can uncomment the line below to
-        use vite. Be sure to run `npm run dev` or `npm run build` first.
+        use vite.
+
+        Be sure to run `npm install` and then `npm run dev` or `npm run build` first.
     --}}
     {{-- {{ vite('css/app.css') }} --}}
 
