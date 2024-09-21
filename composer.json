@@ -17,6 +17,12 @@
             "email": "mickdd22@gmail.com",
             "homepage": "https://mychi.netlify.app",
             "role": "Maintainer"
+        },
+        {
+            "name": "Abdulbasit Rubeya",
+            "email": "abdulbasitsultan4@gmail.com",
+            "homepage": "https://github.com/ibnsultan",
+            "role": "Maintainer"
         }
     ],
     "require": {
@@ -78,7 +84,8 @@
             "@php -r \"if (file_exists('README2.MD')) {unlink('README.MD'); rename('README2.MD', 'README.MD');}\""
         ],
         "post-create-project-cmd": [
-            "@php leaf key:generate"
+            "@php leaf key:generate",
+            "@php leaf link"
         ]
     },
     "minimum-stability": "dev",
