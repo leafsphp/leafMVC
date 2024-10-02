@@ -242,5 +242,22 @@ return [
     | How long should JWT be valid for?
     |
     */
-    'TOKEN_LIFETIME' => 60 * 60 * 24 * 365
+    'TOKEN_LIFETIME' => 60 * 60 * 24 * 365,
+
+    /*
+    |--------------------------------------------------------------------------
+    | SESSION COOKIE PARAMS
+    |--------------------------------------------------------------------------
+    |
+    | Set the session cookie params
+    | Read more: https://www.php.net/manual/en/function.session-set-cookie-params.php
+    |
+    | secure: cookie should only be sent over secure connections (https)
+    | httponly: cookie should only be accessible through HTTP requests
+    | samesite: cookie should be sent with "SameSite" directives :-
+    |       Possible values for samesite: 'strict', 'lax', 'none' or null
+    |
+    |
+    */
+    'SESSION_COOKIE_PARAMS' => ['secure' => false, 'httponly' => true, 'samesite' => 'lax']
 ];
