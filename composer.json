@@ -31,6 +31,7 @@
         "leafs/blade": "*",
         "leafs/mvc-core": "*",
         "leafs/leaf": "^3.3",
+        "leafs/csrf": "*",
         "leafs/logger": "*",
         "leafs/cors": "*",
         "leafs/auth": "*",
