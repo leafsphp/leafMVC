@@ -4,17 +4,17 @@
     <br><br>
 </p>
 
-# Leaf MVC 3
+# Leaf MVC
 
 [![Latest Stable Version](https://poser.pugx.org/leafs/mvc/v/stable)](https://packagist.org/packages/leafs/mvc)
 [![Total Downloads](https://poser.pugx.org/leafs/mvc/downloads)](https://packagist.org/packages/leafs/mvc)
 [![License](https://poser.pugx.org/leafs/mvc/license)](https://packagist.org/packages/leafs/mvc)
 
-Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). It provides a simple and opinionated structure with a tons of functionality built in.
+Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). It gives you the simplicity of Leaf and it's modules with the structure of an MVC framework. Leaf MVC is a great choice for building applications that scale without the complexity of most modern frameworks.
 
 ## 📦 Installation
 
-You can install Leaf MVC v3 with the [Leaf CLI](https://cli.leafphp.dev)
+You can install Leaf MVC with the [Leaf CLI](https://cli.leafphp.dev)
 
 ```sh
 leaf create <project-name> --mvc
@@ -67,7 +67,7 @@ C:.
 └───vendor
 ```
 
-This directory structure is a blend of Ruby on Rails and Laravel
+This directory structure is our opinionated way of organizing your MVC application. It is a blend of the best practices from different frameworks like Ruby on Rails and Laravel and some of our own experience building applications.
 
 To run your Leaf MVC application, use
 
@@ -83,10 +83,10 @@ leaf serve
 
 ## 📓 Learning Leaf MVC
 
-- Leaf MVC has a very easy to understand [documentation](https://mvc.leafphp.dev) which contains information on all operations in Leaf MVC.
+- Leaf MVC has a very easy to understand [documentation](https://leafphp.dev/docs/mvc/) which contains information on all operations in Leaf MVC.
 - Since Leaf MVC runs on Leaf, you should check out the Leaf PHP Framework documentation [here](https://leafphp.dev).
 - You can also check out our [youtube channel](https://www.youtube.com/channel/UCllE-GsYy10RkxBUK0HIffw) which has video tutorials on different topics
-- We are also working on [codelabs](https://codelabs.leafphp.dev) which will bring hands-on tutorials you can follow and contribute to.
+<!-- - We are also working on [codelabs](https://codelabs.leafphp.dev) which will bring hands-on tutorials you can follow and contribute to. -->
 
 ## 😇 Contributing
 
@@ -96,19 +96,8 @@ To report a security vulnerability, you can reach out to [@mychidarko](https://t
 
 ## 🤩 Sponsoring Leaf
 
-Your cash contributions go a long way to help us make Leaf even better for you. You can sponsor Leaf and any of our packages on [open collective](https://opencollective.com/leaf) or check the [contribution page](https://leafphp.dev/support/) for a list of ways to contribute.
+We are committed to keeping Leaf open-source and free, but maintaining and developing new features now requires significant time and resources. As the project has grown, so have the costs, which have been mostly covered by the team. To sustain and grow Leaf, we need your help to support full-time maintainers.
 
-We will furthermore like to thank our existing supporters, we love you all ❤️
+You can sponsor Leaf and any of our packages on [open collective](https://opencollective.com/leaf) or check the [contribution page](https://leafphp.dev/support/) for a list of ways to contribute.
 
-## 💬 Stay In Touch
-
-- [Twitter](https://twitter.com/leafphp)
-- [Join the forum](https://github.com/leafsphp/leaf/discussions/37)
-- [Chat on discord](https://discord.com/invite/Pkrm9NJPE3)
-
-## 🎨 Links/Projects
-
-- [Leaf Docs](https://leafphp.dev)
-- [Leaf MVC Docs](https://mvc.leafphp.dev)
-- [Leaf CLI Docs](https://cli.leafphp.dev)
-- [Aloe CLI Docs](https://leafphp.dev/aloe-cli/)
+And to all our [existing cash/code contributors](https://leafphp.dev#sponsors), we love you all ❤️
