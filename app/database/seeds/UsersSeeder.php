@@ -16,8 +16,7 @@ class UsersSeeder extends Seeder
         // You can directly create db records like this 👇
 
         // $user = new User();
-        // $user->username = 'mychi';
-        // $user->fullname = 'Mychi Darko';
+        // $user->name = 'mychi';
         // $user->email = 'mychi@leafphp.dev';
         // $user->password = \Leaf\Password::hash('password');
         // $user->save();
