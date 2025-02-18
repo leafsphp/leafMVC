@@ -30,14 +30,14 @@
 
 /*
 |--------------------------------------------------------------------------
-| Set up Controller namespace
+| Set middleware for all routes
 |--------------------------------------------------------------------------
 |
-| This allows you to directly use controller names instead of typing
-| the controller namespace first.
+| You can use app()->use() to load middleware for all
+| routes in your application.
 |
 */
-app()->setNamespace('\App\Controllers');
+// app()->use(ExampleMiddleware::class);
 
 /*
 |--------------------------------------------------------------------------
