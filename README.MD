@@ -11,7 +11,7 @@
     <a href="https://packagist.org/packages/leafs/leaf"><img src="https://poser.pugx.org/leafs/mvc/license" alt="License"></a>
 </p>
 
-Leaf MVC is a lightweight but feature-rich MVC framework built on top of [leaf php](https://leafphp.dev). It gives you the structure and tools of larger frameworks like Laravel and Ruby on Rails with the simplicity and elegance of Leaf.
+Leaf MVC is built on top of [leaf php](https://leafphp.dev), and is the framework for people who just want to ship. It gives you the structure and tools of larger frameworks like Laravel and Ruby on Rails with the simplicity and elegance of Leaf which lets you focus on shipping—fast.
 
 ## Setting up
 
@@ -21,9 +21,7 @@ You can install Leaf MVC with the [Leaf CLI](https://cli.leafphp.dev)
 leaf create <project-name> --mvc
 ```
 
-This will scaffold a basic MVC application and set up your environment for you. You can add features like authentication, database migrations, and more with the Leaf CLI. Find the full documentation on the [Leaf website](https://leafphp.dev/docs/mvc/).
-
-To run your Leaf MVC application, use
+This will create an MVC application for you. Start off your project with authentication, mailing, UI/UX, and a ton of other features using Leaf's [powerful modules](https://leafphp.dev/docs/modules/), and then run your app with:
 
 ```bash
 php leaf serve
@@ -31,9 +29,9 @@ php leaf serve
 
 ## Learning Leaf MVC
 
-- Leaf MVC is Leaf + an MVC wrapper, we provide a lot of [documenation](https://leafphp.dev/docs/mvc/) on how to use Leaf MVC.
+- Leaf MVC is Leaf + an MVC wrapper, we provide a lot of [documentation](https://leafphp.dev/docs/mvc/) on how to use Leaf MVC.
 - You can also check out our [youtube channel](https://www.youtube.com/channel/UCllE-GsYy10RkxBUK0HIffw) which has video tutorials on different topics
-<!-- - We are also working on [codelabs](https://codelabs.leafphp.dev) which will bring hands-on tutorials you can follow and contribute to. -->
+- Checkout the [learn page](https://leafphp.dev/learn/) on our website for more resources
 
 ## Contributing
 

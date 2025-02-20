@@ -1,7 +1,7 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "leafs/mvc",
-    "description": "A lightweight PHP MVC framework powered by Leaf",
+    "description": "A lightweight framework for people who just want to ship",
     "type": "project",
     "keywords": [
         "framework",
@@ -10,14 +10,16 @@
     ],
     "license": "MIT",
     "require": {
-        "leafs/blade": "*",
+        "leafs/blade": "v4.x-dev",
         "leafs/mvc-core": "v4.x-dev",
-        "leafs/leaf": "^3.7",
-        "leafs/logger": "*",
-        "leafs/aloe": "v4.x-dev"
+        "leafs/leaf": "v4.x-dev",
+        "leafs/logger": "v4.x-dev",
+        "leafs/aloe": "v4.x-dev",
+        "leafs/queue": "v4.x-dev",
+        "leafs/redis": "v4.x-dev"
     },
     "require-dev": {
-        "leafs/alchemy": "^2.0",
+        "leafs/alchemy": "v4.x-dev",
         "fakerphp/faker": "^1.24"
     },
     "autoload": {
