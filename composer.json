@@ -14,9 +14,7 @@
         "leafs/mvc-core": "v4.x-dev",
         "leafs/leaf": "v4.x-dev",
         "leafs/logger": "v4.x-dev",
-        "leafs/aloe": "v4.x-dev",
-        "leafs/queue": "v4.x-dev",
-        "leafs/redis": "v4.x-dev"
+        "leafs/aloe": "v4.x-dev"
     },
     "require-dev": {
         "leafs/alchemy": "v4.x-dev",
