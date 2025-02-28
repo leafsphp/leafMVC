@@ -20,7 +20,7 @@
 <body
     class="antialiased bg-gradient-to-br from-transparent via-white to-green-100 dark:from-[#102e36] dark:via-[#001318] dark:to-[#001318] dark:text-white/50">
     <div class="text-black/50 dark:text-white/50 flex flex-col justify-between items-center min-h-screen">
-        @includeIf('components.topnav')
+        @includeIf('components.welcome.topnav')
 
         <div class="-mt-10"></div>
 
