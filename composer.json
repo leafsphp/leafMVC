@@ -10,14 +10,13 @@
     ],
     "license": "MIT",
     "require": {
-        "leafs/blade": "v4.x-dev",
-        "leafs/mvc-core": "v4.x-dev",
-        "leafs/leaf": "v4.x-dev",
-        "leafs/logger": "v4.x-dev",
-        "leafs/aloe": "v4.x-dev"
+        "leafs/aloe": "v4.0-beta",
+        "leafs/blade": "^4.0",
+        "leafs/mvc-core": "v4.0-beta",
+        "leafs/leaf": "v4.0-beta",
+        "leafs/logger": "^4.0"
     },
     "require-dev": {
-        "leafs/alchemy": "v4.x-dev",
         "fakerphp/faker": "^1.24"
     },
     "autoload": {
