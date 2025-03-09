@@ -167,7 +167,7 @@
             <div class="mx-auto sm:px-6 lg:px-8 px-4 w-full">
                 <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
                     <div class="flex flex-col-reverse items-center gap-3 sm:flex-row"><span
-                            class="text-sm text-gray-700 dark:text-gray-300">Leaf MVC v4.x-Beta - PHP
+                            class="text-sm text-gray-700 dark:text-gray-300">Leaf MVC v4.0 - PHP
                             v{{ PHP_VERSION }}</span>
                     </div>
                     <ul class="flex items-center justify-end gap-3">

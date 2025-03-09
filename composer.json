@@ -10,10 +10,10 @@
     ],
     "license": "MIT",
     "require": {
-        "leafs/aloe": "v4.0-beta.2",
+        "leafs/aloe": "^4.0",
         "leafs/blade": "^4.0",
-        "leafs/mvc-core": "v4.0-beta.2",
-        "leafs/leaf": "v4.0-beta",
+        "leafs/mvc-core": "^4.0",
+        "leafs/leaf": "^4.0",
         "leafs/logger": "^4.0"
     },
     "require-dev": {
