@@ -11,7 +11,7 @@
 |
 */
 // app()->set404(function() {
-// 	response()->page(ViewsPath("errors/404.html", false), 404);
+//     response()->markup('Page not found', 404);
 // });
 
 /*
@@ -25,7 +25,7 @@
 |
 */
 // app()->setErrorHandler(function() {
-// 	response()->page(ViewsPath("errors/500.html", false), 500);
+//     response()->markup('An error occurred', 500);
 // });
 
 /*
