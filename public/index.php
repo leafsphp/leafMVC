@@ -1,5 +1,7 @@
 <?php
 
+$appPath = dirname(__DIR__);
+
 /*
 |--------------------------------------------------------------------------
 | Switch to root path
@@ -9,7 +11,7 @@
 | resolve app paths.
 |
 */
-chdir(dirname(__DIR__));
+chdir($appPath);
 
 /*
 |--------------------------------------------------------------------------
@@ -22,21 +24,7 @@ chdir(dirname(__DIR__));
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-require dirname(__DIR__) . '/vendor/autoload.php';
-
-/*
-|--------------------------------------------------------------------------
-| Bring in (env)
-|--------------------------------------------------------------------------
-|
-| Quickly use our environment variables
-|
-*/
-try {
-    \Dotenv\Dotenv::createUnsafeImmutable(dirname(__DIR__))->load();
-} catch (\Throwable $th) {
-    trigger_error($th);
-}
+require "$appPath/vendor/autoload.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +43,16 @@ if (php_sapi_name() === 'cli-server') {
 
     unset($path);
 }
+
+/*
+|--------------------------------------------------------------------------
+| Bring in (env)
+|--------------------------------------------------------------------------
+|
+| Load our environment variables into our application context
+|
+*/
+\Leaf\Core::loadApplicationEnv($appPath);
 
 /*
 |--------------------------------------------------------------------------
