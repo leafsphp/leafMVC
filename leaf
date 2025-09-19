@@ -33,7 +33,11 @@ require __DIR__ . '/vendor/autoload.php';
 | Quickly use our environment variables
 |
 */
-\Leaf\Core::loadApplicationEnv(__DIR__);
+try {
+    \Dotenv\Dotenv::createUnsafeImmutable(__DIR__)->load();
+} catch (\Throwable $th) {
+    trigger_error($th);
+}
 
 /*
 |--------------------------------------------------------------------------
