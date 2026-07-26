@@ -41,7 +41,7 @@ The project focuses on simplicity, maintainability, and AI-assisted development.
 
 # Current Goal
 
-[This section should always describe the next thing the team is actively working on. Only one current goal should exist at a time.]
+_Ask the user what this app is for, then replace this line with the goal. This section should always describe the next thing the team is actively working on — only one current goal should exist at a time._
 
 ---
 
@@ -70,10 +70,9 @@ The project focuses on simplicity, maintainability, and AI-assisted development.
 
 ## Frontend
 
-* [User selected] is the preferred frontend stack.
-* If no frontend stack has been selected yet, ask the user whether they want Blade or React + Inertia.
+* Frontend stack: _not chosen yet — agent: ask the user whether they want Blade or React + Inertia, then record the choice here._
 * Tailwind is the primary styling system.
-* shadcn/ui components are preferred when using React + Inertia [remove this line if not using React + Inertia]
+* shadcn/ui components are preferred when using React + Inertia. _Agent: remove this line if the project does not use React + Inertia._
 
 ---
 
@@ -105,7 +104,7 @@ payments: paystack
 
 # Recent Changes
 
-* [track your recent changes here in DESC order, maximum of 5 recents. Older changes should be summarized into Known Decisions or removed.]
+* _No changes yet — agent: track recent changes here, newest first, maximum of 5. Summarize older changes into Known Decisions or remove them._
 
 ---
 
@@ -115,15 +114,9 @@ payments: paystack
 
 ---
 
-# Current Goal
-
-Get user direction on what this app is for
-
----
-
 # Future Ideas
 
-* Build app as user wants
+* _None yet — agent: record ideas the user mentions but isn't building yet._
 
 ---
 
