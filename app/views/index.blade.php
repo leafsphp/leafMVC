@@ -81,7 +81,7 @@
     <div class="rails">
         <header>
             <a class="brand" href="https://leafphp.dev" aria-label="Leaf PHP">
-                <img src="https://v5-x.leafphp.dev/logo-circle.png" alt="">
+                <img src="https://leafphp.dev/logo-circle.png" alt="">
                 <span>Leaf MVC</span>
                 <span class="badge">v5</span>
             </a>
