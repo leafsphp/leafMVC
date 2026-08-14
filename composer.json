@@ -11,11 +11,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "leafs/blade": "v5.x-dev",
-        "leafs/mvc-core": "v5.x-dev",
-        "leafs/leaf": "v5.x-dev",
-        "leafs/logger": "v5.x-dev",
-        "leafs/schema": "v5.x-dev"
+        "leafs/blade": "^5.0",
+        "leafs/mvc-core": "^5.0",
+        "leafs/leaf": "^5.0",
+        "leafs/logger": "^5.0",
+        "leafs/schema": "^5.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.24"
