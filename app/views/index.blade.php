@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="actions">
-                    <a class="btn btn-primary" href="https://leafphp.dev/docs/intro/first-app" target="_blank" rel="noreferrer">
+                    <a class="btn btn-primary" href="https://leafphp.dev/learn/mvc" target="_blank" rel="noreferrer">
                         Quick Start
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
                     </a>

@@ -24,7 +24,7 @@ leaf create <project-name> --mvc
 This will create an MVC application for you. Start off your project with authentication, mailing, UI/UX, and a ton of other features using Leaf's [powerful modules](https://leafphp.dev/docs/modules/), and then run your app with:
 
 ```bash
-php leaf serve
+leaf serve
 ```
 
 ## Learning Leaf MVC

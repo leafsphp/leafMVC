@@ -31,7 +31,7 @@ To run this application, you need to have:
 To create your database, you can run:
 
 ```bash
-php leaf db:migrate
+leaf db:migrate
 ```
 
 ## Deployment instructions
